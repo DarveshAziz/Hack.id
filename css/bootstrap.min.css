@@ -6781,7 +6781,7 @@ fieldset:disabled .btn {
   word-break: break-word !important;
 }
 .text-primary {
-  color: #00d1f9 !important;
+  color: #8938ed !important;
 }
 .text-secondary {
   color: #19409a !important;
@@ -6796,7 +6796,7 @@ fieldset:disabled .btn {
   color: #ffc107 !important;
 }
 .text-danger {
-  color: #dc3545 !important;
+  color: #8938ed !important;
 }
 .text-light {
   color: #f2f9f9 !important;
@@ -6841,7 +6841,7 @@ fieldset:disabled .btn {
   background-color: #dc3545 !important;
 }
 .bg-light {
-  background-color: #202024 !important;
+  background-color: #c9c9cf !important;
 }
 .bg-dark {
   background-color: #001442 !important;

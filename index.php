@@ -42,7 +42,7 @@
 
         <!-- Navbar & Hero Start -->
         <div class="container-fluid position-relative p-0">
-            <nav class="navbar navbar-expand-lg navbar-light px-4 px-lg-5 py-3 py-lg-0">
+            <nav class="navbar navbar-expand-lg navbar-light px-4 px-lg-5 py-3 py-lg-0 sticky-top shadow-sm">
                 <a href="index.php" class="navbar-brand d-flex align-items-center p-0">
 					<!-- image logo -->
 					<img src="img/logos.png" alt="Acuas logo"

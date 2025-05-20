@@ -1,4 +1,6 @@
-
+#challenge-header{
+  margin-top: 64px;   /* push it down below the navbar */
+}
 /*** Spinner Start ***/
 /*** Spinner ***/
 #spinner {

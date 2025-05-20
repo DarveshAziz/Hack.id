@@ -1,0 +1,187 @@
+[
+  {
+    "slug": "googlecloudmultiagents",
+    "schedule": [
+      {
+        "period": "Submissions",
+        "begins": "2025-05-12T12:00:00-04:00",
+        "ends": "2025-06-23T20:00:00-04:00"
+      },
+      {
+        "period": "Judging",
+        "begins": "2025-06-24T12:00:00-04:00",
+        "ends": "2025-07-09T20:00:00-04:00"
+      },
+      {
+        "period": "Winners Announced",
+        "begins": "",
+        "ends": "2025-07-14T17:00:00-04:00"
+      }
+    ]
+  },
+  {
+    "slug": "ai-in-action",
+    "schedule": [
+      {
+        "period": "Submissions",
+        "begins": "2025-05-06T12:00:00-04:00",
+        "ends": "2025-06-17T17:00:00-04:00"
+      },
+      {
+        "period": "Judging",
+        "begins": "2025-06-25T12:00:00-04:00",
+        "ends": "2025-07-09T20:00:00-04:00"
+      },
+      {
+        "period": "Winners Announced",
+        "begins": "",
+        "ends": "2025-07-16T15:00:00-04:00"
+      }
+    ]
+  },
+  {
+    "slug": "perplexityhackathon",
+    "schedule": [
+      {
+        "period": "Submissions",
+        "begins": "2025-04-16T12:45:00-04:00",
+        "ends": "2025-05-28T15:00:00-04:00"
+      },
+      {
+        "period": "Judging",
+        "begins": "2025-05-30T16:00:00-04:00",
+        "ends": "2025-06-13T15:00:00-04:00"
+      },
+      {
+        "period": "Winners Announced",
+        "begins": "",
+        "ends": "2025-06-18T17:00:00-04:00"
+      }
+    ]
+  },
+  {
+    "slug": "hpaistudio",
+    "schedule": [
+      {
+        "period": "Submissions",
+        "begins": "2025-04-07T12:00:00-04:00",
+        "ends": "2025-06-09T20:00:00-04:00"
+      },
+      {
+        "period": "Judging",
+        "begins": "2025-06-10T12:00:00-04:00",
+        "ends": "2025-06-20T20:00:00-04:00"
+      },
+      {
+        "period": "Winners Announced",
+        "begins": "",
+        "ends": "2025-06-27T17:00:00-04:00"
+      }
+    ]
+  },
+  {
+    "slug": "aws-breaking-barriers",
+    "schedule": [
+      {
+        "period": "Submissions",
+        "begins": "2025-04-21T14:45:00-04:00",
+        "ends": "2025-06-23T12:00:00-04:00"
+      },
+      {
+        "period": "Judging",
+        "begins": "2025-06-30T13:00:00-04:00",
+        "ends": "2025-07-14T12:00:00-04:00"
+      },
+      {
+        "period": "Winners Announced",
+        "begins": "",
+        "ends": "2025-07-17T12:00:00-04:00"
+      }
+    ]
+  },
+  {
+    "slug": "b25",
+    "schedule": [
+      {
+        "period": "Submissions",
+        "begins": "2025-04-08T18:00:00-04:00",
+        "ends": "2025-05-20T20:00:00-04:00"
+      },
+      {
+        "period": "Judging",
+        "begins": "2025-05-21T09:00:00-04:00",
+        "ends": "2025-05-27T17:00:00-04:00"
+      },
+      {
+        "period": "Winners Announced",
+        "begins": "",
+        "ends": "2025-05-29T17:00:00-04:00"
+      }
+    ]
+  },
+  {
+    "slug": "hackonomics25",
+    "schedule": [
+      {
+        "period": "Submissions",
+        "begins": "2025-02-01T00:00:00-05:00",
+        "ends": "2025-06-15T17:00:00-04:00"
+      },
+      {
+        "period": "Judging",
+        "begins": "2025-06-16T09:00:00-04:00",
+        "ends": "2025-06-20T12:00:00-04:00"
+      },
+      {
+        "period": "Winners Announced",
+        "begins": "",
+        "ends": "2025-06-21T12:00:00-04:00"
+      }
+    ]
+  },
+  {
+    "slug": "amplicode",
+    "schedule": [
+      {
+        "period": "Submissions",
+        "begins": "2025-04-30T13:30:00-04:00",
+        "ends": "2025-05-30T18:30:00-04:00"
+      },
+      {
+        "period": "Public Voting",
+        "begins": "2025-05-30T18:30:00-04:00",
+        "ends": "2025-05-31T18:30:00-04:00"
+      },
+      {
+        "period": "Judging",
+        "begins": "2025-05-30T18:30:00-04:00",
+        "ends": "2025-06-07T18:30:00-04:00"
+      },
+      {
+        "period": "Winners Announced",
+        "begins": "",
+        "ends": "2025-06-16T21:30:00-04:00"
+      }
+    ]
+  },
+  {
+    "slug": "codepi-ic-2025-1",
+    "schedule": [
+      {
+        "period": "Submissions",
+        "begins": "2025-02-16T00:00:00-05:00",
+        "ends": "2025-05-25T17:00:00-04:00"
+      },
+      {
+        "period": "Judging",
+        "begins": "2025-05-26T09:00:00-04:00",
+        "ends": "2025-05-30T17:00:00-04:00"
+      },
+      {
+        "period": "Winners Announced",
+        "begins": "",
+        "ends": "2025-05-31T09:00:00-04:00"
+      }
+    ]
+  }
+]

@@ -43,44 +43,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     <link href="css/style.css" rel="stylesheet" />
 </head>
 
-<body>
-    <!-- ===== Navbar ===== -->
-    <div class="container-fluid position-relative p-0">
-        <nav class="navbar navbar-expand-lg navbar-light px-4 px-lg-5 py-3 py-lg-0">
-            <a href="index.php" class="navbar-brand p-0">
-                <h1 class="text-primary"><i class="fas fa-hand-holding-water me-3"></i>Acuas</h1>
-            </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
-                <span class="fa fa-bars"></span>
-            </button>
-
-            <div class="collapse navbar-collapse" id="navbarCollapse">
-                <div class="navbar-nav ms-auto py-0">
-                    <a href="index.php"    class="nav-item nav-link">Home</a>
-                    <a href="about.html"    class="nav-item nav-link">About</a>
-                    <a href="service.html"  class="nav-item nav-link">Service</a>
-                    <a href="blog.html"     class="nav-item nav-link">Blog</a>
-                    <a href="contact.html"  class="nav-item nav-link">Contact</a>
-                </div>
-                <a href="login.html" class="btn btn-primary rounded-pill d-inline-flex flex-shrink-0 py-2 px-4">Login</a>
-            </div>
-        </nav>
-    </div>
-    <!-- ===== /Navbar ===== -->
-
-    <!-- ===== Hero (short) ===== -->
-    <div class="container-fluid page-header wow fadeIn" data-wow-delay="0.1s">
-        <div class="container text-center py-5">
-            <h1 class="display-4 text-white mb-3 animated slideInDown">Login</h1>
-            <nav aria-label="breadcrumb animated slideInDown">
-                <ol class="breadcrumb justify-content-center mb-0">
-                    <li class="breadcrumb-item"><a href="index.php">Home</a></li>
-                    <li class="breadcrumb-item text-primary" aria-current="page">Login</li>
-                </ol>
-            </nav>
-        </div>
-    </div>
-    <!-- ===== /Hero ===== -->
+<body class="pt-5">
+    <?php include 'includes/header.php'; ?>
 
     <!-- ===== Login form ===== -->
     <div class="container py-5">
