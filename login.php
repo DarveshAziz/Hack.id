@@ -1,5 +1,20 @@
 <?php
 include 'config.php';
+if (session_status() !== PHP_SESSION_ACTIVE) {
+    session_start();
+}
+require __DIR__ . "/vendor/autoload.php";
+
+$client = new Google\Client;
+
+$client->setClientId("844878097440-7fd98ruf2jkfhhalfrb4aut9nda5jhd7.apps.googleusercontent.com");
+$client->setClientSecret("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");
+$client->setRedirectUri("http://localhost/Hack.id/oauth2callback.php");
+
+$client->addScope("email");
+$client->addScope("profile");
+
+$url = $client->createAuthUrl();
 
 $errors = [];
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
@@ -34,9 +49,15 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     <!-- Google Fonts + Icons + CSS libs (unchanged) -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Playfair+Display:wght@400..900&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" />
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Playfair+Display:wght@400..900&display=swap"
+      rel="stylesheet" />
+    <link
+      href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
+      rel="stylesheet" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css"
+      rel="stylesheet" />
     <link href="lib/animate/animate.min.css" rel="stylesheet" />
     <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet" />
     <link href="css/bootstrap.min.css" rel="stylesheet" />
@@ -70,9 +91,28 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                                    placeholder="Password" required>
                             <label>Password</label>
                         </div>
+
                         <button class="btn btn-primary w-100 py-3">Log In</button>
-                        <p class="text-center mt-3 mb-0">Need an account?
-                           <a href="register.php">Register</a></p>
+
+                        <!-- ===== Social login icons ===== -->
+                        <div class="text-center mt-4">
+                            <p class="mb-2">Or log in with</p>
+                            <div class="d-flex justify-content-center gap-3">
+                                <a href="<?= htmlspecialchars($url) ?>" class="btn btn-outline-danger btn-lg rounded-circle">
+                                    <i class="fab fa-google"></i>
+                                </a>
+                                <a href="" class="btn btn-outline-dark btn-lg rounded-circle">
+                                    <i class="fab fa-github"></i>
+                                </a>
+                                <a href="" class="btn btn-outline-primary btn-lg rounded-circle">
+                                    <i class="fab fa-linkedin-in"></i>
+                                </a>
+                            </div>
+                        </div>
+
+                        <p class="text-center mt-3 mb-0">
+                           Need an account? <a href="register.php">Register</a>
+                        </p>
                     </form>
                 </div>
             </div>
@@ -80,9 +120,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     </div>
     <!-- ===== /Login form ===== -->
 
-    <!-- ===== Footer & scripts (copied verbatim) ===== -->
+    <!-- ===== Footer & scripts ===== -->
     <div class="container-fluid footer py-5 wow fadeIn" data-wow-delay="0.2s">
-        <!-- … all the same footer markup … -->
+        <!-- … your usual footer markup … -->
     </div>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>

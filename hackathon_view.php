@@ -68,6 +68,18 @@ function schedule_row(string $slug): array
     return [];
 }
 
+$userId = $_SESSION['user_id'] ?? 0;
+$hid    = (int)$hack['id'];
+
+// check registration
+$stmt = $mysqli->prepare(
+  "SELECT 1 FROM registrations WHERE user_id=? AND hackathon_id=?"
+);
+$stmt->bind_param('ii',$userId,$hid);
+$stmt->execute();
+$isReg = (bool)$stmt->get_result()->fetch_row();
+$stmt->close();
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -260,9 +272,24 @@ switch ($tab) {
             <?php endif; ?>
           </div>
           <div class="card-footer bg-transparent">
-            <a href="<?= htmlspecialchars($hack['link']) ?>"
-               class="btn btn-primary w-100">Register</a>
-          </div>
+			  <?php if (!$isReg): ?>
+				<!-- register action -->
+				<form method="post" action="register_to_hack.php" class="d-inline w-100">
+				  <input type="hidden" name="hackathon_id" value="<?= $hid ?>">
+				  <button type="submit" class="btn btn-primary w-100">
+					Register
+				  </button>
+				</form>
+			  <?php else: ?>
+				<!-- already registered -->
+				<a href="manage_teams.php" class="btn btn-outline-primary w-100 mb-2">
+				  Find Teams
+				</a>
+				<a href="manage_teams.php?create=<?= $hid ?>" class="btn btn-primary w-100">
+				  Create Team
+				</a>
+			  <?php endif; ?>
+			</div>
         </div>
       </div>
     </aside>

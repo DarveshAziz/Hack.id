@@ -54,12 +54,17 @@ if ($needsPatch) {
     <!-- Google Fonts & Icons -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"/>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap"
+      rel="stylesheet"
+    >
+    <link rel="stylesheet"
+          href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"/>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css"
+          rel="stylesheet">
 
-    <!-- Vendor CSS -->
-    <link href="lib/animate/animate.min.css"         rel="stylesheet">
+    <!-- Animate.css & Vendor CSS -->
+    <link href="lib/animate/animate.min.css" rel="stylesheet">
     <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
 
     <!-- Theme CSS -->
@@ -68,7 +73,7 @@ if ($needsPatch) {
 </head>
 <body class="pt-5">
 
-<!-- ===== Sticky header (same one you use everywhere) ===== -->
+<!-- ===== Sticky header ===== -->
 <?php include 'includes/header.php'; ?>
 
 <!-- ===== Page hero ===== -->
@@ -84,25 +89,26 @@ if ($needsPatch) {
 <!-- ===== Hackathon grid ===== -->
 <div class="container py-5">
     <div class="row g-4">
-
-<?php
-/* pull everything from the table you previously seeded */
-$res = $mysqli->query("SELECT * FROM hackathons ORDER BY id DESC");
-while ($h = $res->fetch_assoc()):
-    $themes = json_decode($h['themes'], true) ?: [];
-
-    /* Devpost URL  ➜  slug (e.g. codepi-ic-2025-1) */
-    if (preg_match('~https?://([^.]+)\.devpost\.com~i', $h['link'], $m)) {
-		$slug = $m[1];                       // googlecloudmultiagents
-	} else {
-		$slug = '';                          // fallback – shouldn’t happen
-	}
-?>
-        <div class="col-md-6 col-lg-4">
-            <!-- take the user to our internal overview page instead of Devpost -->
-            <a href="hackathon_view.php?slug=<?= urlencode($slug) ?>" class="text-decoration-none">
+    <?php
+      $res = $mysqli->query("SELECT * FROM hackathons ORDER BY id DESC");
+      $idx = 0;
+      while ($h = $res->fetch_assoc()):
+        $themes = json_decode($h['themes'], true) ?: [];
+        // derive slug from link
+        if (preg_match('~https?://([^.]+)\.devpost\.com~i', $h['link'], $m)) {
+          $slug = $m[1];
+        } else {
+          $slug = '';
+        }
+        // compute a 0.1s staggered delay
+        $delay = sprintf('%.1f', $idx * 0.1) . 's';
+    ?>
+        <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="<?= $delay ?>">
+            <a href="hackathon_view.php?slug=<?= urlencode($slug) ?>"
+               class="text-decoration-none">
                 <div class="card h-100 shadow-sm border-0">
-                    <img src="<?= htmlspecialchars($h['image_src']) ?>" class="card-img-top"
+                    <img src="<?= htmlspecialchars($h['image_src'] ?? $h['header_img']) ?>"
+                         class="card-img-top"
                          alt="<?= htmlspecialchars($h['title']) ?>">
 
                     <div class="card-body">
@@ -139,8 +145,10 @@ while ($h = $res->fetch_assoc()):
                 </div>
             </a>
         </div>
-<?php endwhile; ?>
-
+    <?php
+        $idx++;
+      endwhile;
+    ?>
     </div>
 </div>
 
@@ -149,7 +157,13 @@ while ($h = $res->fetch_assoc()):
 <!-- ===== JS ===== -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+
+<!-- WOW.js + init -->
 <script src="lib/wow/wow.min.js"></script>
+<script>
+  new WOW().init();
+</script>
+
 <script src="lib/easing/easing.min.js"></script>
 <script src="lib/owlcarousel/owl.carousel.min.js"></script>
 <script src="js/main.js"></script>

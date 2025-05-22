@@ -196,7 +196,7 @@ if ($_SERVER['REQUEST_METHOD']==='POST') {
 
 <?php include 'includes/header.php'; ?>
 
-<div class="container py-5">
+<div class="container py-5 mt-5">
   <h2 class="mb-4">Profile settings</h2>
 
   <?php foreach($errors as $e): ?>
