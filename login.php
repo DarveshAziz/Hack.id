@@ -41,7 +41,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 ?>
 <!DOCTYPE html>
 <html lang="en">
-<?php include 'includes/header.php'; ?>
 <head>
     <meta charset="utf-8">
     <title>Login – Hack.id</title>
@@ -69,7 +68,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     <link href="css/style.css" rel="stylesheet" />
 </head>
 
-<body class="pt-5 mt-5">
+<body class="pt-5">
     <!-- ===== Login form ===== -->
     <div class="container py-5">
         <div class="row justify-content-center wow fadeInUp" data-wow-delay="0.2s">

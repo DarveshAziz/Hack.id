@@ -237,15 +237,15 @@ if (isset($_SESSION['user_id'])) {
         <div class="container-fluid team pb-5">
             <div class="container pb-5">
                 <div class="text-center mx-auto pb-5 wow fadeInUp" data-wow-delay="0.2s" style="max-width: 800px;">
-                    <h4 class="text-uppercase text-primary">Daftar Kelompok</h4>
-                    <h1 class="display-3 text-capitalize mb-3">Kim Jong Ris 😋</h1>
+                    <h4 class="text-primary">Recommended People</h4>
+                    <h1 class="display-3 text-capitalize mb-3">The most popular Mentor for Hackathon</h1>
                 </div>
                 <div class="row g-4">
                     <div class="col-md-6 col-lg-6 col-xl-3 wow fadeInUp" data-wow-delay="0.2s">
                         <div class="team-item p-4">
                             <div class="team-inner rounded">
                                 <div class="team-img">
-                                    <img src="img/rich.png" class="img-fluid rounded-top w-100" alt="Image">
+                                    <img src="img/Richard.png" class="img-fluid rounded-top w-100" alt="Image">
                                     <div class="team-share">
                                         <a class="btn btn-secondary btn-md-square rounded-pill text-white mx-1" href=""><i class="fas fa-share-alt"></i></a>
                                     </div>
@@ -258,7 +258,7 @@ if (isset($_SESSION['user_id'])) {
                                 </div>
                                 <div class="bg-light rounded-bottom text-center py-4">
                                     <h4 class="mb-3">Richard</h4>
-                                    <p class="mb-0">CEO & Founder</p>
+                                    <p class="mb-0">Product Manager</p>
                                 </div>
                             </div>
                         </div>
@@ -267,7 +267,7 @@ if (isset($_SESSION['user_id'])) {
                         <div class="team-item p-4">
                             <div class="team-inner rounded">
                                 <div class="team-img">
-                                    <img src="img/brandpfp.png" class="img-fluid rounded-top w-100" alt="Image">
+                                    <img src="img/Brandon.png" class="img-fluid rounded-top w-100" alt="Image">
                                     <div class="team-share">
                                         <a class="btn btn-secondary btn-md-square rounded-pill text-white mx-1" href=""><i class="fas fa-share-alt"></i></a>
                                     </div>
@@ -279,8 +279,8 @@ if (isset($_SESSION['user_id'])) {
                                     </div>
                                 </div>
                                 <div class="bg-light rounded-bottom text-center py-4">
-                                    <h4 class="mb-3">Brandon Geraldo Adji</h4>
-                                    <p class="mb-0">CEO & Founder</p>
+                                    <h4 class="mb-3">Brandon Geraldo</h4>
+                                    <p class="mb-0">UI/UX & Front End</p>
                                 </div>
                             </div>
                         </div>
@@ -289,7 +289,7 @@ if (isset($_SESSION['user_id'])) {
                         <div class="team-item p-4">
                             <div class="team-inner rounded">
                                 <div class="team-img">
-                                    <img src="img/harispfp.png" class="img-fluid rounded-top w-100" alt="Image">
+                                    <img src="img/Haris.png" class="img-fluid rounded-top w-100" alt="Image">
                                     <div class="team-share">
                                         <a class="btn btn-secondary btn-md-square rounded-pill text-white mx-1" href=""><i class="fas fa-share-alt"></i></a>
                                     </div>
@@ -301,8 +301,8 @@ if (isset($_SESSION['user_id'])) {
                                     </div>
                                 </div>
                                 <div class="bg-light rounded-bottom text-center py-4">
-                                    <h4 class="mb-3">Malvinsyah Haris Athala</h4>
-                                    <p class="mb-0">CEO & Founder</p>
+                                    <h4 class="mb-3">Malvinshah Haris</h4>
+                                    <p class="mb-0">Back End & Secuirty</p>
                                 </div>
                             </div>
                         </div>
@@ -311,7 +311,7 @@ if (isset($_SESSION['user_id'])) {
                         <div class="team-item p-4">
                             <div class="team-inner rounded">
                                 <div class="team-img">
-                                    <img src="img/3x4_Darvesh.jpeg" class="img-fluid rounded-top w-100" alt="Image">
+                                    <img src="img/Darvesh.png" class="img-fluid rounded-top w-100" alt="Image">
                                     <div class="team-share">
                                         <a class="btn btn-secondary btn-md-square rounded-pill text-white mx-1" href=""><i class="fas fa-share-alt"></i></a>
                                     </div>
@@ -323,8 +323,8 @@ if (isset($_SESSION['user_id'])) {
                                     </div>
                                 </div>
                                 <div class="bg-light rounded-bottom text-center py-4">
-                                    <h4 class="mb-3">Darvesh Aziz Mawla</h4>
-                                    <p class="mb-0">CEO & Founder</p>
+                                    <h4 class="mb-3">Darvesh Aziz</h4>
+                                    <p class="mb-0">Back End & Secuirty</p>
                                 </div>
                             </div>
                         </div>
@@ -812,7 +812,7 @@ if (isset($_SESSION['user_id'])) {
                     <div class="col-md-6 col-lg-6 col-xl-3">
                         <div class="footer-item d-flex flex-column">
                             <div class="footer-item">
-                                <h3 class="text-white mb-4"><i class="fas fa-hand-holding-water text-primary me-3"></i>Acuas</h3>
+                                <h3 class="text-white mb-4"></i>Hack.id</h3>
                                 <p class="mb-3">Dolor amet sit justo amet elitr clita ipsum elitr est.Lorem ipsum dolor sit amet, consectetur adipiscing elit consectetur adipiscing elit.</p>
                             </div>
                             <div class="position-relative">
@@ -869,13 +869,7 @@ if (isset($_SESSION['user_id'])) {
             <div class="container">
                 <div class="row g-4 align-items-center">
                     <div class="col-md-6 text-center text-md-start mb-md-0">
-                        <span class="text-body"><a href="#" class="border-bottom text-white"><i class="fas fa-copyright text-light me-2"></i>Your Site Name</a>, All right reserved.</span>
-                    </div>
-                    <div class="col-md-6 text-center text-md-end text-body">
-                        <!--/*** This template is free as long as you keep the below author’s credit link/attribution link/backlink. ***/-->
-                        <!--/*** If you'd like to use the template without the below author’s credit link/attribution link/backlink, ***/-->
-                        <!--/*** you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". ***/-->
-                        Designed By <a class="border-bottom text-white" href="https://htmlcodex.com">HTML Codex</a> Distributed By <a class="border-bottom text-white" href="https://themewagon.com">ThemeWagon</a>
+                        <span class="text-body"><a href="#" class="border-bottom text-white"><i class="fas fa-copyright text-light me-2"></i>Hack.id</a> All right reserved.</span>
                     </div>
                 </div>
             </div>

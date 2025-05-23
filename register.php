@@ -61,7 +61,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 ?>
 <!DOCTYPE html>
 <html lang="en">
-<?php include 'includes/header.php'; ?>
 <head>
   <meta charset="utf-8">
   <title>Register – Hack.id</title>
@@ -85,7 +84,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 <body>
 
 <!-- Register Form -->
-<div class="container py-5 mt-5">
+<div class="container py-5">
   <div class="row justify-content-center wow fadeInUp" data-wow-delay="0.2s">
     <div class="col-md-6 col-lg-5">
       <div class="bg-light rounded p-5">
