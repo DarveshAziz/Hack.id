@@ -233,7 +233,105 @@ if (isset($_SESSION['user_id'])) {
         </div>
         <!-- Modal Search End -->
 
-		<!-- Team Start -->
+        <!-- feature Start -->
+        <div class="container-fluid feature bg-light py-5">
+            <div class="container py-5">
+                <div class="text-center mx-auto pb-5 wow fadeInUp" data-wow-delay="0.2s" style="max-width: 800px;">
+                    <h4 class="text-uppercase text-primary">Our Feature</h4>
+                    <h1 class="display-3 text-capitalize mb-3">Your Launchpad For Hackathon Success</h1>
+                </div>
+                <div class="row g-4">
+                    <div class=" col-md-6 col-lg-6 col-xl-3 wow fadeInUp" data-wow-delay="0.2s">
+                        <div class="feature-item p-4">
+                            <div class="feature-icon mb-3"><i class="fas fa-handshake text-white fa-3x"></i></div>
+                            <a href="#" class="h4 mb-3">Teammate Finder</a>
+                            <p class="mb-3">Connect with skilled and passionate individuals.</p>
+                            <a href="#" class="btn text-secondary">Find Teammates <i class="fa fa-angle-right"></i></a>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-6 col-xl-3 wow fadeInUp" data-wow-delay="0.4s">
+                        <div class="feature-item p-4">
+                            <div class="feature-icon mb-3"><i class="fas fa-chalkboard-teacher text-white fa-3x"></i></div>
+                            <a href="#" class="h4 mb-3">Ask a Mentor</a>
+                            <p class="mb-3">Get expert advice from experienced mentors.</p>
+                            <a href="#" class="btn text-secondary">Get Advice <i class="fa fa-angle-right"></i></a>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-6 col-xl-3 wow fadeInUp" data-wow-delay="0.6s">
+                        <div class="feature-item p-4">
+                            <div class="feature-icon mb-3"><i class="fas fa-search text-white fa-3x"></i></div>
+                            <a href="#" class="h4 mb-3">Hackathon Finder</a>
+                            <p class="mb-3">Discover exciting hackathons happening globally or locally.</p>
+                            <a href="#" class="btn text-secondary">Explore Events <i class="fa fa-angle-right"></i></a>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-6 col-xl-3 wow fadeInUp" data-wow-delay="0.8s">
+                        <div class="feature-item p-4">
+                            <div class="feature-icon mb-3"><i class="fas fa-file-alt text-white fa-3x"></i></div>
+                            <a href="#" class="h4 mb-3">Skill Assessment</a>
+                            <p class="mb-3">Identify your strengths and areas for growth.</p>
+                            <a href="#" class="btn text-secondary">Test Your Skill <i class="fa fa-angle-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- feature End -->
+        <!-- About Start -->
+        <div class="container-fluid about overflow-hidden py-5">
+            <div class="container py-5">
+                <div class="row g-5">
+                    <div class="col-xl-6 wow fadeInLeft" data-wow-delay="0.2s">
+                        <div class="about-img rounded h-100">
+                            <img src="img/about.jpg" class="img-fluid rounded h-100 w-100" style="object-fit: cover;" alt="">
+                            <div class="about-exp"><span>20 Years Experiance</span></div>
+                        </div>
+                    </div>
+                    <div class="col-xl-6 wow fadeInRight" data-wow-delay="0.2s">
+                        <div class="about-item">
+                            <h4 class="text-primary text-uppercase">About Us</h4>
+                            <h1 class="display-3 mb-3">We Deliver The Quality Water.</h1>
+                            <p class="mb-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum quidem quas totam nostrum! Maxime rerum voluptatem sed, facilis unde a aperiam nulla voluptatibus excepturi ipsam iusto consequuntur
+                            </p>
+                            <div class="bg-light rounded p-4 mb-4">
+                                <div class="row">
+                                    <div class="col-12">
+                                        <div class="d-flex">
+                                            <div class="pe-4">
+                                                <div class="rounded-circle bg-primary d-flex align-items-center justify-content-center" style="width: 80px; height: 80px;"><i class="fas fa-tint text-white fa-2x"></i></div>
+                                            </div>
+                                            <div class="">
+                                                <a href="#" class="h4 d-inline-block mb-3">Satisfied Customer</a>
+                                                <p class="mb-0">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quas provident maiores quisquam.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="bg-light rounded p-4 mb-4">
+                                <div class="row">
+                                    <div class="col-12">
+                                        <div class="d-flex">
+                                            <div class="pe-4">
+                                                <div class="rounded-circle bg-primary d-flex align-items-center justify-content-center" style="width: 80px; height: 80px;"><i class="fas fa-faucet text-white fa-2x"></i></div>
+                                            </div>
+                                            <div class="">
+                                                <a href="#" class="h4 d-inline-block mb-3">Standard Product</a>
+                                                <p class="mb-0">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quas provident maiores quisquam.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <a href="#" class="btn btn-secondary rounded-pill py-3 px-5">Read More</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- About End -->
+
+            <!-- Team Start -->
         <div class="container-fluid team pb-5">
             <div class="container pb-5">
                 <div class="text-center mx-auto pb-5 wow fadeInUp" data-wow-delay="0.2s" style="max-width: 800px;">
@@ -333,107 +431,6 @@ if (isset($_SESSION['user_id'])) {
             </div>
         </div>
         <!-- Team End -->
-
-        <!-- feature Start -->
-        <div class="container-fluid feature bg-light py-5">
-            <div class="container py-5">
-                <div class="text-center mx-auto pb-5 wow fadeInUp" data-wow-delay="0.2s" style="max-width: 800px;">
-                    <h4 class="text-uppercase text-primary">Our Feature</h4>
-                    <h1 class="display-3 text-capitalize mb-3">Your Launchpad For Hackathon Success</h1>
-                </div>
-                <div class="row g-4">
-                    <div class=" col-md-6 col-lg-6 col-xl-3 wow fadeInUp" data-wow-delay="0.2s">
-                        <div class="feature-item p-4">
-                            <div class="feature-icon mb-3"><i class="fas fa-handshake text-white fa-3x"></i></div>
-                            <a href="#" class="h4 mb-3">Teammate Finder</a>
-                            <p class="mb-3">Connect with skilled and passionate individuals.</p>
-                            <a href="#" class="btn text-secondary">Find Teammates <i class="fa fa-angle-right"></i></a>
-                        </div>
-                    </div>
-                    <div class="col-md-6 col-lg-6 col-xl-3 wow fadeInUp" data-wow-delay="0.4s">
-                        <div class="feature-item p-4">
-                            <div class="feature-icon mb-3"><i class="fas fa-chalkboard-teacher text-white fa-3x"></i></div>
-                            <a href="#" class="h4 mb-3">Ask a Mentor</a>
-                            <p class="mb-3">Get expert advice from experienced mentors.</p>
-                            <a href="#" class="btn text-secondary">Get Advice <i class="fa fa-angle-right"></i></a>
-                        </div>
-                    </div>
-                    <div class="col-md-6 col-lg-6 col-xl-3 wow fadeInUp" data-wow-delay="0.6s">
-                        <div class="feature-item p-4">
-                            <div class="feature-icon mb-3"><i class="fas fa-search text-white fa-3x"></i></div>
-                            <a href="#" class="h4 mb-3">Hackathon Finder</a>
-                            <p class="mb-3">Discover exciting hackathons happening globally or locally.</p>
-                            <a href="#" class="btn text-secondary">Explore Events <i class="fa fa-angle-right"></i></a>
-                        </div>
-                    </div>
-                    <div class="col-md-6 col-lg-6 col-xl-3 wow fadeInUp" data-wow-delay="0.8s">
-                        <div class="feature-item p-4">
-                            <div class="feature-icon mb-3"><i class="fas fa-file-alt text-white fa-3x"></i></div>
-                            <a href="#" class="h4 mb-3">Skill Assessment</a>
-                            <p class="mb-3">Identify your strengths and areas for growth.</p>
-                            <a href="#" class="btn text-secondary">Test Your Skill <i class="fa fa-angle-right"></i></a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- feature End -->
-
-
-        <!-- About Start -->
-        <div class="container-fluid about overflow-hidden py-5">
-            <div class="container py-5">
-                <div class="row g-5">
-                    <div class="col-xl-6 wow fadeInLeft" data-wow-delay="0.2s">
-                        <div class="about-img rounded h-100">
-                            <img src="img/about.jpg" class="img-fluid rounded h-100 w-100" style="object-fit: cover;" alt="">
-                            <div class="about-exp"><span>20 Years Experiance</span></div>
-                        </div>
-                    </div>
-                    <div class="col-xl-6 wow fadeInRight" data-wow-delay="0.2s">
-                        <div class="about-item">
-                            <h4 class="text-primary text-uppercase">About Us</h4>
-                            <h1 class="display-3 mb-3">We Deliver The Quality Water.</h1>
-                            <p class="mb-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum quidem quas totam nostrum! Maxime rerum voluptatem sed, facilis unde a aperiam nulla voluptatibus excepturi ipsam iusto consequuntur
-                            </p>
-                            <div class="bg-light rounded p-4 mb-4">
-                                <div class="row">
-                                    <div class="col-12">
-                                        <div class="d-flex">
-                                            <div class="pe-4">
-                                                <div class="rounded-circle bg-primary d-flex align-items-center justify-content-center" style="width: 80px; height: 80px;"><i class="fas fa-tint text-white fa-2x"></i></div>
-                                            </div>
-                                            <div class="">
-                                                <a href="#" class="h4 d-inline-block mb-3">Satisfied Customer</a>
-                                                <p class="mb-0">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quas provident maiores quisquam.</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="bg-light rounded p-4 mb-4">
-                                <div class="row">
-                                    <div class="col-12">
-                                        <div class="d-flex">
-                                            <div class="pe-4">
-                                                <div class="rounded-circle bg-primary d-flex align-items-center justify-content-center" style="width: 80px; height: 80px;"><i class="fas fa-faucet text-white fa-2x"></i></div>
-                                            </div>
-                                            <div class="">
-                                                <a href="#" class="h4 d-inline-block mb-3">Standard Product</a>
-                                                <p class="mb-0">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quas provident maiores quisquam.</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <a href="#" class="btn btn-secondary rounded-pill py-3 px-5">Read More</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- About End -->
-
 
         <!-- Fact Counter -->
         <div class="container-fluid counter py-5">
