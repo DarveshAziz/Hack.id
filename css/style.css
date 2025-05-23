@@ -423,8 +423,8 @@
 .bg-breadcrumb {
   position: relative;
   overflow: hidden;
-  background: linear-gradient(rgba(0, 20, 66, 0.7), rgba(0, 20, 66, 0.7)),
-    url(../img/breadcrumb.jpg);
+  background: linear-gradient(rgba(97, 50, 215, 0.9), rgb(53, 28, 118)),
+    url(../img/logo2.png);
   background-position: center top;
   background-repeat: no-repeat;
   background-size: cover;
