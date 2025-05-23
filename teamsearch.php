@@ -53,7 +53,8 @@ $users = $mysqli->query("
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<title>Find teammates • Hack.id</title>
+<title>Find teammates - Hack.id</title>
+<link rel="Website Icon" type="png" href="img/Logo1.png" />
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link href="css/bootstrap.min.css" rel="stylesheet">
 <link href="css/style.css"        rel="stylesheet">

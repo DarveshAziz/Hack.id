@@ -48,7 +48,8 @@ if ($needsPatch) {
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>Upcoming Hackathons • Hack.id</title>
+    <title>Hack.id - Find Your Team. Hack the Future </title>
+    <link rel="Website Icon" type="png" href="img/Logo1.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <!-- Google Fonts & Icons -->
@@ -58,6 +59,7 @@ if ($needsPatch) {
       href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap"
       rel="stylesheet"
     >
+    
     <link rel="stylesheet"
           href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"/>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css"
@@ -71,7 +73,7 @@ if ($needsPatch) {
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/style.css"          rel="stylesheet">
 </head>
-<body class="pt-5">
+<body class="">
 
 <!-- ===== Sticky header ===== -->
 <?php include 'includes/header.php'; ?>

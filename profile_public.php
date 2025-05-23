@@ -64,6 +64,8 @@ $theirOwnedTeams = [];
 <html lang="en">
 <head>
 <meta charset="utf-8">
+<title>Hack.id - Find Your Team. Hack the Future </title>
+<link rel="Website Icon" type="png" href="img/Logo1.png" />
 <title><?= htmlspecialchars($user['display_name']) ?> • Hack.id</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link href="css/bootstrap.min.css" rel="stylesheet">

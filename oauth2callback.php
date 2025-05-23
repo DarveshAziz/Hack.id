@@ -7,7 +7,7 @@ require __DIR__ . "/vendor/autoload.php";
 // 2) build client
 $client = new Google\Client;
 $client->setClientId("844878097440-7fd98ruf2jkfhhalfrb4aut9nda5jhd7.apps.googleusercontent.com");
-$client->setClientSecret("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");
+$client->setClientSecret("");
 $client->setRedirectUri("http://localhost/Hack.id/oauth2callback.php");
 $client->addScope("email");
 $client->addScope("profile");

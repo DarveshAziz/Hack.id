@@ -53,6 +53,13 @@ $inboxRequests = $reqStmt->get_result()->fetch_all(MYSQLI_ASSOC);
 <head>
   <meta charset="utf-8">
   <title>Inbox • Hack.id</title>
+  <!-- Google Fonts & Icons -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap"
+      rel="stylesheet"
+    >
   <link href="css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body>

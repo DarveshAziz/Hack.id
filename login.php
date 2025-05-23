@@ -41,17 +41,22 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 ?>
 <!DOCTYPE html>
 <html lang="en">
+<?php include 'includes/header.php'; ?>
 <head>
     <meta charset="utf-8">
-    <title>Login – Acuas</title>
+    <title>Login – Hack.id</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
+    <title>Hack.id - Find Your Team. Hack the Future </title>
+    <link rel="Website Icon" type="png" href="img/Logo1.png" />
     <!-- Google Fonts + Icons + CSS libs (unchanged) -->
+       <!-- Font -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Playfair+Display:wght@400..900&display=swap"
-      rel="stylesheet" />
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
     <link
       href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
       rel="stylesheet" />
@@ -64,9 +69,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     <link href="css/style.css" rel="stylesheet" />
 </head>
 
-<body class="pt-5">
-    <?php include 'includes/header.php'; ?>
-
+<body class="pt-5 mt-5">
     <!-- ===== Login form ===== -->
     <div class="container py-5">
         <div class="row justify-content-center wow fadeInUp" data-wow-delay="0.2s">
@@ -86,10 +89,13 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                                    placeholder="Username or Email" required>
                             <label>Username or Email</label>
                         </div>
-                        <div class="form-floating mb-4">
-                            <input type="password" name="password" class="form-control"
+                        <div class="form-floating mb-4 position-relative">
+                            <input type="password" name="password" class="form-control" id="passwordInput"
                                    placeholder="Password" required>
                             <label>Password</label>
+                            <span class="position-absolute top-50 end-0 translate-middle-y me-3" style="cursor:pointer;z-index:2;" onclick="togglePassword()">
+                                <i class="fa fa-eye" id="togglePasswordIcon"></i>
+                            </span>
                         </div>
 
                         <button class="btn btn-primary w-100 py-3">Log In</button>
@@ -120,11 +126,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     </div>
     <!-- ===== /Login form ===== -->
 
-    <!-- ===== Footer & scripts ===== -->
-    <div class="container-fluid footer py-5 wow fadeIn" data-wow-delay="0.2s">
-        <!-- … your usual footer markup … -->
-    </div>
-
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="lib/wow/wow.min.js"></script>
@@ -133,5 +134,20 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     <script src="lib/counterup/counterup.min.js"></script>
     <script src="lib/owlcarousel/owl.carousel.min.js"></script>
     <script src="js/main.js"></script>
+    <script>
+        function togglePassword() {
+            const input = document.getElementById('passwordInput');
+            const icon = document.getElementById('togglePasswordIcon');
+            if (input.type === 'password') {
+                input.type = 'text';
+                icon.classList.remove('fa-eye');
+                icon.classList.add('fa-eye-slash');
+            } else {
+                input.type = 'password';
+                icon.classList.remove('fa-eye-slash');
+                icon.classList.add('fa-eye');
+            }
+        }
+    </script>
 </body>
 </html>

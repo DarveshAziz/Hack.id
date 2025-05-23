@@ -30,16 +30,25 @@ if (isset($_SESSION['user_id'])) {
 
     <head>
         <meta charset="utf-8">
-        <title>Acuas - Drinking Water Website Template</title>
+        <title>Hack.id - Find Your Team. Hack the Future </title>
+        <link rel="Website Icon" type="png" href="img/Logo1.png" />
         <meta content="width=device-width, initial-scale=1.0" name="viewport">
         <meta content="" name="keywords">
         <meta content="" name="description">
 
-        <!-- Google Web Fonts -->
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wdth,wght@0,75..100,300..800;1,75..100,300..800&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet"> 
+        <!-- Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
 
+       
         <!-- Icon Font Stylesheet -->
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"/>
         <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
@@ -138,26 +147,25 @@ if (isset($_SESSION['user_id'])) {
                     </ol>
                     <div class="carousel-inner" role="listbox">
                         <div class="carousel-item active">
-							<img src="img/2carousel-1.jpg" class="img-fluid w-100" alt="Hack.id hero">
+							<img src="img/frame2.png" class="img-fluid w-100" alt="Hack.id hero">
 							<div class="carousel-caption-1">
 								<div class="carousel-caption-1-content" style="max-width: 900px;">
 									<!-- sub-headline -->
 									<h4 class="text-white text-uppercase fw-bold mb-4 fadeInLeft animated"
 										data-animation="fadeInLeft" data-delay="1s" style="animation-delay:1s;">
-										Build • Learn • Ship
+										Team Up • Build Fast • Win Big
 									</h4>
 
 									<!-- main headline -->
 									<h1 class="display-2 text-capitalize text-white mb-4 fadeInLeft animated"
 										data-animation="fadeInLeft" data-delay="1.3s" style="animation-delay:1.3s;">
-										Find Your Dream Team for the Next Hackathon
+										Discover your perfect hackathon squad on Hack.id
 									</h1>
 
 									<!-- blurb -->
 									<p class="mb-5 fs-5 text-white fadeInLeft animated"
 									   data-animation="fadeInLeft" data-delay="1.5s" style="animation-delay:1.5s;">
-									   Match with talented makers, designers, and developers in minutes.  
-									   Browse live hackathons, assemble a crew, and start shipping — all on Hack.id.
+									   Instantly match with top-tier devs, designers, and creators. Find events, form teams, and launch your next big idea
 									</p>
 
 									<!-- CTA buttons -->
@@ -176,13 +184,13 @@ if (isset($_SESSION['user_id'])) {
 							</div>
 						</div>
                         <div class="carousel-item">
-                            <img src="img/2carousel-2.jpg" class="img-fluid w-100" alt="Image">
+                            <img src="img/frame1.png" class="img-fluid w-100" alt="Image">
                             <div class="carousel-caption-2">
                                 <div class="carousel-caption-2-content" style="max-width: 900px;">
                                     <h4 class="text-white text-uppercase fw-bold mb-4 fadeInRight animated" data-animation="fadeInRight" data-delay="1s" style="animation-delay: 1s;" style="letter-spacing: 3px;">Build • Learn • Ship</h4>
                                     <h1 class="display-2 text-capitalize text-white mb-4 fadeInRight animated" data-animation="fadeInRight" data-delay="1.3s" style="animation-delay: 1.3s;">Find Your Dream Team for the Next Hackathon</h1>
                                     <p class="mb-5 fs-5 text-white fadeInRight animated" data-animation="fadeInRight" data-delay="1.5s" style="animation-delay: 1.5s;">Match with talented makers, designers, and developers in minutes. 
-									Browse live hackathons, assemble a crew, and start shipping — all on Hack.id. 
+									Browse live hackathons, assemble a crew, and start shipping. 
                                     </p>
                                     <div class="carousel-caption-2-content-btn fadeInRight animated" data-animation="fadeInRight" data-delay="1.7s" style="animation-delay: 1.7s;">
                                         <a class="btn btn-primary rounded-pill flex-shrink-0 py-3 px-5 me-2" href="/Hack.id/teamsearch.php">Find Your Team</a>
@@ -541,7 +549,7 @@ if (isset($_SESSION['user_id'])) {
                     </div>
                     <div class="col-lg-6 col-xl-4 wow fadeInUp" data-wow-delay="0.3s">
                         <div class="bg-transparent">
-                            <img src="img/water.png" class="img-fluid w-100" alt="">
+                            <img src="" class="img-fluid w-100" alt="">
                         </div>
                     </div>
                     <div class="col-lg-6 col-xl-4 wow fadeInRight" data-wow-delay="0.2s">
@@ -892,5 +900,4 @@ if (isset($_SESSION['user_id'])) {
     <!-- Template Javascript -->
     <script src="js/main.js"></script>
     </body>
-
 </html>

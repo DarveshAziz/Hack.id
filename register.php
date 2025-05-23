@@ -61,39 +61,31 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 ?>
 <!DOCTYPE html>
 <html lang="en">
+<?php include 'includes/header.php'; ?>
 <head>
   <meta charset="utf-8">
   <title>Register – Hack.id</title>
+  <link rel="Website Icon" type="png" href="img/Logo1.png" />
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <!-- Google Fonts + Icons + CSS -->
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap" rel="stylesheet" />
   <link href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" rel="stylesheet"/>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet" />
   <link href="lib/animate/animate.min.css" rel="stylesheet" />
   <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet" />
   <link href="css/bootstrap.min.css" rel="stylesheet" />
   <link href="css/style.css" rel="stylesheet" />
+  <!-- Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
 </head>
 <body>
-<?php include 'includes/header.php'; ?>
-
-<!-- Hero -->
-<div class="container-fluid page-header wow fadeIn mt-5" data-wow-delay="0.1s">
-  <div class="container text-center py-5">
-    <h1 class="display-4 text-white mb-3 animated slideInDown">Register</h1>
-    <nav aria-label="breadcrumb animated slideInDown">
-      <ol class="breadcrumb justify-content-center mb-0">
-        <li class="breadcrumb-item"><a href="index.php">Home</a></li>
-        <li class="breadcrumb-item text-primary" aria-current="page">Register</li>
-      </ol>
-    </nav>
-  </div>
-</div>
 
 <!-- Register Form -->
-<div class="container py-5">
+<div class="container py-5 mt-5">
   <div class="row justify-content-center wow fadeInUp" data-wow-delay="0.2s">
     <div class="col-md-6 col-lg-5">
       <div class="bg-light rounded p-5">
@@ -120,15 +112,21 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                    required>
             <label for="email">Email address</label>
           </div>
-          <div class="form-floating mb-3">
+          <div class="form-floating mb-3 position-relative">
             <input type="password" name="password" id="pass1" class="form-control"
                    placeholder="Password" required minlength="6">
             <label for="pass1">Password</label>
+            <span class="position-absolute top-50 end-0 translate-middle-y me-3" style="cursor:pointer;z-index:2;" onclick="togglePassword('pass1','togglePass1')">
+              <i class="fa fa-eye" id="togglePass1"></i>
+            </span>
           </div>
-          <div class="form-floating mb-4">
+          <div class="form-floating mb-4 position-relative">
             <input type="password" name="pass_confirm" id="pass2" class="form-control"
                    placeholder="Confirm Password" required>
             <label for="pass2">Confirm Password</label>
+            <span class="position-absolute top-50 end-0 translate-middle-y me-3" style="cursor:pointer;z-index:2;" onclick="togglePassword('pass2','togglePass2')">
+              <i class="fa fa-eye" id="togglePass2"></i>
+            </span>
           </div>
           <button class="btn btn-primary w-100 py-3 mb-3">Register</button>
 
@@ -158,7 +156,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
   </div>
 </div>
 
-<?php include 'includes/footer.php'; ?>
+
 
 <!-- JS Scripts -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
@@ -169,5 +167,20 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 <script src="lib/counterup/counterup.min.js"></script>
 <script src="lib/owlcarousel/owl.carousel.min.js"></script>
 <script src="js/main.js"></script>
+<script>
+  function togglePassword(inputId, iconId) {
+    const input = document.getElementById(inputId);
+    const icon = document.getElementById(iconId);
+    if (input.type === 'password') {
+      input.type = 'text';
+      icon.classList.remove('fa-eye');
+      icon.classList.add('fa-eye-slash');
+    } else {
+      input.type = 'password';
+      icon.classList.remove('fa-eye-slash');
+      icon.classList.add('fa-eye');
+    }
+  }
+</script>
 </body>
 </html>

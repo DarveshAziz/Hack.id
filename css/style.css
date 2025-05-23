@@ -245,6 +245,13 @@
         display: none;
     }
 }
+.navbar .navbar-nav {
+  margin-left: auto;
+  margin-right: auto;
+  /* if for some reason your nav isn’t flex already: */
+  display: flex !important;
+  justify-content: center;
+}
 /*** Carousel Hero Header Start ***/
 .carousel-header {
     position: relative;
