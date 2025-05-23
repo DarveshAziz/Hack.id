@@ -400,7 +400,7 @@ if (isset($_SESSION['user_id'])) {
                                 </div>
                                 <div class="bg-light rounded-bottom text-center py-4">
                                     <h4 class="mb-3">Malvinshah Haris</h4>
-                                    <p class="mb-0">Back End & Secuirty</p>
+                                    <p class="mb-0">Back End & Security</p>
                                 </div>
                             </div>
                         </div>
@@ -422,7 +422,7 @@ if (isset($_SESSION['user_id'])) {
                                 </div>
                                 <div class="bg-light rounded-bottom text-center py-4">
                                     <h4 class="mb-3">Darvesh Aziz</h4>
-                                    <p class="mb-0">Back End & Secuirty</p>
+                                    <p class="mb-0">Back End & Security</p>
                                 </div>
                             </div>
                         </div>

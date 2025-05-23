@@ -2037,7 +2037,6 @@ textarea.form-control-lg {
   background-size: contain;
   border: 1px solid rgba(0, 0, 0, 0.25);
   appearance: none;
-  color-adjust: exact;
 }
 .form-check-input[type="checkbox"] {
   border-radius: 0.25em;
@@ -3208,7 +3207,6 @@ fieldset:disabled .btn {
   color: gray;
   text-align: left;
   list-style: none;
-  background-color: #fff;
   background-clip: padding-box;
   border: 1px solid rgba(0, 0, 0, 0.15);
   border-radius: 10px;
@@ -3397,7 +3395,7 @@ fieldset:disabled .btn {
   padding: 0.25rem 1rem;
   clear: both;
   font-weight: 400;
-  color: #212529;
+  color: #582ec4;
   text-align: inherit;
   white-space: nowrap;
   background-color: rgba(0, 0, 0, 0);
