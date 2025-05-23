@@ -25,6 +25,16 @@
   z-index: 99;
 }
 
+.h4.d-inline-block:hover,
+.h4.d-inline-block:focus {
+  color: #8938ed !important;
+}
+
+.h4.mb-3:hover,
+.h4.mb-3:focus {
+  color: #8938ed !important;
+}
+
 /*** Button Start ***/
 .btn {
   font-weight: 600;
@@ -443,13 +453,16 @@
   flex-direction: column;
   align-items: center;
   text-align: center;
-  background: var(--bs-white);
+  background: #212121;
   border-radius: 10px;
   transition: 0.5s;
 }
 
 .feature .feature-item:hover {
   box-shadow: 0 0 45px rgba(0, 0, 0, 0.08);
+  border-color: #6132d7;
+  box-shadow: 0 0 50px rgba(97, 50, 215, 0.3);
+  transform: translateY(-1px);
 }
 
 .feature .feature-item .feature-icon {
@@ -475,8 +488,9 @@
 }
 
 .feature .feature-item:hover a.btn:hover {
-  color: var(--bs-primary) !important;
+  color: #fff !important;
 }
+
 /*** Features End ***/
 
 /*** About Start ***/
@@ -539,7 +553,7 @@
   left: 0;
   bottom: 0;
   border-radius: 10px;
-  background: var(--bs-primary);
+  background: #452499;
   transition: 0.5s;
   z-index: 1;
 }
@@ -561,7 +575,7 @@
 }
 
 .service-item:hover .service-content a:hover {
-  color: var(--bs-secondary);
+  color: #351c76;
 }
 
 .service-item:hover .service-content p {

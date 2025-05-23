@@ -339,39 +339,39 @@ if (isset($_SESSION['user_id'])) {
             <div class="container py-5">
                 <div class="text-center mx-auto pb-5 wow fadeInUp" data-wow-delay="0.2s" style="max-width: 800px;">
                     <h4 class="text-uppercase text-primary">Our Feature</h4>
-                    <h1 class="display-3 text-capitalize mb-3">A Trusted Name In Bottled Water Industry</h1>
+                    <h1 class="display-3 text-capitalize mb-3">Your Launchpad For Hackathon Success</h1>
                 </div>
                 <div class="row g-4">
                     <div class=" col-md-6 col-lg-6 col-xl-3 wow fadeInUp" data-wow-delay="0.2s">
                         <div class="feature-item p-4">
-                            <div class="feature-icon mb-3"><i class="fas fa-hand-holding-water text-white fa-3x"></i></div>
-                            <a href="#" class="h4 mb-3">Quality Check</a>
-                            <p class="mb-3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero repellat deleniti necessitatibus</p>
-                            <a href="#" class="btn text-secondary">Read More <i class="fa fa-angle-right"></i></a>
+                            <div class="feature-icon mb-3"><i class="fas fa-handshake text-white fa-3x"></i></div>
+                            <a href="#" class="h4 mb-3">Teammate Finder</a>
+                            <p class="mb-3">Connect with skilled and passionate individuals.</p>
+                            <a href="#" class="btn text-secondary">Find Teammates <i class="fa fa-angle-right"></i></a>
                         </div>
                     </div>
                     <div class="col-md-6 col-lg-6 col-xl-3 wow fadeInUp" data-wow-delay="0.4s">
                         <div class="feature-item p-4">
-                            <div class="feature-icon mb-3"><i class="fas fa-filter text-white fa-3x"></i></div>
-                            <a href="#" class="h4 mb-3">5 Steps Filtration</a>
-                            <p class="mb-3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero repellat deleniti necessitatibus</p>
-                            <a href="#" class="btn text-secondary">Read More <i class="fa fa-angle-right"></i></a>
+                            <div class="feature-icon mb-3"><i class="fas fa-chalkboard-teacher text-white fa-3x"></i></div>
+                            <a href="#" class="h4 mb-3">Ask a Mentor</a>
+                            <p class="mb-3">Get expert advice from experienced mentors.</p>
+                            <a href="#" class="btn text-secondary">Get Advice <i class="fa fa-angle-right"></i></a>
                         </div>
                     </div>
                     <div class="col-md-6 col-lg-6 col-xl-3 wow fadeInUp" data-wow-delay="0.6s">
                         <div class="feature-item p-4">
-                            <div class="feature-icon mb-3"><i class="fas fa-recycle text-white fa-3x"></i></div>
-                            <a href="#" class="h4 mb-3">Composition</a>
-                            <p class="mb-3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero repellat deleniti necessitatibus</p>
-                            <a href="#" class="btn text-secondary">Read More <i class="fa fa-angle-right"></i></a>
+                            <div class="feature-icon mb-3"><i class="fas fa-search text-white fa-3x"></i></div>
+                            <a href="#" class="h4 mb-3">Hackathon Finder</a>
+                            <p class="mb-3">Discover exciting hackathons happening globally or locally.</p>
+                            <a href="#" class="btn text-secondary">Explore Events <i class="fa fa-angle-right"></i></a>
                         </div>
                     </div>
                     <div class="col-md-6 col-lg-6 col-xl-3 wow fadeInUp" data-wow-delay="0.8s">
                         <div class="feature-item p-4">
-                            <div class="feature-icon mb-3"><i class="fas fa-microscope text-white fa-3x"></i></div>
-                            <a href="#" class="h4 mb-3">Lab Control</a>
-                            <p class="mb-3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero repellat deleniti necessitatibus</p>
-                            <a href="#" class="btn text-secondary">Read More <i class="fa fa-angle-right"></i></a>
+                            <div class="feature-icon mb-3"><i class="fas fa-file-alt text-white fa-3x"></i></div>
+                            <a href="#" class="h4 mb-3">Skill Assessment</a>
+                            <p class="mb-3">Identify your strengths and areas for growth.</p>
+                            <a href="#" class="btn text-secondary">Test Your Skill <i class="fa fa-angle-right"></i></a>
                         </div>
                     </div>
                 </div>
@@ -510,7 +510,7 @@ if (isset($_SESSION['user_id'])) {
                                             <p class="mb-0">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quas provident maiores quisquam.</p>
                                         </div>
                                         <div class="ps-4">
-                                            <div class="service-btn"><i class="fas fa-hand-holding-water text-white fa-2x"></i></div>
+                                            <div class="service-btn"><i class="fas fa-handshake text-white fa-2x"></i></div>
                                         </div>
                                     </div>
                                 </div>
