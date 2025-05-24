@@ -646,12 +646,12 @@
 /*** Blog Start ***/
 .blog .blog-item {
   border-radius: 10px;
-  background: var(--bs-light);
+  background: #1f1f1f;
   transition: 0.5s;
 }
 
 .blog .blog-item:hover {
-  box-shadow: 0 0 45px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 0 15px #6132d7;
 }
 
 .blog .blog-item .blog-img {
