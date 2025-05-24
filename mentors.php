@@ -115,13 +115,13 @@ if (isset($_SESSION['user_id'])) {
 
 						<!-- logout pill -->
 						<a href="logout.php"
-						   class="btn btn-secondary rounded-pill d-inline-flex flex-shrink-0 py-2 px-4">
+						   class="btn-mentor btn-kedua rounded-pill d-inline-flex flex-shrink-0 py-2 px-4">
 						   Logout
 						</a>
 					<?php else: ?>
 						<!-- guest sees the login pill -->
 						<a href="login.php"
-						   class="btn btn-primary rounded-pill d-inline-flex flex-shrink-0 py-2 px-4 ms-3">
+						   class="btn-mentor btn-pertama rounded-pill d-inline-flex flex-shrink-0 py-2 px-4 ms-3">
 						   Login
 						</a>
 					<?php endif; ?>
@@ -136,7 +136,7 @@ if (isset($_SESSION['user_id'])) {
         </section>
 
         <section class="search-section">
-            <div class="container">
+            <div class="container-search">
                 <div class="search-form">
                     <input type="text" class="search-input" id="searchInput" placeholder="Search by name, skill, or role...">
                 </div>
@@ -218,7 +218,7 @@ if (isset($_SESSION['user_id'])) {
                         <textarea id="message" class="form-control form-textarea" placeholder="What would you like to discuss with the mentor?"></textarea>
                     </div>
                     
-                    <button type="button" id="submitBooking" class="btn btn-primary">Confirm Booking</button>
+                    <button type="button" id="submitBooking" class="btn-mentor btn-pertama">Confirm Booking</button>
                 </div>
                 
                 <div id="confirmation" class="confirmation">
@@ -226,7 +226,7 @@ if (isset($_SESSION['user_id'])) {
                     <h2>Booking Confirmed!</h2>
                     <p>Your session has been successfully booked.</p>
                     <p id="confirmationDetails"></p>
-                    <button type="button" id="closeConfirmation" class="btn btn-primary" style="margin-top: 1rem;">Close</button>
+                    <button type="button" id="closeConfirmation" class="btn-mentor btn-pertama" style="margin-top: 1rem;">Close</button>
                 </div>
             </div>
         </div>
@@ -238,15 +238,15 @@ if (isset($_SESSION['user_id'])) {
                 <div class="col-lg-7">
                     <div class="position-relative mx-auto">
                         <input class="form-control rounded-pill w-100 py-3 ps-4 pe-5" type="text" placeholder="Email address to Subscribe">
-                        <button type="button" class="btn btn-secondary rounded-pill position-absolute top-0 end-0 py-2 px-4 mt-2 me-2">Subscribe</button>
+                        <button type="button" class="btn-mentor btn-kedua rounded-pill position-absolute top-0 end-0 py-2 px-4 mt-2 me-2">Subscribe</button>
                     </div>
                 </div>
                 <div class="col-lg-5">
                     <div class="d-flex align-items-center justify-content-center justify-content-lg-end">
-                        <a class="btn btn-secondary btn-md-square rounded-circle me-3" href=""><i class="fab fa-facebook-f"></i></a>
-                        <a class="btn btn-secondary btn-md-square rounded-circle me-3" href=""><i class="fab fa-twitter"></i></a>
-                        <a class="btn btn-secondary btn-md-square rounded-circle me-3" href=""><i class="fab fa-instagram"></i></a>
-                        <a class="btn btn-secondary btn-md-square rounded-circle me-0" href=""><i class="fab fa-linkedin-in"></i></a>
+                        <a class="btn-mentor btn-kedua btn-md-square rounded-circle me-3" href=""><i class="fab fa-facebook-f"></i></a>
+                        <a class="btn-mentor btn-kedua btn-md-square rounded-circle me-3" href=""><i class="fab fa-twitter"></i></a>
+                        <a class="btn-mentor btn-kedua btn-md-square rounded-circle me-3" href=""><i class="fab fa-instagram"></i></a>
+                        <a class="btn-mentor btn-kedua btn-md-square rounded-circle me-0" href=""><i class="fab fa-linkedin-in"></i></a>
                     </div>
                 </div>
             </div>
@@ -259,7 +259,7 @@ if (isset($_SESSION['user_id'])) {
                         </div>
                         <div class="position-relative">
                             <input class="form-control rounded-pill w-100 py-3 ps-4 pe-5" type="text" placeholder="Enter your email">
-                            <button type="button" class="btn btn-secondary rounded-pill position-absolute top-0 end-0 py-2 mt-2 me-2">SignUp</button>
+                            <button type="button" class="btn-mentor btn-kedua rounded-pill position-absolute top-0 end-0 py-2 mt-2 me-2">SignUp</button>
                         </div>
                     </div>
                 </div>
