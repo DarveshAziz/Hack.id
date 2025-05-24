@@ -439,9 +439,9 @@ if (isset($_SESSION['user_id'])) {
                     <div class="col-md-6 col-lg-6 col-xl-3 wow fadeInUp" data-wow-delay="0.2s">
                         <div class="counter-item">
                             <div class="counter-item-icon mx-auto">
-                                <i class="fas fa-thumbs-up fa-3x text-white"></i>
+                                 <i class="fas fa-trophy fa-3x text-white"></i>
                             </div>
-                            <h4 class="text-white my-4">Happy Clients</h4>
+                            <h4 class="text-white my-4">Competition</h4>
                             <div class="counter-counting">
                                 <span class="text-white fs-2 fw-bold" data-toggle="counter-up">456</span>
                                 <span class="h1 fw-bold text-white">+</span>
@@ -451,9 +451,9 @@ if (isset($_SESSION['user_id'])) {
                     <div class="col-md-6 col-lg-6 col-xl-3 wow fadeInUp" data-wow-delay="0.4s">
                         <div class="counter-item">
                             <div class="counter-item-icon mx-auto">
-                                <i class="fas fa-truck fa-3x text-white"></i>
+                                <i class="fas fa-chalkboard-teacher fa-3x text-white"></i>
                             </div>
-                            <h4 class="text-white my-4">Transport</h4>
+                            <h4 class="text-white my-4">Mentor</h4>
                             <div class="counter-counting">
                                 <span class="text-white fs-2 fw-bold" data-toggle="counter-up">513</span>
                                 <span class="h1 fw-bold text-white">+</span>
@@ -465,7 +465,7 @@ if (isset($_SESSION['user_id'])) {
                             <div class="counter-item-icon mx-auto">
                                 <i class="fas fa-users fa-3x text-white"></i>
                             </div>
-                            <h4 class="text-white my-4">Employees</h4>
+                            <h4 class="text-white my-4">Teams</h4>
                             <div class="counter-counting">
                                 <span class="text-white fs-2 fw-bold" data-toggle="counter-up">53</span>
                                 <span class="h1 fw-bold text-white">+</span>
