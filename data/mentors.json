@@ -1,0 +1,92 @@
+[
+  {
+    "id": 1,
+    "name": "Alex Rodriguez",
+    "title": "Senior Frontend Developer",
+    "avatar": "https://i.pravatar.cc/300?img=11",
+    "skills": ["JavaScript", "React", "TypeScript", "CSS", "HTML"],
+    "bio": "With over 8 years of experience in frontend development, Alex specializes in building scalable web applications using modern JavaScript frameworks. He's passionate about teaching React best practices and helping junior developers grow.",
+    "shortDescription": "Frontend expert with a passion for React and modern JavaScript."
+  },
+  {
+    "id": 2,
+    "name": "Priya Sharma",
+    "title": "DevOps Engineer",
+    "avatar": "https://i.pravatar.cc/300?img=25",
+    "skills": ["Docker", "Kubernetes", "AWS", "CI/CD", "Terraform"],
+    "bio": "Priya is a certified AWS solutions architect with extensive experience in cloud infrastructure and DevOps practices. She helps teams implement efficient CI/CD pipelines and container orchestration solutions.",
+    "shortDescription": "Cloud infrastructure specialist with expertise in AWS and Kubernetes."
+  },
+  {
+    "id": 3,
+    "name": "Marcus Johnson",
+    "title": "Data Scientist",
+    "avatar": "https://i.pravatar.cc/300?img=3",
+    "skills": [
+      "Python",
+      "Machine Learning",
+      "TensorFlow",
+      "Data Analysis",
+      "SQL"
+    ],
+    "bio": "Marcus has a PhD in Computer Science and specializes in machine learning algorithms. He has experience in both academic research and industry applications of AI/ML, particularly in natural language processing and computer vision.",
+    "shortDescription": "AI/ML expert specializing in Python and TensorFlow implementations."
+  },
+  {
+    "id": 4,
+    "name": "Sophia Chen",
+    "title": "Backend Developer",
+    "avatar": "https://i.pravatar.cc/300?img=5",
+    "skills": ["Node.js", "Express", "MongoDB", "GraphQL", "API Design"],
+    "bio": "Sophia has built numerous scalable backend systems using Node.js and various database technologies. She's an advocate for clean code architecture and efficient API design patterns.",
+    "shortDescription": "Backend specialist with expertise in Node.js and database optimization."
+  },
+  {
+    "id": 5,
+    "name": "Richard Torres",
+    "title": "Mobile App Developer",
+    "avatar": "https://i.pravatar.cc/300?img=33",
+    "skills": ["React Native", "Swift", "Kotlin", "Firebase", "UI/UX"],
+    "bio": "Richard has shipped multiple successful mobile applications on both iOS and Android platforms. He specializes in cross-platform development using React Native and has deep knowledge of native mobile development as well.",
+    "shortDescription": "Mobile app expert with both cross-platform and native development skills."
+  },
+  {
+    "id": 6,
+    "name": "Mira Khan",
+    "title": "UX/UI Designer",
+    "avatar": "https://i.pravatar.cc/300?img=13",
+    "skills": [
+      "User Research",
+      "Wireframing",
+      "Figma",
+      "Design Systems",
+      "Prototyping"
+    ],
+    "bio": "Mira has worked with startups and enterprise companies to create intuitive and delightful user experiences. She combines user research with modern design principles to build products that users love.",
+    "shortDescription": "Design expert focused on creating intuitive and user-friendly interfaces."
+  },
+  {
+    "id": 7,
+    "name": "David Lee",
+    "title": "Cybersecurity Specialist",
+    "avatar": "https://i.pravatar.cc/300?img=9",
+    "skills": [
+      "Network Security",
+      "Penetration Testing",
+      "Security Audits",
+      "Cryptography",
+      "Risk Assessment"
+    ],
+    "bio": "David is a certified security professional with experience protecting systems against various cyber threats. He conducts security audits, penetration testing, and helps teams implement secure coding practices.",
+    "shortDescription": "Security expert specializing in threat detection and secure systems design."
+  },
+  {
+    "id": 8,
+    "name": "Elena Rodriguez",
+    "title": "Blockchain Developer",
+    "avatar": "https://i.pravatar.cc/300?img=32",
+    "skills": ["Solidity", "Ethereum", "Smart Contracts", "Web3.js", "DeFi"],
+    "bio": "Elena is at the forefront of blockchain technology, having built several DeFi applications and NFT platforms. She's passionate about the potential of decentralized systems and enjoys mentoring developers new to blockchain.",
+    "shortDescription": "Blockchain specialist with expertise in Ethereum and smart contract development."
+  }
+]
