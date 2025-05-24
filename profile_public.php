@@ -93,7 +93,7 @@ $theirOwnedTeams = [];
 }
 </style>
 </head>
-<body class="pt-5">
+<body class="">
 
 <?php include 'includes/header.php'; ?>`
 

@@ -244,7 +244,7 @@ if (isset($_SESSION['user_id'])) {
                     <div class=" col-md-6 col-lg-6 col-xl-3 wow fadeInUp" data-wow-delay="0.2s">
                         <div class="feature-item p-4">
                             <div class="feature-icon mb-3"><i class="fas fa-handshake text-white fa-3x"></i></div>
-                            <a href="#" class="h4 mb-3">Teammate Finder</a>
+                            <h1 class="h4 mb-3">Teammate Finder</h1>
                             <p class="mb-3">Connect with skilled and passionate individuals.</p>
                             <a href="#" class="btn text-secondary">Find Teammates <i class="fa fa-angle-right"></i></a>
                         </div>
@@ -252,7 +252,7 @@ if (isset($_SESSION['user_id'])) {
                     <div class="col-md-6 col-lg-6 col-xl-3 wow fadeInUp" data-wow-delay="0.4s">
                         <div class="feature-item p-4">
                             <div class="feature-icon mb-3"><i class="fas fa-chalkboard-teacher text-white fa-3x"></i></div>
-                            <a href="#" class="h4 mb-3">Ask a Mentor</a>
+                            <h1 class="h4 mb-3">Ask a Mentor</h1>
                             <p class="mb-3">Get expert advice from experienced mentors.</p>
                             <a href="#" class="btn text-secondary">Get Advice <i class="fa fa-angle-right"></i></a>
                         </div>
@@ -260,7 +260,7 @@ if (isset($_SESSION['user_id'])) {
                     <div class="col-md-6 col-lg-6 col-xl-3 wow fadeInUp" data-wow-delay="0.6s">
                         <div class="feature-item p-4">
                             <div class="feature-icon mb-3"><i class="fas fa-search text-white fa-3x"></i></div>
-                            <a href="#" class="h4 mb-3">Hackathon Finder</a>
+                            <h1 class="h4 mb-3">Hackathon Finder</h1>
                             <p class="mb-3">Discover exciting hackathons happening globally or locally.</p>
                             <a href="#" class="btn text-secondary">Explore Events <i class="fa fa-angle-right"></i></a>
                         </div>
@@ -268,7 +268,7 @@ if (isset($_SESSION['user_id'])) {
                     <div class="col-md-6 col-lg-6 col-xl-3 wow fadeInUp" data-wow-delay="0.8s">
                         <div class="feature-item p-4">
                             <div class="feature-icon mb-3"><i class="fas fa-file-alt text-white fa-3x"></i></div>
-                            <a href="#" class="h4 mb-3">Skill Assessment</a>
+                            <h1 class="h4 mb-3">Skill Assessment</h1>
                             <p class="mb-3">Identify your strengths and areas for growth.</p>
                             <a href="#" class="btn text-secondary">Test Your Skill <i class="fa fa-angle-right"></i></a>
                         </div>
