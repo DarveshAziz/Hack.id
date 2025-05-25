@@ -1322,7 +1322,7 @@ body {
   font-weight: 500;
 }
 
-.form-control {
+.form-control-mentor {
   width: 100%;
   background-color: #333;
   border: 1px solid var(--border-color);
@@ -1332,7 +1332,7 @@ body {
   font-family: "Poppins", sans-serif;
 }
 
-.form-control:focus {
+.form-control-mentor {
   outline: none;
   border-color: var(--primary);
 }

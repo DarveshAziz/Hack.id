@@ -205,17 +205,17 @@ if (isset($_SESSION['user_id'])) {
                     <h3>Your Information</h3>
                     <div class="form-group">
                         <label for="fullName" class="form-label">Full Name</label>
-                        <input type="text" id="fullName" class="form-control" placeholder="Your full name">
+                        <input type="text" id="fullName" class="form-control-mentor" placeholder="Your full name">
                     </div>
                     
                     <div class="form-group">
                         <label for="email" class="form-label">Email</label>
-                        <input type="email" id="email" class="form-control" placeholder="Your email address">
+                        <input type="email" id="email" class="form-control-mentor" placeholder="Your email address">
                     </div>
                     
                     <div class="form-group">
                         <label for="message" class="form-label">Message</label>
-                        <textarea id="message" class="form-control form-textarea" placeholder="What would you like to discuss with the mentor?"></textarea>
+                        <textarea id="message" class="form-control-mentor form-textarea" placeholder="What would you like to discuss with the mentor?"></textarea>
                     </div>
                     
                     <button type="button" id="submitBooking" class="btn-mentor btn-pertama">Confirm Booking</button>
@@ -237,7 +237,7 @@ if (isset($_SESSION['user_id'])) {
             <div class="row g-5 mb-5 align-items-center">
                 <div class="col-lg-7">
                     <div class="position-relative mx-auto">
-                        <input class="form-control rounded-pill w-100 py-3 ps-4 pe-5" type="text" placeholder="Email address to Subscribe">
+                        <input class="form-control-mentor rounded-pill w-100 py-3 ps-4 pe-5" type="text" placeholder="Email address to Subscribe">
                         <button type="button" class="btn-mentor btn-kedua rounded-pill position-absolute top-0 end-0 py-2 px-4 mt-2 me-2">Subscribe</button>
                     </div>
                 </div>
@@ -258,7 +258,7 @@ if (isset($_SESSION['user_id'])) {
                             <p class="mb-3">Dolor amet sit justo amet elitr clita ipsum elitr est.Lorem ipsum dolor sit amet, consectetur adipiscing elit consectetur adipiscing elit.</p>
                         </div>
                         <div class="position-relative">
-                            <input class="form-control rounded-pill w-100 py-3 ps-4 pe-5" type="text" placeholder="Enter your email">
+                            <input class="form-control-mentor rounded-pill w-100 py-3 ps-4 pe-5" type="text" placeholder="Enter your email">
                             <button type="button" class="btn-mentor btn-kedua rounded-pill position-absolute top-0 end-0 py-2 mt-2 me-2">SignUp</button>
                         </div>
                     </div>
