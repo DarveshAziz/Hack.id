@@ -152,7 +152,6 @@ body {
 
 /* Search Form Styling */
 .container > form {
-  background: var(--card-bg);
   padding: 2rem;
   border-radius: 20px;
   box-shadow: 0 10px 30px var(--shadow-color);
@@ -168,6 +167,12 @@ body {
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
 }
 
+.input-group-text {
+  background: var(--primary-color);
+  border: none;
+  color: white;
+  font-weight: 500;
+}
 
 .form-control {
   background: rgba(255, 255, 255, 0.05);
@@ -540,6 +545,7 @@ body::before {
         <div class="input-group">
           <input class="form-control" placeholder="Search by name"
                  name="q" value="<?= htmlspecialchars($q) ?>">
+          <span class="input-group-text"><i class="fas fa-search"></i></span>
         </div>
       </div>
     </div>
