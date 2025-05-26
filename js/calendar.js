@@ -237,9 +237,9 @@ function renderCalendar() {
     let isFullyBooked = false;
     if (currentMentor) {
       const dateStr = day.toISOString().slice(0, 10);
-      const bookedSlots = bookings
+      bookedSlots = bookings
         .filter(b =>
-          (b.mentor_id == currentMentor.id || b.mentorId == currentMentor.id) &&
+          String(b.mentor_id) == String(currentMentor.id) &&
           b.date === dateStr
         )
         .map(b => b.time);
@@ -326,9 +326,7 @@ function generateTimeSlots() {
         const dateStr = selectedDate.toISOString().slice(0, 10);
         bookedSlots = bookings
           .filter(b =>
-            (b.mentor_id == currentMentor.id || b.mentorId == currentMentor.id) &&
-            (b.date === dateStr)
-          )
+            (b.mentor_id == currentMentor.id) && (b.date === dateStr))
           .map(b => b.time);
       }
 
