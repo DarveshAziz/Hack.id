@@ -1,0 +1,4 @@
+# filepath: c:\xampp\htdocs\Hack.id\.htaccess
+<FilesMatch "\.(css)$">
+  Header set Cache-Control "public, max-age=604800"
+</FilesMatch>

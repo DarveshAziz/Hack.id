@@ -1,0 +1,247 @@
+{
+  "title": "Frontend Frameworks",
+  "description": "Test your knowledge of modern JavaScript ES6+, React fundamentals, hooks, state management, and component lifecycle.",
+  "difficulty": "Intermediate to Advanced",
+  "questions": [
+    {
+      "id": 1,
+      "question": "What is the correct way to write an arrow function in JavaScript ES6?",
+      "options": [
+        "function() => {}",
+        "() => {}",
+        "=> () {}",
+        "function => ()"
+      ],
+      "answer": 1,
+      "explanation": "Arrow functions in ES6 are written with parentheses for parameters (which can be empty), followed by the arrow => and then the function body."
+    },
+    {
+      "id": 2,
+      "question": "Which of the following is the correct way to destructure an object in JavaScript?",
+      "options": [
+        "const {name, age} = person;",
+        "const [name, age] = person;",
+        "const {person.name, person.age} = variables;",
+        "const name, age = destruct(person);"
+      ],
+      "answer": 0,
+      "explanation": "Object destructuring uses curly braces {} to extract properties by name. The syntax const {name, age} = person; extracts the 'name' and 'age' properties from the 'person' object."
+    },
+    {
+      "id": 3,
+      "question": "What does JSX stand for in React?",
+      "options": [
+        "JavaScript XML",
+        "JavaScript Extension",
+        "JavaScript Syntax",
+        "JavaScript eXperience"
+      ],
+      "answer": 0,
+      "explanation": "JSX stands for JavaScript XML. It's a syntax extension for JavaScript that looks similar to HTML and is used with React to describe what the UI should look like."
+    },
+    {
+      "id": 4,
+      "question": "In React, what is the correct way to render a list of items from an array?",
+      "options": [
+        "items.forEach(item => <div>{item}</div>)",
+        "for(let i=0; i<items.length; i++) { <div>{items[i]}</div> }",
+        "items.map(item => <div key={item.id}>{item}</div>)",
+        "<for item in items><div>{item}</div></for>"
+      ],
+      "answer": 2,
+      "explanation": "In React, the most common way to render a list is to use the map() method to transform each item in the array into a JSX element. The key prop is important for React's reconciliation process."
+    },
+    {
+      "id": 5,
+      "question": "What is the purpose of the 'key' prop when rendering lists in React?",
+      "options": [
+        "It's used as a CSS selector to style the list items",
+        "It helps React identify which items have changed, are added, or are removed",
+        "It's required to access the list item in event handlers",
+        "It specifies the order of items in the list"
+      ],
+      "answer": 1,
+      "explanation": "The 'key' prop helps React identify which items have changed, are added, or are removed. It gives elements a stable identity and helps with efficient re-rendering."
+    },
+    {
+      "id": 6,
+      "question": "What is the correct way to pass props to a React component?",
+      "options": [
+        "<MyComponent props={name: 'John'} />",
+        "<MyComponent name='John' />",
+        "<MyComponent props.name='John' />",
+        "<MyComponent>name='John'</MyComponent>"
+      ],
+      "answer": 1,
+      "explanation": "Props are passed to React components as attributes in JSX. The correct syntax is to include the prop name and value directly as an attribute."
+    },
+    {
+      "id": 7,
+      "question": "What is the purpose of the useState hook in React?",
+      "options": [
+        "To create global state that persists between page reloads",
+        "To add state management capabilities to functional components",
+        "To replace the need for component lifecycle methods",
+        "To synchronize state between different components"
+      ],
+      "answer": 1,
+      "explanation": "The useState hook allows functional components to have state variables. It returns a stateful value and a function to update it, enabling state management in functional components."
+    },
+    {
+      "id": 8,
+      "question": "What is the purpose of the useEffect hook in React?",
+      "options": [
+        "To create side effects in functional components",
+        "To optimize performance by preventing unnecessary re-renders",
+        "To create local state in functional components",
+        "To handle user input events"
+      ],
+      "answer": 0,
+      "explanation": "The useEffect hook lets you perform side effects in functional components. It's similar to componentDidMount, componentDidUpdate, and componentWillUnmount combined in class components."
+    },
+    {
+      "id": 9,
+      "question": "Which of the following is NOT a feature of React's Virtual DOM?",
+      "options": [
+        "It's a lightweight copy of the actual DOM",
+        "It allows React to update only what has changed",
+        "It directly modifies the browser's DOM for every state change",
+        "It helps improve performance by minimizing DOM operations"
+      ],
+      "answer": 2,
+      "explanation": "React's Virtual DOM does NOT directly modify the browser's DOM for every state change. Instead, it creates a virtual representation, calculates the differences, and then efficiently updates only the necessary parts of the actual DOM."
+    },
+    {
+      "id": 10,
+      "question": "What is the correct way to define a component in React?",
+      "options": [
+        "component MyComponent() { return <div>Hello</div>; }",
+        "function MyComponent() { return <div>Hello</div>; }",
+        "const MyComponent = () => { return <div>Hello</div>; }",
+        "Both B and C are correct"
+      ],
+      "answer": 3,
+      "explanation": "In React, components can be defined either as functions (option B) or as arrow functions assigned to constants (option C). Both are valid ways to create functional components."
+    },
+    {
+      "id": 11,
+      "question": "What does the spread operator (...) do in JavaScript?",
+      "options": [
+        "It creates a loop through all array elements",
+        "It combines multiple arrays or objects, or spreads an array into function arguments",
+        "It removes duplicate values from an array",
+        "It spreads a string into individual characters"
+      ],
+      "answer": 1,
+      "explanation": "The spread operator (...) in JavaScript can be used to expand an array into its elements, combine multiple arrays or objects, or spread an array into function arguments."
+    },
+    {
+      "id": 12,
+      "question": "What is the correct way to conditionally render a component in React?",
+      "options": [
+        "<if condition={isVisible}><MyComponent /></if>",
+        "{isVisible ? <MyComponent /> : null}",
+        "<MyComponent visible={isVisible} />",
+        "<show when={isVisible}><MyComponent /></show>"
+      ],
+      "answer": 1,
+      "explanation": "In React, conditional rendering is typically done using JavaScript's ternary operator or logical && operator. The ternary operator (condition ? expressionIfTrue : expressionIfFalse) is a common pattern."
+    },
+    {
+      "id": 13,
+      "question": "What is Redux in the context of React applications?",
+      "options": [
+        "A built-in React library for handling forms",
+        "A state management library for JavaScript applications",
+        "A UI component library for React",
+        "A tool for testing React components"
+      ],
+      "answer": 1,
+      "explanation": "Redux is a state management library for JavaScript applications, often used with React. It provides a predictable state container that helps manage application state in a consistent way."
+    },
+    {
+      "id": 14,
+      "question": "What happens when you call setState in a React component?",
+      "options": [
+        "The component immediately re-renders with the new state",
+        "The state updates immediately, but the component doesn't re-render",
+        "The state update is scheduled, and React may batch multiple updates for performance",
+        "All child components are forced to re-render regardless of their props"
+      ],
+      "answer": 2,
+      "explanation": "When you call setState, React schedules an update to the component's state object. It doesn't make changes to the state immediately but creates a pending state transition. For performance reasons, React may batch multiple setState calls into a single update."
+    },
+    {
+      "id": 15,
+      "question": "What is the purpose of React.memo()?",
+      "options": [
+        "To create a memoized version of a component that only re-renders if its props change",
+        "To memorize the previous state of a component",
+        "To create a component that renders only once",
+        "To store values in memory between renders"
+      ],
+      "answer": 0,
+      "explanation": "React.memo() is a higher-order component that memoizes a component, preventing unnecessary re-renders if the component's props haven't changed. It's used for performance optimization."
+    },
+    {
+      "id": 16,
+      "question": "What is a pure component in React?",
+      "options": [
+        "A component written in pure JavaScript without JSX",
+        "A component that only renders UI and doesn't manage state",
+        "A component that only re-renders when its props or state change",
+        "A component without side effects"
+      ],
+      "answer": 2,
+      "explanation": "A pure component in React only re-renders when its props or state change. React.PureComponent implements a shouldComponentUpdate method with a shallow comparison of props and state."
+    },
+    {
+      "id": 17,
+      "question": "Which of the following is NOT a React Hook?",
+      "options": [
+        "useState",
+        "useEffect",
+        "useHistory",
+        "useComponent"
+      ],
+      "answer": 3,
+      "explanation": "useComponent is not a standard React Hook. useState, useEffect, and useHistory (from React Router) are valid hooks."
+    },
+    {
+      "id": 18,
+      "question": "What is the correct way to handle forms in React?",
+      "options": [
+        "Forms in React must use a separate library like Formik",
+        "React has a built-in Form component that handles all form logic",
+        "Forms can be controlled (with React state) or uncontrolled (using DOM references)",
+        "Forms in React can only be handled using class components, not functional components"
+      ],
+      "answer": 2,
+      "explanation": "In React, forms can be implemented as either controlled components (where form data is handled by React state) or uncontrolled components (where form data is handled by the DOM itself using refs)."
+    },
+    {
+      "id": 19,
+      "question": "What does the following ES6 code do? const { a, b, ...rest } = obj;",
+      "options": [
+        "Assigns the properties 'a' and 'b' from obj to variables, and the remaining properties to a 'rest' object",
+        "Creates a deep copy of obj with only the properties 'a' and 'b'",
+        "Removes properties 'a' and 'b' from obj and stores the remaining properties in 'rest'",
+        "Creates a new object with properties 'a', 'b', and all properties from the 'rest' object"
+      ],
+      "answer": 0,
+      "explanation": "This is object destructuring with rest syntax. It extracts the properties 'a' and 'b' from obj into individual variables, and collects all remaining properties into a new object called 'rest'."
+    },
+    {
+      "id": 20,
+      "question": "What is the correct way to update an object in state in a React functional component?",
+      "options": [
+        "setState(prevState.user.name = 'John')",
+        "setState({ ...state, user: { ...state.user, name: 'John' } })",
+        "setState(state.user.name = 'John')",
+        "setState(Object.assign(state, { user: { name: 'John' } }))"
+      ],
+      "answer": 1,
+      "explanation": "When updating nested objects in React state, you should create a new object that includes all the properties of the previous state object (using the spread operator), and then override the specific properties you want to change. This maintains immutability."
+    }
+  ]
+}

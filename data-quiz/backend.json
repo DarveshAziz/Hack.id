@@ -1,0 +1,247 @@
+{
+  "title": "Backend Development",
+  "description": "Test your knowledge of PHP, Node.js, HTTP methods, REST APIs, sessions, and database connections.",
+  "difficulty": "Intermediate",
+  "questions": [
+    {
+      "id": 1,
+      "question": "Which of the following is the correct way to declare a variable in PHP?",
+      "options": [
+        "variable x = 5;",
+        "var x = 5;",
+        "$x = 5;",
+        "let x = 5;"
+      ],
+      "answer": 2,
+      "explanation": "In PHP, variables are declared using the dollar sign ($) followed by the variable name."
+    },
+    {
+      "id": 2,
+      "question": "What is the purpose of the 'require' statement in PHP?",
+      "options": [
+        "To declare a required variable",
+        "To include and evaluate a specified file, throwing a fatal error if the file is not found",
+        "To check if a certain PHP extension is installed",
+        "To declare a function that must be implemented"
+      ],
+      "answer": 1,
+      "explanation": "The 'require' statement includes and evaluates a specified file, throwing a fatal error if the file cannot be included."
+    },
+    {
+      "id": 3,
+      "question": "In Node.js, which module is used to create a web server?",
+      "options": [
+        "url",
+        "server",
+        "http",
+        "web"
+      ],
+      "answer": 2,
+      "explanation": "The 'http' module in Node.js allows you to create a web server that listens for requests."
+    },
+    {
+      "id": 4,
+      "question": "Which HTTP method is idempotent, meaning that making multiple identical requests has the same effect as making a single request?",
+      "options": [
+        "POST",
+        "GET",
+        "DELETE",
+        "PATCH"
+      ],
+      "answer": 1,
+      "explanation": "GET requests are idempotent, meaning that making multiple identical GET requests should have the same effect as a single request."
+    },
+    {
+      "id": 5,
+      "question": "What is the purpose of the $_SESSION superglobal in PHP?",
+      "options": [
+        "To store variables and share them across different pages/requests for a specific user",
+        "To retrieve form data submitted with the GET method",
+        "To retrieve form data submitted with the POST method",
+        "To access server-related information"
+      ],
+      "answer": 0,
+      "explanation": "The $_SESSION superglobal is used to store variables and share them across different pages/requests for a specific user session."
+    },
+    {
+      "id": 6,
+      "question": "What does the following PHP code do? $result = $conn->query('SELECT * FROM users');",
+      "options": [
+        "Establishes a connection to a database",
+        "Creates a new 'users' table in the database",
+        "Executes a SQL query to retrieve all records from the 'users' table",
+        "Checks if the 'users' table exists in the database"
+      ],
+      "answer": 2,
+      "explanation": "This code executes a SQL query using the query method on a database connection object to retrieve all records from the 'users' table."
+    },
+    {
+      "id": 7,
+      "question": "Which Node.js module is commonly used for parsing incoming request bodies?",
+      "options": [
+        "path",
+        "body-parser",
+        "request",
+        "url-parser"
+      ],
+      "answer": 1,
+      "explanation": "The 'body-parser' module is used to parse incoming request bodies in a middleware before your handlers, available under the req.body property."
+    },
+    {
+      "id": 8,
+      "question": "In PHP, what is the difference between '==' and '==='?",
+      "options": [
+        "No difference, they can be used interchangeably",
+        "== checks only for value equality, === checks for both value and type equality",
+        "== is used for numeric comparison, === is used for string comparison",
+        "== is used for assignment, === is used for comparison"
+      ],
+      "answer": 1,
+      "explanation": "In PHP, == is the equality operator that compares values after type juggling, while === is the identity operator that compares both value and type without type conversion."
+    },
+    {
+      "id": 9,
+      "question": "What is REST in the context of web development?",
+      "options": [
+        "Returning Error Status Text",
+        "Remote Execution Service Technology",
+        "Representational State Transfer",
+        "Request-Execute-Service-Terminate"
+      ],
+      "answer": 2,
+      "explanation": "REST stands for Representational State Transfer. It's an architectural style for designing networked applications that relies on a stateless, client-server communication protocol, typically HTTP."
+    },
+    {
+      "id": 10,
+      "question": "Which HTTP status code indicates a successful request?",
+      "options": [
+        "200",
+        "404",
+        "500",
+        "302"
+      ],
+      "answer": 0,
+      "explanation": "HTTP status code 200 (OK) indicates that the request has succeeded."
+    },
+    {
+      "id": 11,
+      "question": "What does the following PHP function do? json_decode($string, true);",
+      "options": [
+        "Encrypts the string using JSON format",
+        "Converts a JSON string to a PHP array",
+        "Validates if a string is valid JSON",
+        "Compresses a string using JSON algorithm"
+      ],
+      "answer": 1,
+      "explanation": "json_decode() takes a JSON encoded string and converts it into a PHP variable. When the second parameter is set to true, it returns an associative array instead of an object."
+    },
+    {
+      "id": 12,
+      "question": "In Node.js, what is the purpose of the 'Promise' object?",
+      "options": [
+        "To guarantee that a function will return a value",
+        "To represent a value that may not be available yet but will be resolved at some point",
+        "To promise that code will execute without errors",
+        "To ensure backward compatibility with older Node.js versions"
+      ],
+      "answer": 1,
+      "explanation": "A Promise in Node.js represents a value that may not be available yet but will be resolved at some point. It's used for asynchronous operations and has states: pending, fulfilled, or rejected."
+    },
+    {
+      "id": 13,
+      "question": "What is CSRF in web security?",
+      "options": [
+        "Client Side Request Forgery",
+        "Cross-Site Request Forgery",
+        "Cross-Server Resource Framework",
+        "Client Server Response Format"
+      ],
+      "answer": 1,
+      "explanation": "CSRF stands for Cross-Site Request Forgery. It's an attack that forces an end user to execute unwanted actions on a web application in which they're currently authenticated."
+    },
+    {
+      "id": 14,
+      "question": "Which PHP function is used to start a session?",
+      "options": [
+        "session_begin()",
+        "session_create()",
+        "session_start()",
+        "session_initialize()"
+      ],
+      "answer": 2,
+      "explanation": "session_start() creates a session or resumes the current one based on a session identifier passed via a GET or POST request, or passed via a cookie."
+    },
+    {
+      "id": 15,
+      "question": "What does the acronym ORM stand for in the context of database interaction?",
+      "options": [
+        "Object-Relational Mapping",
+        "Operational Relationship Management",
+        "Object Reference Model",
+        "Optimized Record Manipulation"
+      ],
+      "answer": 0,
+      "explanation": "ORM stands for Object-Relational Mapping. It's a programming technique for converting data between incompatible type systems in object-oriented programming languages."
+    },
+    {
+      "id": 16,
+      "question": "What is the purpose of the following Node.js code? const fs = require('fs');",
+      "options": [
+        "Imports the File System module for working with files",
+        "Creates a new file system on the server",
+        "Sets up a full-stack development environment",
+        "Connects to a database using the FS protocol"
+      ],
+      "answer": 0,
+      "explanation": "This code imports the built-in File System (fs) module in Node.js, which provides an API for interacting with the file system."
+    },
+    {
+      "id": 17,
+      "question": "Which HTTP method should be used to update a resource on the server?",
+      "options": [
+        "GET",
+        "POST",
+        "PUT",
+        "DELETE"
+      ],
+      "answer": 2,
+      "explanation": "The PUT method is used to update a resource on the server. It replaces all current representations of the target resource with the request payload."
+    },
+    {
+      "id": 18,
+      "question": "What is the main advantage of using prepared statements in PHP when executing SQL queries?",
+      "options": [
+        "They make the code more readable",
+        "They improve performance by caching query plans",
+        "They help prevent SQL injection attacks",
+        "They automatically handle database connection errors"
+      ],
+      "answer": 2,
+      "explanation": "Prepared statements help prevent SQL injection attacks by separating SQL logic from data being supplied. This means user input is treated strictly as data and cannot be executed as code."
+    },
+    {
+      "id": 19,
+      "question": "In Node.js, what does the following code do? module.exports = { myFunction };",
+      "options": [
+        "Imports a function called myFunction from another module",
+        "Makes the myFunction function available for import in other files",
+        "Declares a new function called myFunction",
+        "Executes the myFunction function"
+      ],
+      "answer": 1,
+      "explanation": "This code exports an object containing the myFunction function, making it available for import in other files using require()."
+    },
+    {
+      "id": 20,
+      "question": "What is the purpose of the 'Content-Type' header in HTTP responses?",
+      "options": [
+        "To specify the size of the response content",
+        "To indicate the media type of the resource",
+        "To specify the content language",
+        "To indicate if the content has been modified"
+      ],
+      "answer": 1,
+      "explanation": "The Content-Type header is used to indicate the media type (or MIME type) of the resource, telling the client what kind of data is being returned (e.g., application/json, text/html)."
+    }
+  ]
+}
