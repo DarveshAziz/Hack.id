@@ -1,0 +1,247 @@
+{
+  "title": "Digital Product Design Fundamentals",
+  "description": "Check how well you know modern design tools and practices—from Adobe XD, Figma, and Sketch to usability testing, typography, and prototyping workflows.",
+  "difficulty": "Intermediate",
+  "questions": [
+    {
+      "id": 1,
+      "question": "In Figma, which keyboard shortcut instantly duplicates the currently selected layer or frame?",
+      "options": [
+        "Ctrl/Cmd +D",
+        "Alt/Option + Drag",
+        "Ctrl/Cmd +C then Ctrl/Cmd + V",
+        "Shift + Drag"
+      ],
+      "answer": 0,
+      "explanation": "Pressing Ctrl (Windows) or Cmd (macOS) + D creates an exact copy in place while preserving the selection."
+    },
+    {
+      "id": 2,
+      "question": "What is the former name Adobe XD used for what are now called Components?",
+      "options": [
+        "Modules",
+        "Symbols",
+        "Masters",
+        "Templates"
+      ],
+      "answer": 1,
+      "explanation": "Adobe XD originally called reusable design elements “Symbols” before aligning the term with other tools as “Components.”"
+    },
+    {
+      "id": 3,
+      "question": "Files created with Sketch are saved using which extension?",
+      "options": [
+        ".fig",
+        ".xd",
+        ".sketch",
+        ".psd"
+      ],
+      "answer": 2,
+      "explanation": "Sketch documents use the proprietary .sketch extension, essentially a zipped-up JSON package."
+    },
+    {
+      "id": 4,
+      "question": "Adobe XD’s Repeat Grid feature is primarily used to:",
+      "options": [
+        "Apply global color styles",
+        "Create scrollable artboards",
+        "Generate repeating lists or galleries from one base cell",
+        "Switch between design and prototype modes"
+      ],
+      "answer": 2,
+      "explanation": "Repeat Grid lets you drag to duplicate a cell horizontally and/or vertically while keeping spacing and content in sync."
+    },
+    {
+      "id": 5,
+      "question": "Which panel in Figma provides developers with CSS, iOS, and Android code snippets and allows direct asset download for hand-off?",
+      "options": [
+        "Inspect",
+        "Layers",
+        "Assets",
+        "Prototype"
+      ],
+      "answer": 0,
+      "explanation": "The Inspect panel exposes measurements, tokens, and export settings needed during developer hand-off."
+    },
+    {
+      "id": 6,
+      "question": "For vector icons destined for web use, which file format preserves scalability and small file size while remaining text-based?",
+      "options": [
+        "PNG",
+        "JPG",
+        "SVG",
+        "TIFF"
+      ],
+      "answer": 2,
+      "explanation": "Scalable Vector Graphics (SVG) is an XML-based format that scales without pixelation and can be styled with CSS."
+    },
+    {
+      "id": 7,
+      "question": "In typography, the vertical distance from the baseline to the top of lowercase letters such as “x” is called the:",
+      "options": [
+        "Ascender height",
+        "Leading",
+        "X-height",
+        "Cap height"
+      ],
+      "answer": 2,
+      "explanation": "X-height influences legibility and perceived font size, especially in UI labels."
+    },
+    {
+      "id": 8,
+      "question": "Which principle of visual hierarchy most directly guides the viewer’s eye by using size differences?",
+      "options": [
+        "Proximity",
+        "Contrast",
+        "Repetition",
+        "Alignment"
+      ],
+      "answer": 1,
+      "explanation": "Contrast—through scale, weight, or color—creates focal points and clarifies information priority."
+    },
+    {
+      "id": 9,
+      "question": "Low-fidelity wireframes are typically produced to:",
+      "options": [
+        "Show pixel-perfect typography choices",
+        "Validate layout concepts rapidly before heavy styling",
+        "Hand off spacing specs to developers",
+        "Benchmark production performance"
+      ],
+      "answer": 1,
+      "explanation": "Early wireframes focus on structure and flow, minimizing time invested before stakeholder alignment."
+    },
+    {
+      "id": 10,
+      "question": "During moderated usability testing, the facilitator’s primary responsibility is to:",
+      "options": [
+        "Guide participants but avoid leading them, asking clarifying questions after tasks",
+        "Silently observe without interacting at all",
+        "Explain the correct actions whenever the user hesitates",
+        "Write code fixes in real time"
+      ],
+      "answer": 0,
+      "explanation": "Moderators encourage think-aloud feedback and ensure tasks are completed while keeping bias minimal."
+    },
+    {
+      "id": 11,
+      "question": "In Figma, Auto Layout is especially useful for:",
+      "options": [
+        "Exporting raster assets",
+        "Creating data-driven charts",
+        "Building adaptive buttons, lists, and components that resize with content",
+        "Recording click-through prototype videos"
+      ],
+      "answer": 2,
+      "explanation": "Auto Layout lets frames adjust padding, direction, and spacing automatically when content changes."
+    },
+    {
+      "id": 12,
+      "question": "Which Sketch feature groups color, text, and effect presets so they can be reused across documents and shared in a team library?",
+      "options": [
+        "Shared Styles",
+        "Smart Layout",
+        "Hotspot Templates",
+        "Vector Networks"
+      ],
+      "answer": 0,
+      "explanation": "Shared Styles centralize design tokens—updating the style updates every linked layer."
+    },
+    {
+      "id": 13,
+      "question": "A user flow diagram primarily illustrates:",
+      "options": [
+        "The detailed pixel grid of each screen",
+        "How users move step-by-step through tasks to reach a goal",
+        "Every possible keyboard shortcut in the product",
+        "Database relationships between entities"
+      ],
+      "answer": 1,
+      "explanation": "User flows map decision points and screens, clarifying IA and revealing friction in journeys."
+    },
+    {
+      "id": 14,
+      "question": "Information Architecture (IA) in digital design focuses on:",
+      "options": [
+        "Back-end database indexing",
+        "Structuring and labeling content so people can find and understand it",
+        "Refining brand color palettes",
+        "Writing production CSS"
+      ],
+      "answer": 1,
+      "explanation": "IA deals with taxonomy, navigation, and content organization to support findability and usability."
+    },
+    {
+      "id": 15,
+      "question": "Which prototyping approach allows designers to define micro-interactions like button hover states without writing code inside Adobe XD?",
+      "options": [
+        "Time-triggered transitions",
+        "Component States",
+        "Voice triggers",
+        "Device preview mirroring"
+      ],
+      "answer": 1,
+      "explanation": "Component States enable toggling between default, hover, and active visuals to simulate interactive feedback."
+    },
+    {
+      "id": 16,
+      "question": "During asset handoff, providing a baseline grid and spacing values helps developers primarily with:",
+      "options": [
+        "Database schema design",
+        "Consistent implementation of layout rhythm",
+        "Marketing copywriting",
+        "Selecting cloud-hosting providers"
+      ],
+      "answer": 1,
+      "explanation": "Clear spacing tokens prevent subjective guesses and enforce the design system’s rhythm in code."
+    },
+    {
+      "id": 17,
+      "question": "Vector boolean operations such as Union, Subtract, Intersect, and Exclude are essential when:",
+      "options": [
+        "Combining multiple paths to craft a complex icon shape",
+        "Rasterizing layers for export",
+        "Adjusting kerning in body text",
+        "Embedding video content"
+      ],
+      "answer": 0,
+      "explanation": "Boolean ops merge or cut paths, letting you refine icons or illustrations while maintaining editability."
+    },
+    {
+      "id": 18,
+      "question": "Which Figma feature lets multiple designers collaborate in real time on the same file without version-conflict merges?",
+      "options": [
+        "Branching & Merging",
+        "Live Cursor Presence",
+        "FigJam Widgets",
+        "Outline Mode"
+      ],
+      "answer": 1,
+      "explanation": "Each collaborator’s cursor appears live, enabling synchronous editing akin to Google Docs for design."
+    },
+    {
+      "id": 19,
+      "question": "The ideal minimum number of participants recommended by Nielsen Norman Group for catching the majority of usability issues in a single round of testing is:",
+      "options": [
+        "3",
+        "5",
+        "12",
+        "20"
+      ],
+      "answer": 1,
+      "explanation": "NN/g studies show that about five users uncover 80 % of problems, balancing insight with test cost."
+    },
+    {
+      "id": 20,
+      "question": "When refining visual hierarchy, which CSS property would you most likely adjust to make headline text dominate body copy on a web page?",
+      "options": [
+        "font-weight",
+        "line-height",
+        "letter-spacing",
+        "text-decoration"
+      ],
+      "answer": 0,
+      "explanation": "Increasing font-weight (e.g., bold) elevates prominence, signaling importance within the hierarchy."
+    }
+  ]
+}

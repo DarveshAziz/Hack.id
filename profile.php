@@ -175,6 +175,14 @@ if ($_SERVER['REQUEST_METHOD']==='POST') {
 
     if(!$errors){ header('Location: profile.php?saved=1'); exit; }
 }
+
+function skillLabel(int $pct): string
+{
+	if ($pct == 0)  return 'N/A';
+    if ($pct < 50)  return 'Beginner';
+    if ($pct < 75)  return 'Intermediate';
+    return 'Advanced';
+}
 ?>
 <!DOCTYPE html><html lang="en"><head>
 <meta charset="utf-8">
@@ -503,47 +511,64 @@ h2, h3, h5{
   <hr class="my-4">
 
   <!-- skills -->
-  <h2 class="mb-3">Skill levels</h2>
+<h2 class="mb-3">Skill levels</h2>
 <?php
-$cat='';$sub='';
-foreach($skillRows as $s){
-  if($s['category']!==$cat){
-      $cat=$s['category'];$sub='';
-      echo "<h3 class='mt-4'>".$cat."</h3>";
-  }
-  if($s['subcategory']!==$sub){
-      $sub=$s['subcategory'];
-      echo "<h5 class='mt-3'>".$sub."</h5>";
-  }
-  $sid=$s['id']; $lvl=$userLvls[$sid]??0;
-  echo '<label class="skill-pill" style="--pct:'.$lvl.'">';
-  echo '<span class="circle"></span>'.htmlspecialchars($s['name']);
-  echo '<input type="range" min="0" max="100" value="'.$lvl.
-       '" name="skill['.$sid.']" class="w-100 ms-2"></label>';
+$cat = '';
+$sub = '';
+// Assuming $skillRows and $userLvls are populated as they were in your original file.
+// This loop will display skills based on the existing $skillRows structure.
+foreach ($skillRows as $s) {
+    if ($s['category'] !== $cat) {
+        $cat = $s['category'];
+        $sub = ''; // Reset subcategory when category changes
+        echo "<h3 class='mt-4'>" . htmlspecialchars($cat) . "</h3>";
+    }
+    if ($s['subcategory'] !== $sub) {
+        $sub = $s['subcategory'];
+        // You might want to hide "Core Role" if it's a generic subcategory after your changes
+        if ($sub !== 'Core Role') { 
+            echo "<h5 class='mt-3'>" . htmlspecialchars($sub) . "</h5>";
+        }
+    }
+    $sid = $s['id'];
+    $lvl = $userLvls[$sid] ?? 0;
+
+    // Output the skill pill without the range input
+    echo '<div class="skill-pill-container mb-2">'; // Added a container for layout flexibility
+    echo '  <span class="skill-pill" style="--pct:' . $lvl . ';">'; // Use span instead of label if no input
+    echo '    <span class="circle"></span>' . htmlspecialchars($s['name']);
+    $label = skillLabel($lvl);
+	echo '    <span class="badge bg-info ms-2">' . $label . '</span>';
+    echo '  </span>';
+    echo '</div>';
 }
 ?>
-  <div class="mt-4">
-     <button class="btn btn-primary">Save profile</button>
-  </div>
-</form>
+<div class="mt-4">
+    <button class="btn btn-primary">Save profile</button>
 </div>
-
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+</form> </div> <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
 <script>
-/* live skill circles */
-document.querySelectorAll('input[type=range]').forEach(r=>{
-  r.addEventListener('input',e=>{
-    e.target.parentElement.style.setProperty('--pct',e.target.value);
-  });
+/* live skill circles - This JavaScript is no longer needed as the range input is removed.
+document.querySelectorAll('input[type=range]').forEach(r => {
+    r.addEventListener('input', e => {
+        // This line would cause an error if r (the range input) doesn't exist.
+        // e.target.parentElement.style.setProperty('--pct', e.target.value);
+    });
 });
+*/
 
 /* avatar picker */
-const img=document.getElementById('avatarPreview');
-const file=document.getElementById('avatarInput');
-img.onclick=()=>file.click();
-file.onchange=e=>{
-   if(e.target.files && e.target.files[0])
-     img.src = URL.createObjectURL(e.target.files[0]);
-};
+const img = document.getElementById('avatarPreview');
+const file = document.getElementById('avatarInput');
+
+// It's good practice to check if elements exist before adding event listeners
+if (img && file) {
+    img.onclick = () => file.click();
+    file.onchange = e => {
+        if (e.target.files && e.target.files[0]) {
+            img.src = URL.createObjectURL(e.target.files[0]);
+        }
+    };
+}
 </script>
 </body></html>

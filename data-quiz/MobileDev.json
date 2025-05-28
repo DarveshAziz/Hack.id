@@ -1,0 +1,247 @@
+{
+  "title": "Mobile Development Essentials",
+  "description": "Measure your grasp of modern mobile-dev skills—Dart / Flutter, Kotlin, Swift, React Native, deployment pipelines, device APIs, data storage, and offline patterns.",
+  "difficulty": "Intermediate",
+  "questions": [
+    {
+      "id": 1,
+      "question": "In Flutter, which widget typically wraps the entire application to provide Material-design theming, navigation, and localization?",
+      "options": [
+        "MaterialApp",
+        "Scaffold",
+        "WidgetsApp",
+        "AppContainer"
+      ],
+      "answer": 0,
+      "explanation": "MaterialApp is the high-level convenience widget that sets up themes, routes, and other app-wide services."
+    },
+    {
+      "id": 2,
+      "question": "In Dart, which keyword defines a compile-time constant that can never change?",
+      "options": [
+        "final",
+        "var",
+        "const",
+        "static"
+      ],
+      "answer": 2,
+      "explanation": "const objects are created and frozen at compile time; final is run-time-immutable but not necessarily constant."
+    },
+    {
+      "id": 3,
+      "question": "In Kotlin coroutines, which keyword marks a function that can be suspended and resumed asynchronously?",
+      "options": [
+        "async",
+        "suspend",
+        "defer",
+        "await"
+      ],
+      "answer": 1,
+      "explanation": "Adding the suspend modifier lets the function call other suspend functions and run inside a coroutine."
+    },
+    {
+      "id": 4,
+      "question": "In Kotlin, declaring a variable as String? (with a question mark) means:",
+      "options": [
+        "It can hold either a string value or null",
+        "It is late-initialized but non-null",
+        "It is a compile-time constant string",
+        "It can hold only empty strings"
+      ],
+      "answer": 0,
+      "explanation": "The trailing ? marks the type as nullable, enabling Kotlin’s built-in null-safety checks."
+    },
+    {
+      "id": 5,
+      "question": "In SwiftUI, every custom view struct must conform to which protocol?",
+      "options": [
+        "UIViewControllerRepresentable",
+        "ObservableObject",
+        "View",
+        "SceneDelegate"
+      ],
+      "answer": 2,
+      "explanation": "A SwiftUI view is any type that conforms to the View protocol and provides a body property."
+    },
+    {
+      "id": 6,
+      "question": "Which SwiftUI property wrapper stores mutable state *inside* a view and triggers a re-render when it changes?",
+      "options": [
+        "@State",
+        "@Binding",
+        "@ObservedObject",
+        "@EnvironmentObject"
+      ],
+      "answer": 0,
+      "explanation": "@State is meant for simple, view-local pieces of state such as toggles or text-field values."
+    },
+    {
+      "id": 7,
+      "question": "Which Gradle task generates an optimized release APK ready for distribution on Google Play?",
+      "options": [
+        "assembleDebug",
+        "bundleRelease",
+        "assembleRelease",
+        "installRelease"
+      ],
+      "answer": 2,
+      "explanation": "Running ./gradlew assembleRelease builds a signed, shrinked APK (or AAB with bundle* tasks)."
+    },
+    {
+      "id": 8,
+      "question": "After you upload an iOS build to App Store Connect, TestFlight will list it as ________ before internal testers can install it.",
+      "options": [
+        "Processing",
+        "In Review",
+        "Ready for Testing",
+        "Expired"
+      ],
+      "answer": 2,
+      "explanation": "When App Store Connect finishes processing, the build status changes to “Ready for Testing.”"
+    },
+    {
+      "id": 9,
+      "question": "In React Native, AsyncStorage is primarily used to:",
+      "options": [
+        "Render long lists efficiently",
+        "Persist simple key-value data on the device",
+        "Schedule background jobs",
+        "Encrypt network traffic"
+      ],
+      "answer": 1,
+      "explanation": "AsyncStorage (or its community replacement) offers a tiny, promise-based key-value store for caching prefs and tokens."
+    },
+    {
+      "id": 10,
+      "question": "Which annotation in Android’s Room persistence library marks a DAO method that inserts entities into a table?",
+      "options": [
+        "@Query",
+        "@Insert",
+        "@Update",
+        "@Delete"
+      ],
+      "answer": 1,
+      "explanation": "@Insert generates SQL that performs an INSERT and returns the new row IDs if needed."
+    },
+    {
+      "id": 11,
+      "question": "To access the device’s precise GPS location on Android 13, which permission must be declared in AndroidManifest.xml?",
+      "options": [
+        "android.permission.ACCESS_NETWORK_STATE",
+        "android.permission.ACCESS_COARSE_LOCATION",
+        "android.permission.ACCESS_FINE_LOCATION",
+        "android.permission.INTERNET"
+      ],
+      "answer": 2,
+      "explanation": "ACCESS_FINE_LOCATION grants access to high-accuracy location sources such as GPS."
+    },
+    {
+      "id": 12,
+      "question": "In React Navigation v6, which component wraps your app’s navigator hierarchy to manage navigation state?",
+      "options": [
+        "NavigationContainer",
+        "StackNavigator",
+        "Screen",
+        "LinkingConfig"
+      ],
+      "answer": 0,
+      "explanation": "NavigationContainer is required once at the root to provide context for all navigators."
+    },
+    {
+      "id": 13,
+      "question": "Which popular Flutter plugin supplies a straightforward SQLite API on both Android and iOS?",
+      "options": [
+        "shared_preferences",
+        "hive",
+        "sqflite",
+        "path_provider"
+      ],
+      "answer": 2,
+      "explanation": "sqflite is the de-facto standard wrapper around the mobile SQLite C library."
+    },
+    {
+      "id": 14,
+      "question": "In native iOS development, the lightweight storage API commonly used for saving user preferences is:",
+      "options": [
+        "Core Data",
+        "UserDefaults (NSUserDefaults)",
+        "Keychain Services",
+        "FileManager"
+      ],
+      "answer": 1,
+      "explanation": "UserDefaults persists small key-value pairs like booleans, numbers, and strings across app launches."
+    },
+    {
+      "id": 15,
+      "question": "Which CLI command will launch a React Native app on an iOS simulator?",
+      "options": [
+        "npx react-native run-ios",
+        "npm start ios",
+        "expo start --ios",
+        "gradlew iosRun"
+      ],
+      "answer": 0,
+      "explanation": "The React Native CLI’s run-ios helper builds the Xcode project and boots the default simulator."
+    },
+    {
+      "id": 16,
+      "question": "In Dart’s asynchronous syntax, which keyword is paired with async to pause execution until a Future completes?",
+      "options": [
+        "defer",
+        "yield",
+        "await",
+        "then"
+      ],
+      "answer": 2,
+      "explanation": "await unwraps the result of a Future, resuming the function when the value arrives."
+    },
+    {
+      "id": 17,
+      "question": "In Android Jetpack Navigation, the navigation graph is typically defined in which resource directory?",
+      "options": [
+        "res/layout/",
+        "res/navigation/",
+        "res/values/",
+        "META-INF/"
+      ],
+      "answer": 1,
+      "explanation": "XML files in res/navigation/ describe destinations and actions for the Navigation component."
+    },
+    {
+      "id": 18,
+      "question": "Flutter’s Hot Reload differs from Hot Restart because Hot Reload:",
+      "options": [
+        "Recompiles the whole app and resets state",
+        "Injects code changes without losing current widget state",
+        "Clears application caches",
+        "Only works in release builds"
+      ],
+      "answer": 1,
+      "explanation": "Hot Reload patches running Dart code, preserving in-memory state for a fast dev loop."
+    },
+    {
+      "id": 19,
+      "question": "On iOS, application metadata such as bundle identifier, supported orientations, and usage-description strings are stored in:",
+      "options": [
+        "Info.plist",
+        "AppDelegate.swift",
+        "SceneDelegate.swift",
+        "Assets.xcassets"
+      ],
+      "answer": 0,
+      "explanation": "Info.plist (a property-list file) declares fundamental app configuration consumed by the OS."
+    },
+    {
+      "id": 20,
+      "question": "When designing an offline-first mobile app, which pattern caches changes locally and synchronizes them once connectivity returns?",
+      "options": [
+        "Client-server polling",
+        "Master-slave replication",
+        "Store-and-forward (sync) pattern",
+        "Direct remote queries"
+      ],
+      "answer": 2,
+      "explanation": "The store-and-forward approach records mutations in a local queue/database, then propagates them when the network is available."
+    }
+  ]
+}

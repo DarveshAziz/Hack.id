@@ -59,6 +59,14 @@ $theirOwnedTeams = [];
     $theirOwnedTeams = $stmt->get_result()->fetch_all(MYSQLI_ASSOC);
     $stmt->close();
 }
+
+function skillLabel(int $pct): string
+{
+	if ($pct == 0)  return 'N/A';
+    if ($pct < 50)  return 'Beginner';
+    if ($pct < 75)  return 'Intermediate';
+    return 'Advanced';
+}
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -122,7 +130,7 @@ $theirOwnedTeams = [];
                target="_blank" class="me-3"><i class="fas fa-globe me-1"></i>Website</a>
           <?php endif;?>
           <?php if($user['github']): ?>
-            <a href="https://github.com/<?= ltrim($user['github'],'https://github.com/')?>"
+            <a href="https://github.com/<?= ltrim($user['github'],'https://github.com/') ?>"
                target="_blank" class="me-3"><i class="fab fa-github me-1"></i>GitHub</a>
           <?php endif;?>
           <?php if($user['linkedin']): ?>
@@ -137,57 +145,60 @@ $theirOwnedTeams = [];
     <?php if($top3): ?>
     <div class="border-top px-4 py-3">
       <?php foreach ($top3 as $t): ?>
+        <?php $label = skillLabel((int)$t['level']); ?>
         <span class="skill-pill" style="--pct:<?= $t['level'] ?>;">
           <span class="circle"></span><?= htmlspecialchars($t['name']) ?>
+          <span class="badge bg-info ms-2"><?= $label ?></span>
         </span>
       <?php endforeach;?>
     </div>
     <?php endif; ?>
   </div>
-  <?php if (isset($_SESSION['user_id']) && $myOwnedTeams): ?>
-  <div class="nav-item dropdown ms-3">
-    <a class="nav-link dropdown-toggle" href="#" id="inviteDropdown"
-       data-bs-toggle="dropdown" aria-expanded="false">
-      Invite to Team
-    </a>
-    <ul class="dropdown-menu" aria-labelledby="inviteDropdown">
-      <?php foreach($myOwnedTeams as $team): ?>
-        <li>
-          <form action="invite_team.php" method="post" class="m-0 p-0">
-            <input type="hidden" name="team_id"    value="<?= (int)$team['id'] ?>">
-            <input type="hidden" name="to_user_id" value="<?= $viewId ?>"> 
-            <button type="submit" class="dropdown-item">
-              <?= htmlspecialchars($team['name']) ?>
-            </button>
-          </form>
-        </li>
-      <?php endforeach; ?>
-    </ul>
-  </div>
-<?php endif; ?>
 
-<?php if (isset($_SESSION['user_id']) && $theirOwnedTeams): ?>
-  <div class="dropdown mb-3">
-    <button class="btn btn-outline-success dropdown-toggle"
-            type="button" id="requestDropdown" data-bs-toggle="dropdown">
-      Request to Join
-    </button>
-    <ul class="dropdown-menu" aria-labelledby="requestDropdown">
-      <?php foreach ($theirOwnedTeams as $team): ?>
-        <li>
-          <a class="dropdown-item"
-             href="request_team.php?action=request
-                   &team_id=<?= $team['id'] ?>">
-            <?= htmlspecialchars($team['name']) ?>
-          </a>
-        </li>
-      <?php endforeach; ?>
-    </ul>
-  </div>
-<?php endif; ?>
+  <!-- team invites / requests -->
+  <?php if (isset($_SESSION['user_id']) && $myOwnedTeams): ?>
+    <div class="nav-item dropdown ms-3">
+      <a class="nav-link dropdown-toggle" href="#" id="inviteDropdown"
+         data-bs-toggle="dropdown" aria-expanded="false">
+        Invite to Team
+      </a>
+      <ul class="dropdown-menu" aria-labelledby="inviteDropdown">
+        <?php foreach($myOwnedTeams as $team): ?>
+          <li>
+            <form action="invite_team.php" method="post" class="m-0 p-0">
+              <input type="hidden" name="team_id"    value="<?= (int)$team['id'] ?>">
+              <input type="hidden" name="to_user_id" value="<?= $viewId ?>">
+              <button type="submit" class="dropdown-item">
+                <?= htmlspecialchars($team['name']) ?>
+              </button>
+            </form>
+          </li>
+        <?php endforeach; ?>
+      </ul>
+    </div>
+  <?php endif; ?>
+
+  <?php if (isset($_SESSION['user_id']) && $theirOwnedTeams): ?>
+    <div class="dropdown mb-3">
+      <button class="btn btn-outline-success dropdown-toggle"
+              type="button" id="requestDropdown" data-bs-toggle="dropdown">
+        Request to Join
+      </button>
+      <ul class="dropdown-menu" aria-labelledby="requestDropdown">
+        <?php foreach ($theirOwnedTeams as $team): ?>
+          <li>
+            <a class="dropdown-item"
+               href="request_team.php?action=request&team_id=<?= $team['id'] ?>">
+              <?= htmlspecialchars($team['name']) ?>
+            </a>
+          </li>
+        <?php endforeach; ?>
+      </ul>
+    </div>
+  <?php endif; ?>
 
   <?php if (isset($_SESSION['user_id']) && $_SESSION['user_id'] != $viewId): ?>
-  <a href="start_chat.php?uid=<?= $viewId ?>"
+    <a href="start_chat.php?uid=<?= $viewId ?>"
        class="btn btn-primary mt-3">
        <i class="fas fa-paper-plane me-1"></i>Message
     </a>
@@ -205,16 +216,17 @@ $theirOwnedTeams = [];
     foreach ($skills as $s):
       if ($s['category'] !== $currentCat){
          $currentCat = $s['category']; $currentSub='';
-         echo "<h3 class='mt-4'>{$currentCat}</h3>";
+         echo "<h3 class='mt-4'>".htmlspecialchars($currentCat)."</h3>";
       }
       if ($s['subcategory'] !== $currentSub){
          $currentSub = $s['subcategory'];
-         echo "<h5 class='mt-2'>{$currentSub}</h5>";
+         echo "<h5 class='mt-2'>".htmlspecialchars($currentSub)."</h5>";
       }
+      $label = skillLabel((int)$s['level']);
   ?>
       <span class="skill-pill" style="--pct:<?= $s['level'] ?>;">
         <span class="circle"></span><?= htmlspecialchars($s['name']) ?>
-        <small class="ms-1 fw-semibold"><?= $s['level'] ?>%</small>
+        <span class="badge bg-info ms-2"><?= $label ?></span>
       </span>
   <?php endforeach; ?>
 </div>

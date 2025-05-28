@@ -48,6 +48,14 @@ $users = $mysqli->query("
     $whereSQL
     ORDER  BY display_name
 ")->fetch_all(MYSQLI_ASSOC);
+
+function skillLabel(int $pct): string
+{
+	if ($pct == 0)  return 'N/A';
+    if ($pct < 50)  return 'Beginner';
+    if ($pct < 75)  return 'Intermediate';
+    return 'Advanced';
+}
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -613,17 +621,19 @@ body::before {
             </div>
           </div>
 
-          <!-- ─── top-3 skills ────────────────────────── -->
+          <!-- ─── top-3 skills (with label) ───────────── -->
           <?php foreach ($tops as $t): ?>
-            <span class="skill-pill" style="--pct:<?= $t['level'] ?>;">
-              <span class="circle"></span> <?= htmlspecialchars($t['name']) ?>
+            <?php $label = skillLabel((int)$t['level']); ?>
+            <span class="skill-pill d-inline-block mb-1" style="--pct:<?= $t['level'] ?>;">
+              <span class="circle"></span><?= htmlspecialchars($t['name']) ?>
+              <span class="badge bg-info ms-2"><?= $label ?></span>
             </span>
           <?php endforeach; ?>
           <a href="profile_public.php?id=<?= $u['id'] ?>" class="stretched-link" tabindex="0" aria-label="View profile"></a>
         </div>
 
         <div class="card-footer bg-transparent border-0">
-          
+          <!-- (reserved for future buttons / stats) -->
         </div>
       </div>
     </div>

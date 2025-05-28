@@ -1,0 +1,247 @@
+{
+  "title": "AI & Machine Learning Fundamentals",
+  "description": "Test your knowledge of core AI/ML concepts, from NumPy and pandas to model deployment and monitoring in the cloud.",
+  "difficulty": "Intermediate",
+  "questions": [
+    {
+      "id": 1,
+      "question": "In NumPy, which function creates an array of evenly spaced numbers over a specified interval?",
+      "options": [
+        "np.arange()",
+        "np.linspace()",
+        "np.random.rand()",
+        "np.range()"
+      ],
+      "answer": 1,
+      "explanation": "np.linspace(start, stop, num) returns an array of evenly spaced values between start and stop."
+    },
+    {
+      "id": 2,
+      "question": "In pandas, which method removes rows that contain missing values?",
+      "options": [
+        "dropna()",
+        "fillna()",
+        "isnull()",
+        "notnull()"
+      ],
+      "answer": 0,
+      "explanation": "dropna() eliminates rows (or columns) with NaN values, cleaning the dataset."
+    },
+    {
+      "id": 3,
+      "question": "Which high-level API in TensorFlow 2.x is commonly used to build and train deep-learning models?",
+      "options": [
+        "tf.keras",
+        "tf.estimator",
+        "tf.data",
+        "tf.summary"
+      ],
+      "answer": 0,
+      "explanation": "tf.keras provides a simplified, Pythonic interface for defining, training, and evaluating models."
+    },
+    {
+      "id": 4,
+      "question": "In PyTorch, what does calling model.eval() do?",
+      "options": [
+        "Enables gradient calculation for all layers",
+        "Sets the model to evaluation mode, disabling dropout and BatchNorm updates",
+        "Resets all model weights to their initial values",
+        "Switches the optimizer to stochastic gradient descent"
+      ],
+      "answer": 1,
+      "explanation": "model.eval() tells PyTorch you’re performing inference, so layers like Dropout and BatchNorm behave deterministically."
+    },
+    {
+      "id": 5,
+      "question": "Which Google Cloud service is specifically designed for training and deploying machine-learning models at scale?",
+      "options": [
+        "Cloud Functions",
+        "Vertex AI (formerly AI Platform)",
+        "Cloud Spanner",
+        "BigQuery"
+      ],
+      "answer": 1,
+      "explanation": "Vertex AI offers managed training, hyperparameter tuning, and scalable online/offline prediction."
+    },
+    {
+      "id": 6,
+      "question": "Which AWS service provides a fully managed platform for building, training, and deploying ML models?",
+      "options": [
+        "AWS Athena",
+        "Amazon SageMaker",
+        "AWS Lambda",
+        "Amazon Redshift"
+      ],
+      "answer": 1,
+      "explanation": "Amazon SageMaker handles the end-to-end ML workflow, from data labeling to model hosting."
+    },
+    {
+      "id": 7,
+      "question": "Which HTTP method is most commonly used by an inference REST API to send input data and receive predictions?",
+      "options": [
+        "GET",
+        "POST",
+        "PUT",
+        "DELETE"
+      ],
+      "answer": 1,
+      "explanation": "POST requests carry the input payload (often JSON) in the body and return the prediction in the response."
+    },
+    {
+      "id": 8,
+      "question": "In semantic versioning for model versioning (major.minor.patch), increasing the minor version typically indicates:",
+      "options": [
+        "Bug fixes only",
+        "Backward-compatible improvements, such as additional training data",
+        "Breaking changes to the model’s input/output interface",
+        "A rollback to a previous model"
+      ],
+      "answer": 1,
+      "explanation": "A minor bump signals new features or improvements that remain backward-compatible with existing clients."
+    },
+    {
+      "id": 9,
+      "question": "Which metric is NOT appropriate for evaluating a regression model?",
+      "options": [
+        "Mean Squared Error (MSE)",
+        "R-squared",
+        "Confusion Matrix",
+        "Mean Absolute Error (MAE)"
+      ],
+      "answer": 2,
+      "explanation": "A confusion matrix summarizes classification performance, not continuous regression predictions."
+    },
+    {
+      "id": 10,
+      "question": "When performing one-hot encoding of categorical variables, including all category columns can introduce which issue?",
+      "options": [
+        "Multicollinearity (dummy-variable trap)",
+        "Class imbalance",
+        "Overfitting due to under-sampling",
+        "Vanishing gradients"
+      ],
+      "answer": 0,
+      "explanation": "Leaving every dummy column causes perfect collinearity; dropping one reference column avoids this trap."
+    },
+    {
+      "id": 11,
+      "question": "Scaling features to have zero mean and unit variance is known as:",
+      "options": [
+        "Min-Max scaling",
+        "Standardization (Z-score)",
+        "Log transformation",
+        "Binning"
+      ],
+      "answer": 1,
+      "explanation": "Standardization transforms each feature by subtracting its mean and dividing by its standard deviation."
+    },
+    {
+      "id": 12,
+      "question": "Which TensorFlow utility converts a trained Keras model to a lightweight format for mobile and edge inference?",
+      "options": [
+        "tf.lite.TFLiteConverter.from_keras_model",
+        "tf.saved_model.save",
+        "tf.keras.models.save_model",
+        "tf.transform.TFTransformOutput"
+      ],
+      "answer": 0,
+      "explanation": "The TFLite converter turns the full model into a TensorFlow Lite FlatBuffer optimized for edge devices."
+    },
+    {
+      "id": 13,
+      "question": "In PyTorch, which utility efficiently loads data in parallel during training?",
+      "options": [
+        "torch.utils.data.DataLoader",
+        "torch.nn.Sequential",
+        "torch.optim",
+        "torch.autograd"
+      ],
+      "answer": 0,
+      "explanation": "DataLoader handles batching, shuffling, and multi-process data loading to keep the GPU fed."
+    },
+    {
+      "id": 14,
+      "question": "What is early stopping in model training?",
+      "options": [
+        "A method that halts training when validation performance no longer improves to prevent overfitting",
+        "A form of regularization that penalizes large weights",
+        "A data-augmentation technique",
+        "An optimizer that lowers the learning rate early in training"
+      ],
+      "answer": 0,
+      "explanation": "Early stopping monitors a validation metric and stops training once the metric stagnates or degrades."
+    },
+    {
+      "id": 15,
+      "question": "Which evaluation metric is particularly useful for imbalanced binary classification because it focuses on the positive class?",
+      "options": [
+        "Accuracy",
+        "Precision–Recall AUC",
+        "Mean Squared Error",
+        "R-squared"
+      ],
+      "answer": 1,
+      "explanation": "Precision–Recall AUC highlights the trade-off between precision and recall, which is crucial when the positive class is rare."
+    },
+    {
+      "id": 16,
+      "question": "What is drift monitoring in deployed ML models?",
+      "options": [
+        "Checking GPU usage over time",
+        "Tracking changes in input data distribution or model output quality",
+        "Saving periodic model checkpoints",
+        "Automating hyperparameter tuning"
+      ],
+      "answer": 1,
+      "explanation": "Data or concept drift detection alerts you when the production data diverges from the training distribution, signaling possible performance degradation."
+    },
+    {
+      "id": 17,
+      "question": "Which pandas operation stacks two DataFrames vertically (one below the other)?",
+      "options": [
+        "pd.merge()",
+        "pd.concat([df1, df2], axis=1)",
+        "pd.concat([df1, df2], axis=0)",
+        "df.join()"
+      ],
+      "answer": 2,
+      "explanation": "pd.concat(..., axis=0) appends rows, creating a single DataFrame with combined observations."
+    },
+    {
+      "id": 18,
+      "question": "Which hyperparameter-tuning technique systematically tries every combination of specified parameter values?",
+      "options": [
+        "Random Search",
+        "Grid Search",
+        "Bayesian Optimization",
+        "Hyperband"
+      ],
+      "answer": 1,
+      "explanation": "Grid Search exhaustively explores the Cartesian product of given hyperparameter grids."
+    },
+    {
+      "id": 19,
+      "question": "What is the primary difference between batch gradient descent and stochastic gradient descent (SGD)?",
+      "options": [
+        "Batch uses all training samples per update, whereas SGD updates using a single sample",
+        "Batch descent works only for linear models",
+        "SGD guarantees a lower final loss than batch descent",
+        "Batch gradient descent requires a GPU, whereas SGD does not"
+      ],
+      "answer": 0,
+      "explanation": "Batch descent computes gradients on the entire dataset; SGD approximates the gradient with one (or a few) samples, making updates faster but noisier."
+    },
+    {
+      "id": 20,
+      "question": "In transfer learning, which part of a pre-trained network is typically replaced to adapt the model to a new classification task?",
+      "options": [
+        "Early convolutional layers",
+        "BatchNorm layers",
+        "Final classification head",
+        "Weight initializers"
+      ],
+      "answer": 2,
+      "explanation": "The final fully connected or classifier layer is swapped so its output dimension matches the new task’s label set."
+    }
+  ]
+}

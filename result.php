@@ -1,6 +1,6 @@
 <?php
 // Start session for tracking user progress
-session_start();
+require_once __DIR__ . '/config.php';   // gives you $mysqli + session_start()
 
 // Check if topic is specified
 if (!isset($_GET['topic'])) {
@@ -58,6 +58,32 @@ $_SESSION[$topic]['score'] = $score;
 
 // Calculate percentage
 $percentage = ($score / $totalQuestions) * 100;
+
+$skillMap = [
+    'MachineLearning' => 1,  // AI & ML
+    'Backend'         => 4,
+    'CloudDevops'     => 5,
+    'Design'          => 3,
+    'Frontend'        => 2,
+    'MobileDev'       => 6
+];
+
+// Make sure we know who took the quiz and which quiz it was
+if (!empty($_SESSION['user_id']) && isset($skillMap[$topic])) {
+
+    $uid = (int) $_SESSION['user_id'];      // user_id
+    $sid = $skillMap[$topic];               // skill_id
+    $lvl = (int) round($percentage);        // 0-100 whole number
+
+    // INSERT … ON DUPLICATE KEY UPDATE  →  “upsert”
+    $sql  = "INSERT INTO user_skill (user_id, skill_id, level)
+             VALUES (?,?,?)
+             ON DUPLICATE KEY UPDATE level = VALUES(level)";
+    $stmt = $mysqli->prepare($sql);
+    $stmt->bind_param('iii', $uid, $sid, $lvl);
+    $stmt->execute();
+    $stmt->close();
+}
 
 // Determine skill level
 $skillLevel = '';

@@ -1,0 +1,247 @@
+{
+  "title": "Cloud & DevOps Essentials",
+  "description": "Gauge your grasp of Bash scripting, Terraform, YAML, DNS/CDN, monitoring, secrets management, CI/CD, Docker & Kubernetes, and modern infrastructure provisioning.",
+  "difficulty": "Intermediate",
+  "questions": [
+    {
+      "id": 1,
+      "question": "In Bash, what does the command echo $? print?",
+      "options": [
+        "The PID of the last background job",
+        "The exit status of the previously executed command",
+        "The total number of arguments passed to the script",
+        "The current value of the PATH variable"
+      ],
+      "answer": 1,
+      "explanation": "$? expands to the numeric exit code (0-255) returned by the most recently run command."
+    },
+    {
+      "id": 2,
+      "question": "Which Bash construct will execute a command only if the previous command fails?",
+      "options": [
+        "cmd1 && cmd2",
+        "cmd1 || cmd2",
+        "cmd1 ; cmd2",
+        "cmd1 & cmd2"
+      ],
+      "answer": 1,
+      "explanation": "cmd1 || cmd2 runs cmd2 only when cmd1 exits with a non-zero status."
+    },
+    {
+      "id": 3,
+      "question": "In Terraform, which block is used to pass values from one module to another?",
+      "options": [
+        "provider",
+        "variable",
+        "output",
+        "backend"
+      ],
+      "answer": 2,
+      "explanation": "output blocks expose information from a module so it can be consumed by parent configurations or other modules."
+    },
+    {
+      "id": 4,
+      "question": "What does the terraform state pull command do?",
+      "options": [
+        "Removes the local state file",
+        "Retrieves the current state and outputs it to stdout",
+        "Synchronizes remote and local backends",
+        "Shows the planned actions without applying them"
+      ],
+      "answer": 1,
+      "explanation": "terraform state pull fetches the latest state from the backend and prints it as JSON."
+    },
+    {
+      "id": 5,
+      "question": "In YAML, how do you denote a list of items?",
+      "options": [
+        "Comma-separated values on one line",
+        "Keys indented with two spaces",
+        "Dash (-) followed by a space before each item",
+        "Enclosing items in square brackets only"
+      ],
+      "answer": 2,
+      "explanation": "A leading dash and space mark each element in a YAML sequence, e.g., \"- item1\"."
+    },
+    {
+      "id": 6,
+      "question": "Which of these values will YAML interpret as boolean TRUE by default?",
+      "options": [
+        "\"yes\"",
+        "\"0\"",
+        "\"nil\"",
+        "\"off\""
+      ],
+      "answer": 0,
+      "explanation": "Unquoted yes/no/on/off/true/false are booleans; \"yes\" resolves to true."
+    },
+    {
+      "id": 7,
+      "question": "Which DNS record type maps a domain name directly to an IPv4 address?",
+      "options": [
+        "A record",
+        "AAAA record",
+        "CNAME record",
+        "MX record"
+      ],
+      "answer": 0,
+      "explanation": "An A record contains the IPv4 address for the host name."
+    },
+    {
+      "id": 8,
+      "question": "One primary benefit of using a Content Delivery Network (CDN) is:",
+      "options": [
+        "Automatic database sharding",
+        "Reduced latency via edge caching",
+        "Replacing DNS authoritative servers",
+        "Encrypting data at rest in RDS"
+      ],
+      "answer": 1,
+      "explanation": "CDNs cache content at geographically distributed edge nodes, lowering latency for end-users."
+    },
+    {
+      "id": 9,
+      "question": "In Prometheus, which metric type is intended only to increase (except on restart)?",
+      "options": [
+        "Gauge",
+        "Histogram",
+        "Counter",
+        "Summary"
+      ],
+      "answer": 2,
+      "explanation": "Counters are monotonically increasing, ideal for things like total HTTP requests."
+    },
+    {
+      "id": 10,
+      "question": "Grafana's primary role in a monitoring stack is to:",
+      "options": [
+        "Scrape metrics from targets",
+        "Store raw time-series data",
+        "Visualize and alert on data from multiple data sources",
+        "Act as a log shipper"
+      ],
+      "answer": 2,
+      "explanation": "Grafana connects to data sources (Prometheus, InfluxDB, Loki, etc.) to build dashboards and alerts."
+    },
+    {
+      "id": 11,
+      "question": "Which tool is commonly used to centrally store and dynamically issue secrets to applications?",
+      "options": [
+        "Consul",
+        "Vault",
+        "CloudWatch",
+        "Elastic Beanstalk"
+      ],
+      "answer": 1,
+      "explanation": "HashiCorp Vault secures, stores, and tightly controls access to tokens, passwords, certificates, and keys."
+    },
+    {
+      "id": 12,
+      "question": "Storing secrets directly in a Git-based CI/CD repository is discouraged mainly because:",
+      "options": [
+        "It slows down cloning performance",
+        "Secrets become part of immutable history and risk exposure",
+        "Git cannot store binary data",
+        "CI servers do not have network access to Git"
+      ],
+      "answer": 1,
+      "explanation": "Once secrets are committed, they persist in all clones and forks; rotating them is difficult."
+    },
+    {
+      "id": 13,
+      "question": "In a CI pipeline, the stage that runs automated tests typically executes:",
+      "options": [
+        "After code is merged into main",
+        "Before building application artifacts",
+        "Only on release branches",
+        "After deployment to production"
+      ],
+      "answer": 1,
+      "explanation": "Tests usually run right after code checkout/build to gate subsequent steps."
+    },
+    {
+      "id": 14,
+      "question": "Which CI/CD system uses a declarative YAML file named .github/workflows/* to define pipelines?",
+      "options": [
+        "GitLab CI",
+        "CircleCI",
+        "GitHub Actions",
+        "Jenkins"
+      ],
+      "answer": 2,
+      "explanation": "GitHub Actions leverages workflow files in the .github/workflows directory."
+    },
+    {
+      "id": 15,
+      "question": "In Docker, each RUN instruction in a Dockerfile creates:",
+      "options": [
+        "A new tag",
+        "A new image layer",
+        "A new container network",
+        "An additional entrypoint"
+      ],
+      "answer": 1,
+      "explanation": "Every RUN (and similar) command generates a layer cached for subsequent builds."
+    },
+    {
+      "id": 16,
+      "question": "Placing which directive early in a Dockerfile often maximizes build-cache reuse?",
+      "options": [
+        "COPY . .",
+        "RUN apt-get update",
+        "ENV APP_ENV=prod",
+        "FROM base-image:latest"
+      ],
+      "answer": 3,
+      "explanation": "\"FROM\" must be first; minimal earlier layers mean subsequent steps reuse cache when code changes."
+    },
+    {
+      "id": 17,
+      "question": "In Kubernetes, which Service type exposes a pod internally within the cluster only?",
+      "options": [
+        "LoadBalancer",
+        "NodePort",
+        "ClusterIP",
+        "ExternalName"
+      ],
+      "answer": 2,
+      "explanation": "ClusterIP is the default and restricts access to inside the cluster’s virtual network."
+    },
+    {
+      "id": 18,
+      "question": "A rolling update in a Kubernetes Deployment ensures:",
+      "options": [
+        "All old pods are deleted before new ones start",
+        "A fixed downtime window is scheduled",
+        "Pods are replaced incrementally, maintaining availability",
+        "The cluster version is upgraded"
+      ],
+      "answer": 2,
+      "explanation": "Rolling updates gradually spin up new replicas while terminating old ones, so service stays up."
+    },
+    {
+      "id": 19,
+      "question": "Idempotency in infrastructure provisioning means that:",
+      "options": [
+        "Every run must prompt for user confirmation",
+        "Running the same code repeatedly leads to the same resulting state",
+        "Resources are always destroyed before creation",
+        "Scripts halt on the first error"
+      ],
+      "answer": 1,
+      "explanation": "Idempotent IaC tools (Terraform, Ansible) converge to a desired state without causing redundant changes."
+    },
+    {
+      "id": 20,
+      "question": "Compared with AWS CloudFormation, Terraform is:",
+      "options": [
+        "Limited to a single cloud provider",
+        "Imperative rather than declarative",
+        "Able to manage resources across multiple clouds and SaaS products",
+        "Run exclusively as a managed service"
+      ],
+      "answer": 2,
+      "explanation": "Terraform’s provider ecosystem lets you declaratively manage infrastructure across clouds, on-prem, and third-party APIs."
+    }
+  ]
+}

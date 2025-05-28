@@ -1,0 +1,247 @@
+{
+  "title": "Databases & SQL",
+  "description": "Test your knowledge of SQL queries, JOIN operations, aggregate functions, database normalization, and optimization techniques.",
+  "difficulty": "Intermediate",
+  "questions": [
+    {
+      "id": 1,
+      "question": "Which SQL statement is used to retrieve data from a database?",
+      "options": [
+        "GET",
+        "SELECT",
+        "RETRIEVE",
+        "FETCH"
+      ],
+      "answer": 1,
+      "explanation": "The SELECT statement is used to retrieve data from a database. It's one of the most common SQL commands and is used to query one or more tables."
+    },
+    {
+      "id": 2,
+      "question": "Which SQL clause is used to filter rows in a SELECT statement?",
+      "options": [
+        "FILTER",
+        "WHERE",
+        "HAVING",
+        "GROUP BY"
+      ],
+      "answer": 1,
+      "explanation": "The WHERE clause is used to filter rows in a SELECT statement based on specified conditions. It comes after the FROM clause and before GROUP BY, if used."
+    },
+    {
+      "id": 3,
+      "question": "What does the following SQL query do? \n\nSELECT * FROM customers WHERE age > 25 ORDER BY last_name;",
+      "options": [
+        "Selects customers older than 25 and sorts them by first name",
+        "Selects customers older than 25 and sorts them by last name",
+        "Selects customers 25 or younger and sorts them by last name",
+        "Selects 25 customers and sorts them by last name"
+      ],
+      "answer": 1,
+      "explanation": "This SQL query selects all columns (* wildcard) from the customers table where the age is greater than 25, and sorts the results by the last_name column in ascending order."
+    },
+    {
+      "id": 4,
+      "question": "Which of the following JOIN types returns rows from the left table even if there are no matches in the right table?",
+      "options": [
+        "INNER JOIN",
+        "RIGHT JOIN",
+        "LEFT JOIN",
+        "FULL JOIN"
+      ],
+      "answer": 2,
+      "explanation": "A LEFT JOIN returns all rows from the left table and matching rows from the right table. If there's no match in the right table, NULL values are returned for the right table's columns."
+    },
+    {
+      "id": 5,
+      "question": "What is the purpose of the SQL GROUP BY clause?",
+      "options": [
+        "To sort the result set by one or more columns",
+        "To filter rows after aggregation",
+        "To group rows that have the same values into summary rows",
+        "To join tables based on a common column"
+      ],
+      "answer": 2,
+      "explanation": "The GROUP BY clause groups rows that have the same values into summary rows. It's often used with aggregate functions like COUNT, MAX, MIN, SUM, and AVG to generate summary reports."
+    },
+    {
+      "id": 6,
+      "question": "Which SQL function returns the number of rows in a specified column?",
+      "options": [
+        "SUM()",
+        "COUNT()",
+        "AVG()",
+        "TOTAL()"
+      ],
+      "answer": 1,
+      "explanation": "The COUNT() function returns the number of rows that match a specified criterion. COUNT(*) counts all rows in a table, while COUNT(column) counts all rows with non-NULL values in that column."
+    },
+    {
+      "id": 7,
+      "question": "What will the following SQL query return? \n\nSELECT department, COUNT(*) AS employee_count \nFROM employees \nGROUP BY department \nHAVING COUNT(*) > 10;",
+      "options": [
+        "All departments with their employee counts",
+        "Only departments with more than 10 employees",
+        "The top 10 departments by employee count",
+        "Departments with exactly 10 employees"
+      ],
+      "answer": 1,
+      "explanation": "This query groups employees by department, counts how many employees are in each department, and then filters to show only departments with more than 10 employees. The HAVING clause filters groups, while the WHERE clause filters rows before grouping."
+    },
+    {
+      "id": 8,
+      "question": "What does the SQL statement INSERT INTO do?",
+      "options": [
+        "Updates existing records in a table",
+        "Adds new records to a table",
+        "Deletes records from a table",
+        "Creates a new table"
+      ],
+      "answer": 1,
+      "explanation": "The INSERT INTO statement is used to add new records (rows) to a table in a database."
+    },
+    {
+      "id": 9,
+      "question": "Which of the following is NOT a valid SQL aggregate function?",
+      "options": [
+        "AVG()",
+        "COUNT()",
+        "MEDIAN()",
+        "MAX()"
+      ],
+      "answer": 2,
+      "explanation": "MEDIAN() is not a standard SQL aggregate function. The standard aggregate functions include COUNT(), SUM(), AVG(), MIN(), and MAX(). Some database systems may have proprietary functions for median calculations."
+    },
+    {
+      "id": 10,
+      "question": "What is a subquery in SQL?",
+      "options": [
+        "A table with less than 10 columns",
+        "A query nested inside another query",
+        "A partial query that must be completed",
+        "A query that runs automatically at set intervals"
+      ],
+      "answer": 1,
+      "explanation": "A subquery is a query nested inside another query. It can be used in SELECT, INSERT, UPDATE, or DELETE statements, or inside another subquery."
+    },
+    {
+      "id": 11,
+      "question": "Which normalization form ensures that a table has no partial dependencies?",
+      "options": [
+        "First Normal Form (1NF)",
+        "Second Normal Form (2NF)",
+        "Third Normal Form (3NF)",
+        "Boyce-Codd Normal Form (BCNF)"
+      ],
+      "answer": 1,
+      "explanation": "Second Normal Form (2NF) requires that a table is in 1NF and all non-key attributes are fully functionally dependent on the primary key. This means there are no partial dependencies (where a non-key attribute depends on only part of a composite primary key)."
+    },
+    {
+      "id": 12,
+      "question": "What is the purpose of an SQL index?",
+      "options": [
+        "To ensure data is stored in a specific order",
+        "To speed up data retrieval operations on a table",
+        "To encrypt sensitive data in the database",
+        "To validate data before insertion"
+      ],
+      "answer": 1,
+      "explanation": "An SQL index is used to speed up the retrieval of rows from a table. An index acts like a pointer to data in a table, allowing the database engine to find and retrieve specific rows much faster than it could without an index."
+    },
+    {
+      "id": 13,
+      "question": "Which SQL statement would you use to modify data in an existing table row?",
+      "options": [
+        "MODIFY",
+        "ALTER",
+        "CHANGE",
+        "UPDATE"
+      ],
+      "answer": 3,
+      "explanation": "The UPDATE statement is used to modify existing data in a table. It allows you to change the values in one or more columns of a single row or multiple rows."
+    },
+    {
+      "id": 14,
+      "question": "What does the following SQL query do? \n\nSELECT customers.name, orders.order_date \nFROM customers \nINNER JOIN orders ON customers.id = orders.customer_id;",
+      "options": [
+        "Selects all customers and their orders, including customers with no orders",
+        "Selects only customers who have placed at least one order",
+        "Selects all orders and their customers, including orders with no customer",
+        "Selects customers and orders where the IDs match, regardless of relationship"
+      ],
+      "answer": 1,
+      "explanation": "This query performs an INNER JOIN between the customers and orders tables on the customer ID. It returns only the rows where there is a match in both tables, meaning it will show only customers who have placed at least one order."
+    },
+    {
+      "id": 15,
+      "question": "What is a foreign key in a database?",
+      "options": [
+        "A key from a foreign database",
+        "A field in one table that uniquely identifies a row in another table",
+        "A key that cannot be modified once created",
+        "A key used for database encryption"
+      ],
+      "answer": 1,
+      "explanation": "A foreign key is a field (or collection of fields) in one table that refers to the primary key in another table. It establishes a link between the two tables and enforces referential integrity."
+    },
+    {
+      "id": 16,
+      "question": "Which of the following is an example of a DDL (Data Definition Language) command?",
+      "options": [
+        "SELECT",
+        "INSERT",
+        "CREATE",
+        "UPDATE"
+      ],
+      "answer": 2,
+      "explanation": "CREATE is a Data Definition Language (DDL) command used to define database structures like tables, indexes, views, etc. Other DDL commands include ALTER, DROP, and TRUNCATE. SELECT, INSERT, and UPDATE are DML (Data Manipulation Language) commands."
+    },
+    {
+      "id": 17,
+      "question": "What does the SQL DISTINCT keyword do?",
+      "options": [
+        "Sorts the result set in descending order",
+        "Filters out rows that don't match the WHERE clause",
+        "Eliminates duplicate rows from the result set",
+        "Separates results into different tables"
+      ],
+      "answer": 2,
+      "explanation": "The DISTINCT keyword in SQL is used to eliminate duplicate rows from the result set of a SELECT statement, returning only unique values."
+    },
+    {
+      "id": 18,
+      "question": "Which of the following statements would you use to delete a table from a database?",
+      "options": [
+        "DELETE TABLE table_name;",
+        "REMOVE TABLE table_name;",
+        "DROP TABLE table_name;",
+        "TRUNCATE TABLE table_name;"
+      ],
+      "answer": 2,
+      "explanation": "The DROP TABLE statement is used to remove a table definition and all data, indexes, triggers, constraints, and permission specifications for that table. TRUNCATE removes all rows but keeps the table structure."
+    },
+    {
+      "id": 19,
+      "question": "What is the purpose of the SQL LIKE operator?",
+      "options": [
+        "To compare values for similarity using pattern matching",
+        "To express approval of well-written queries",
+        "To connect two tables with similar structures",
+        "To select columns with preferred data types"
+      ],
+      "answer": 0,
+      "explanation": "The LIKE operator is used in the WHERE clause of a SQL statement to search for a specified pattern in a column. It's used for pattern matching with wildcard characters such as % (any string of zero or more characters) and _ (any single character)."
+    },
+    {
+      "id": 20,
+      "question": "Which of the following describes database normalization?",
+      "options": [
+        "The process of optimizing database storage by reducing redundancy",
+        "The process of adding indexes to speed up queries",
+        "The process of converting a database to a newer version",
+        "The process of adding security features to a database"
+      ],
+      "answer": 0,
+      "explanation": "Database normalization is the process of organizing data in a database to reduce redundancy and improve data integrity. It involves dividing large tables into smaller, more organized tables and defining relationships between them."
+    }
+  ]
+}
