@@ -63,7 +63,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <title>Register – Hack.id</title>
+  <title>Register - Hack.id</title>
   <link rel="Website Icon" type="png" href="img/Logo1.png" />
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <!-- Google Fonts + Icons + CSS -->

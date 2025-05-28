@@ -23,41 +23,217 @@ $otherId = ($conv['user1_id'] == $_SESSION['user_id'])
 //   . "</pre>";
 $messages = fetchMessages($mysqli, $cid);
 ?>
-<!doctype html><html><head>
+<!doctype html>
+<html>
+<head>
 <meta charset="utf-8"><title>Chat</title>
 <!-- Font -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
-      rel="stylesheet"
-    />
-<link href="css/bootstrap.min.css" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@0,400;0,600&display=swap" rel="stylesheet" />
+<link href="css/style.css" rel="stylesheet">
 <style>
-.chat-box{height:65vh;overflow-y:auto;border:1px solid #ddd;padding:1rem;}
-.msg{margin:.25rem 0}
-.msg.me  {text-align:right}
-.msg.you {text-align:left}
+:root {
+  --primary: #8938ed;
+  --secondary: #6132d7;
+  --card-bg: #2a2a2a;
+  --text-color: #f0f0f0;
+  --bubble-me: var(--primary);
+  --bubble-you: #333;
+  --bubble-me-text: #fff;
+  --bubble-you-text: #f0f0f0;
+}
+body {
+  background: #202020;
+  font-family: 'Poppins', sans-serif;
+  color: var(--text-color);
+}
+.chat-outer {
+  max-width: 480px;
+  margin: 40px auto;
+  background: var(--card-bg);
+  border-radius: 18px;
+  box-shadow: 0 4px 32px #0002;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  min-height: 80vh;
+  height: 80vh;
+}
+.chat-header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1.2rem 1.5rem 1rem 1.5rem;
+  border-bottom: 1px solid #333;
+  background: #232323;
+  border-top-left-radius: 18px;
+  border-top-right-radius: 18px;
+}
+.chat-header .avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: var(--secondary);
+  color: #fff;
+  font-weight: 600;
+  font-size: 1.2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.chat-header .user-info {
+  flex: 1;
+}
+.chat-header .user-info .name {
+  font-weight: 600;
+  color: var(--primary);
+  font-size: 1.1rem;
+}
+.chat-header .user-info .desc {
+  font-size: .85rem;
+  color: #aaa;
+}
+.chat-box {
+  flex: 1 1 0;
+  overflow-y: auto;
+  padding: 1.2rem 1rem 1.2rem 1rem;
+  background: #232323;
+  display: flex;
+  flex-direction: column;
+  gap: .5rem;
+}
+.msg {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin: 0.25rem 0;
+}
+.msg.me {
+  align-items: flex-end;
+}
+.msg-bubble {
+  max-width: 80%;
+  padding: .7rem 1.1rem;
+  border-radius: 1.2rem;
+  margin-bottom: 2px;
+  font-size: 1rem;
+  background: var(--bubble-you);
+  color: var(--bubble-you-text);
+  box-shadow: 0 2px 8px #0002;
+  word-break: break-word;
+  position: relative;
+  transition: background .2s;
+}
+.msg.me .msg-bubble {
+  background: var(--bubble-me);
+  color: var(--bubble-me-text);
+  border-bottom-right-radius: .5rem;
+}
+.msg.you .msg-bubble {
+  background: var(--bubble-you);
+  color: var(--bubble-you-text);
+  border-bottom-left-radius: .5rem;
+}
+.msg small {
+  font-size: .75rem;
+  color: #aaa;
+  margin-bottom: 2px;
+  margin-top: 2px;
+  padding-left: 2px;
+  padding-right: 2px;
+}
+/* Chat input */
+.chat-input-area {
+  border-top: 1px solid #333;
+  background: #232323;
+  padding: .8rem 1rem;
+  border-bottom-left-radius: 18px;
+  border-bottom-right-radius: 18px;
+}
+#sendForm {
+  display: flex;
+  gap: .5rem;
+  align-items: center;
+  margin: 0;
+}
+#sendForm input[name="body"] {
+  flex: 1;
+  border-radius: 2rem;
+  border: none;
+  background: #333;
+  color: #fff;
+  padding: .7rem 1.2rem;
+  font-size: 1rem;
+  outline: none;
+  transition: border .2s;
+}
+#sendForm input[name="body"]:focus {
+  border: 2px solid var(--primary);
+  background: #292929;
+}
+#sendForm button {
+  border-radius: 2rem;
+  background: var(--primary);
+  color: #fff;
+  border: none;
+  padding: .7rem 1.5rem;
+  font-weight: 600;
+  font-size: 1rem;
+  transition: background .2s;
+}
+#sendForm button:hover {
+  background: var(--secondary);
+}
+/* Responsive */
+@media (max-width: 600px) {
+  .chat-outer {
+    max-width: 100vw;
+    min-height: 100vh;
+    border-radius: 0;
+    margin: 0;
+    height: 100vh;
+  }
+  .chat-header, .chat-input-area {
+    padding-left: .7rem;
+    padding-right: .7rem;
+  }
+  .chat-box {
+    padding-left: .7rem;
+    padding-right: .7rem;
+  }
+}
 </style>
-</head><body class="p-3">
-<a href="profile_public.php?id=<?= $otherId ?>"
-     class="btn btn-outline-secondary mb-3">
-    &larr; Back to profile
-  </a>
-<div class="chat-box" id="chat">
-<?php foreach($messages as $m): ?>
-  <div class="msg <?= $m['sender_id']==$_SESSION['user_id']?'me':'you' ?>">
-    <small><?= htmlspecialchars($m['sent_at']) ?></small><br>
-    <?= nl2br(htmlspecialchars($m['body'])) ?>
+</head>
+<body>
+<div class="chat-outer">
+  <div class="chat-header">
+    <a href="profile_public.php?id=<?= $otherId ?>" class="btn btn-outline-secondary btn-sm" style="border-radius:50%;padding:6px 12px;font-size:1.1rem;background:#232323;border:none;color:#fff;">
+      &larr;
+    </a>
+    <div class="avatar"><?= strtoupper(substr($otherId,0,1)) ?></div>
+    <div class="user-info">
+      <div class="name">User #<?= htmlspecialchars($otherId) ?></div>
+      <div class="desc">Private Chat</div>
+    </div>
   </div>
-<?php endforeach; ?>
+  <div class="chat-box" id="chat">
+    <?php foreach($messages as $m): ?>
+      <div class="msg <?= $m['sender_id']==$_SESSION['user_id']?'me':'you' ?>">
+        <div class="msg-bubble">
+          <small><?= htmlspecialchars($m['sent_at']) ?></small>
+          <?= nl2br(htmlspecialchars($m['body'])) ?>
+        </div>
+      </div>
+    <?php endforeach; ?>
+  </div>
+  <div class="chat-input-area">
+    <form id="sendForm" autocomplete="off">
+      <input name="body" autocomplete="off" placeholder="Type a message..." />
+      <button type="submit">Send</button>
+    </form>
+  </div>
 </div>
-
-<form id="sendForm" class="d-flex mt-2">
-  <input name="body" autocomplete="off" class="form-control me-2">
-  <button class="btn btn-primary">Send</button>
-</form>
-
 <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
 <script>
 const myId   = <?= (int)$_SESSION['user_id'] ?>;
@@ -67,18 +243,20 @@ const cid    = <?= $cid ?>;
 function renderMsg(m) {
   $('#chat').append(`
     <div class="msg ${m.sender_id==myId?'me':'you'}">
-      <small>${m.sent_at}</small><br>
-      ${m.body.replace(/\n/g,'<br>')}
+      <div class="msg-bubble">
+        <small>${m.sent_at}</small>
+        ${$('<div>').text(m.body).html().replace(/\n/g,'<br>')}
+      </div>
     </div>
   `);
 }
 
 function scrollBottom(){
-  $('#chat').scrollTop($('#chat')[0].scrollHeight);
+  const chat = document.getElementById('chat');
+  chat.scrollTop = chat.scrollHeight;
 }
 scrollBottom();
 
-/* ───── send ───── */
 $('#sendForm').on('submit', e => {
   e.preventDefault();
   const txt = $('input[name=body]').val().trim();
@@ -91,24 +269,24 @@ $('#sendForm').on('submit', e => {
       if (!res.ok) {
         return alert('Send failed: ' + (res.error||'unknown'));
       }
-      // append sender’s bubble immediately
       const safe = $('<div>').text(txt).html().replace(/\n/g,'<br>');
       $('#chat').append(`
         <div class="msg me">
-          <small>just now</small><br>${safe}
+          <div class="msg-bubble">
+            <small>just now</small>${safe}
+          </div>
         </div>
       `);
-      lastId = res.id;      // bump
+      lastId = res.id;
       scrollBottom();
       $('input[name=body]').val('');
     },
-    'json' /* <— tell jQuery to parse JSON */
+    'json'
   ).fail(xhr => {
     alert('Send error: ' + xhr.responseText);
   });
 });
 
-/* ───── poll ───── */
 setInterval(()=>{
   $.getJSON('api/messages_poll.php', { cid, after: lastId })
     .done(data => {
@@ -122,5 +300,5 @@ setInterval(()=>{
     });
 }, 2500);
 </script>
-
-</body></html>
+</body>
+</html>
