@@ -20,7 +20,7 @@
   --bs-primary: #6132d7;
   --bs-secondary: #351c76;
   --bs-success: #198754;
-  --bs-info: #0dcaf0;
+  --bs-info: #582ec4;
   --bs-warning: #ffc107;
   --bs-danger: #dc3545;
   --bs-light: #f2f9f9;
@@ -2660,8 +2660,8 @@ fieldset:disabled .btn {
 }
 .btn-info {
   color: #000;
-  background-color: #0dcaf0;
-  border-color: #0dcaf0;
+  background-color: #582ec4;
+  border-color: #582ec4;
 }
 .btn-info:hover {
   color: #000;
@@ -2694,8 +2694,8 @@ fieldset:disabled .btn {
 .btn-info:disabled,
 .btn-info.disabled {
   color: #000;
-  background-color: #0dcaf0;
-  border-color: #0dcaf0;
+  background-color: #582ec4;
+  border-color: #582ec4;
 }
 .btn-warning {
   color: #000;
@@ -2956,13 +2956,13 @@ fieldset:disabled .btn {
   background-color: rgba(0, 0, 0, 0);
 }
 .btn-outline-info {
-  color: #0dcaf0;
-  border-color: #0dcaf0;
+  color: #582ec4;
+  border-color: #582ec4;
 }
 .btn-outline-info:hover {
   color: #000;
-  background-color: #0dcaf0;
-  border-color: #0dcaf0;
+  background-color: #582ec4;
+  border-color: #582ec4;
 }
 .btn-check:focus + .btn-outline-info,
 .btn-outline-info:focus {
@@ -2974,8 +2974,8 @@ fieldset:disabled .btn {
 .btn-outline-info.active,
 .btn-outline-info.dropdown-toggle.show {
   color: #000;
-  background-color: #0dcaf0;
-  border-color: #0dcaf0;
+  background-color: #582ec4;
+  border-color: #582ec4
 }
 .btn-check:checked + .btn-outline-info:focus,
 .btn-check:active + .btn-outline-info:focus,
@@ -2986,7 +2986,7 @@ fieldset:disabled .btn {
 }
 .btn-outline-info:disabled,
 .btn-outline-info.disabled {
-  color: #0dcaf0;
+  color: #582ec4;
   background-color: rgba(0, 0, 0, 0);
 }
 .btn-outline-warning {
@@ -5722,7 +5722,7 @@ fieldset:disabled .btn {
   color: #146c43;
 }
 .link-info {
-  color: #0dcaf0;
+  color: #582ec4;
 }
 .link-info:hover,
 .link-info:focus {
@@ -6045,7 +6045,7 @@ fieldset:disabled .btn {
   border-color: #198754 !important;
 }
 .border-info {
-  border-color: #0dcaf0 !important;
+  border-color: #582ec4 !important;
 }
 .border-warning {
   border-color: #ffc107 !important;
@@ -6787,7 +6787,7 @@ fieldset:disabled .btn {
   color: #198754 !important;
 }
 .text-info {
-  color: #0dcaf0 !important;
+  color: #582ec4 !important;
 }
 .text-warning {
   color: #ffc107 !important;
@@ -6829,7 +6829,7 @@ fieldset:disabled .btn {
   background-color: #198754 !important;
 }
 .bg-info {
-  background-color: #0dcaf0 !important;
+  background-color: #582ec4 !important;
 }
 .bg-warning {
   background-color: #ffc107 !important;

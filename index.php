@@ -293,14 +293,16 @@ if (isset($_SESSION['user_id'])) {
                         <div class="about-item">
                             <h4 class="text-primary text-uppercase">About Us</h4>
                             <h1 class="display-3 mb-3">Empowering the Next Tech Leaders.</h1>
-                            <p class="mb-4">Hack.id was born to create a vibrant inovation ecosystem. We solve the challanges aspiring developers, designers, and entrepreneurs dace in finding teams discovering hackathons and growing their skills. 
+                            <p class="mb-4">
+                                Hack.id is your ultimate platform for finding the perfect team to conquer hackathons. 
+                                Whether you're a developer, designer, or innovator, we connect you with like-minded individuals to build, learn, and win together.
                             </p>
                             <div class="bg-light rounded p-4 mb-4">
                                 <div class="row">
                                     <div class="col-12">
                                         <div class="d-flex">
                                             <div class="pe-4">
-                                                <div class="rounded-circle bg-primary d-flex align-items-center justify-content-center" style="width: 80px; height: 80px;"><i class="fas fa-tint text-white fa-2x"></i></div>
+                                                <div class="rounded-circle bg-primary d-flex align-items-center justify-content-center" style="width: 80px; height: 80px;"><i class="fas fa-user-friends text-white fa-2x"></i></div>
                                             </div>
                                             <div class="">
                                                 <a href="#" class="h4 d-inline-block mb-3">Presticious Team</a>
@@ -315,11 +317,11 @@ if (isset($_SESSION['user_id'])) {
                                     <div class="col-12">
                                         <div class="d-flex">
                                             <div class="pe-4">
-                                                <div class="rounded-circle bg-primary d-flex align-items-center justify-content-center" style="width: 80px; height: 80px;"><i class="fas fa-faucet text-white fa-2x"></i></div>
+                                                <div class="rounded-circle bg-primary d-flex align-items-center justify-content-center" style="width: 80px; height: 80px;"><i class="fas fa-chart-line text-white fa-2x"></i></div>
                                             </div>
                                             <div class="">
                                                 <a href="#" class="h4 d-inline-block mb-3">Our Impact</a>
-                                                <p class="mb-0">We empower Indonesia's brightiest minds by connecting them to opportunites and collaborators.</p>
+                                                <p class="mb-0">We empower Indonesia's brightiest minds by connecting them to opportunities and collaborators</p>
                                             </div>
                                         </div>
                                     </div>
@@ -552,14 +554,14 @@ if (isset($_SESSION['user_id'])) {
                 </div>
                 <div class="owl-carousel testimonial-carousel wow fadeInUp" data-wow-delay="0.3s">
                     <div class="testimonial-item text-center p-4">
-                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Incidunt pariatur officiis quis molestias, sit iure sunt voluptatibus accusantium laboriosam dolore.
+                        <p>Hack.id was an incredible experience. The organizers did a fantastic job, and the mentorship was top-notch. I gained valuable insights and connected with amazing developers.
                         </p>
                         <div class="d-flex justify-content-center mb-4">
                             <img src="img/testimonial-1.jpg" class="img-fluid border border-4 border-primary" style="width: 100px; height: 100px; border-radius: 50px;" alt="">
                         </div>
                         <div class="d-block">
-                            <h4 class="text-dark">Client Name</h4>
-                            <p class="m-0 pb-3">Profession</p>
+                            <h4 class="text-dark">Dinda Sulistiani</h4>
+                            <p class="m-0 pb-3">Product Manager</p>
                             <div class="d-flex justify-content-center text-secondary">
                                 <i class="fas fa-star"></i>
                                 <i class="fas fa-star"></i>
@@ -570,14 +572,14 @@ if (isset($_SESSION['user_id'])) {
                         </div>
                     </div>
                     <div class="testimonial-item text-center p-4">
-                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Incidunt pariatur officiis quis molestias, sit iure sunt voluptatibus accusantium laboriosam dolore.
+                        <p>An intense and inspiring 48 hours. I had the chance to turn my ideas into a working prototype and pitch it in front of experienced judges. A truly empowering experience.
                         </p>
                         <div class="d-flex justify-content-center mb-4">
                             <img src="img/testimonial-2.jpg" class="img-fluid border border-4 border-primary" style="width: 100px; height: 100px; border-radius: 50px;" alt="">
                         </div>
                         <div class="d-block">
-                            <h4 class="text-dark">Client Name</h4>
-                            <p class="m-0 pb-3">Profession</p>
+                            <h4 class="text-dark">Kevin Pratama</h4>
+                            <p class="m-0 pb-3">Front End</p>
                             <div class="d-flex justify-content-center text-secondary">
                                 <i class="fas fa-star"></i>
                                 <i class="fas fa-star"></i>
@@ -588,14 +590,13 @@ if (isset($_SESSION['user_id'])) {
                         </div>
                     </div>
                     <div class="testimonial-item text-center p-4">
-                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Incidunt pariatur officiis quis molestias, sit iure sunt voluptatibus accusantium laboriosam dolore.
-                        </p>
+                        <p>The mentors were incredibly helpful, and the community was so supportive. I learned more in two days than I expected. Highly recommended for anyone in tech!
                         <div class="d-flex justify-content-center mb-4">
                             <img src="img/testimonial-3.jpg" class="img-fluid border border-4 border-primary" style="width: 100px; height: 100px; border-radius: 50px;" alt="">
                         </div>
                         <div class="d-block">
-                            <h4 class="text-dark">Client Name</h4>
-                            <p class="m-0 pb-3">Profession</p>
+                            <h4 class="text-dark">Ayu Kartika</h4>
+                            <p class="m-0 pb-3">UI/UX Designer</p>
                             <div class="d-flex justify-content-center text-secondary">
                                 <i class="fas fa-star"></i>
                                 <i class="fas fa-star"></i>
@@ -606,14 +607,14 @@ if (isset($_SESSION['user_id'])) {
                         </div>
                     </div>
                     <div class="testimonial-item text-center p-4">
-                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Incidunt pariatur officiis quis molestias, sit iure sunt voluptatibus accusantium laboriosam dolore.
+                        <p>Joining the Hackathon was one of the best decisions I've made. It pushed me out of my comfort zone and helped me grow both technically and creatively.
                         </p>
                         <div class="d-flex justify-content-center mb-4">
-                            <img src="img/testimonial-3.jpg" class="img-fluid border border-4 border-primary" style="width: 100px; height: 100px; border-radius: 50px;" alt="">
+                            <img src="img/testimonial-4.jpg" class="img-fluid border border-4 border-primary" style="width: 100px; height: 100px; border-radius: 50px;" alt="">
                         </div>
                         <div class="d-block">
-                            <h4 class="text-dark">Client Name</h4>
-                            <p class="m-0 pb-3">Profession</p>
+                            <h4 class="text-dark">Rizky Chandra</h4>
+                            <p class="m-0 pb-3">Back End</p>
                             <div class="d-flex justify-content-center text-secondary">
                                 <i class="fas fa-star"></i>
                                 <i class="fas fa-star"></i>

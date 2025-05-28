@@ -88,11 +88,11 @@
             <!-- Header Start -->
             <div class="container-fluid bg-breadcrumb">
                 <div class="container text-center py-5" style="max-width: 900px;">
-                    <h4 class="text-white display-4 mb-4 wow fadeInDown" data-wow-delay="0.1s">About Us</h4>
+                    <h4 class="text-white display-4 mb-4 wow fadeInDown" data-wow-delay="0.1s">Blog</h4>
                     <ol class="breadcrumb d-flex justify-content-center mb-0 wow fadeInDown" data-wow-delay="0.3s">
                         <li class="breadcrumb-item"><a href="index.html">Home</a></li>
-                        <li class="breadcrumb-item"><a href="#">Pages</a></li>
-                        <li class="breadcrumb-item active text-primary">About</li>
+                        <li class="breadcrumb-item"><a href="index.html">About Us</a></li>
+                        <li class="breadcrumb-item active text-primary">Blog</li>
                     </ol>    
                 </div>
             </div>
@@ -118,222 +118,7 @@
             </div>
         </div>
         <!-- Modal Search End -->
-
-        <!-- About Start -->
-        <div class="container-fluid about overflow-hidden py-5">
-            <div class="container py-5">
-                <div class="row g-5">
-                    <div class="col-xl-6 wow fadeInLeft" data-wow-delay="0.2s">
-                        <div class="about-img rounded h-100">
-                            <img src="img/logo2.png" class="img-fluid rounded h-100 w-100" style="object-fit: cover;" alt="">
-                            <div class="about-exp"><span>20 Years Experiance</span></div>
-                        </div>
-                    </div>
-                    <div class="col-xl-6 wow fadeInRight" data-wow-delay="0.2s">
-                        <div class="about-item">
-                            <h4 class="text-primary text-uppercase">About Us</h4>
-                            <h1 class="display-3 mb-3">Empowering the Next Tech Leaders.</h1>
-                            <p class="mb-4">
-                                Hack.id is your ultimate platform for finding the perfect team to conquer hackathons. 
-                                Whether you're a developer, designer, or innovator, we connect you with like-minded individuals to build, learn, and win together.
-                            </p>
-                            <div class="bg-light rounded p-4 mb-4">
-                                <div class="row">
-                                    <div class="col-12">
-                                        <div class="d-flex">
-                                            <div class="pe-4">
-                                                <div class="rounded-circle bg-primary d-flex align-items-center justify-content-center" style="width: 80px; height: 80px;"><i class="fas fa-user-friends text-white fa-2x"></i></div>
-                                            </div>
-                                            <div class="">
-                                                <a href="#" class="h4 d-inline-block mb-3">Presticious Team</a>
-                                                <p class="mb-0">Hack.id connected me with an amazing team! We tackled a tough challange and ended up winning</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="bg-light rounded p-4 mb-4">
-                                <div class="row">
-                                    <div class="col-12">
-                                        <div class="d-flex">
-                                            <div class="pe-4">
-                                                <div class="rounded-circle bg-primary d-flex align-items-center justify-content-center" style="width: 80px; height: 80px;"><i class="fas fa-chart-line text-white fa-2x"></i></div>
-                                            </div>
-                                            <div class="">
-                                                <a href="#" class="h4 d-inline-block mb-3">Our Impact</a>
-                                                <p class="mb-0">We empower Indonesia's brightiest minds by connecting them to opportunities and collaborators</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <a href="#" class="btn btn-secondary rounded-pill py-3 px-5">Read More</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- About End -->
-
-            <!-- Team Start -->
-        <div class="container-fluid team pb-5">
-            <div class="container pb-5">
-                <div class="text-center mx-auto pb-5 wow fadeInUp" data-wow-delay="0.2s" style="max-width: 800px;">
-                    <h4 class="text-primary">Recommended People</h4>
-                    <h1 class="display-3 text-capitalize mb-3">The most popular Mentor for Hackathon</h1>
-                </div>
-                <div class="row g-4">
-                    <div class="col-md-6 col-lg-6 col-xl-3 wow fadeInUp" data-wow-delay="0.2s">
-                        <div class="team-item p-4">
-                            <div class="team-inner rounded">
-                                <div class="team-img">
-                                    <img src="img/Richard.png" class="img-fluid rounded-top w-100" alt="Image">
-                                    <div class="team-share">
-                                        <a class="btn btn-secondary btn-md-square rounded-pill text-white mx-1" href=""><i class="fas fa-share-alt"></i></a>
-                                    </div>
-                                    <div class="team-icon rounded-pill py-2 px-2">
-                                        <a class="btn btn-secondary btn-sm-square rounded-pill mx-1" href=""><i class="fab fa-facebook-f"></i></a>
-                                        <a class="btn btn-secondary btn-sm-square rounded-pill me-1" href=""><i class="fab fa-twitter"></i></a>
-                                        <a class="btn btn-secondary btn-sm-square rounded-pill me-1" href=""><i class="fab fa-linkedin-in"></i></a>
-                                        <a class="btn btn-secondary btn-sm-square rounded-pill me-1" href=""><i class="fab fa-instagram"></i></a>
-                                    </div>
-                                </div>
-                                <div class="bg-light rounded-bottom text-center py-4">
-                                    <h4 class="mb-3">Richard</h4>
-                                    <p class="mb-0">Product Manager</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-6 col-lg-6 col-xl-3 wow fadeInUp" data-wow-delay="0.4s">
-                        <div class="team-item p-4">
-                            <div class="team-inner rounded">
-                                <div class="team-img">
-                                    <img src="img/Brandon.png" class="img-fluid rounded-top w-100" alt="Image">
-                                    <div class="team-share">
-                                        <a class="btn btn-secondary btn-md-square rounded-pill text-white mx-1" href=""><i class="fas fa-share-alt"></i></a>
-                                    </div>
-                                    <div class="team-icon rounded-pill py-2 px-2">
-                                        <a class="btn btn-secondary btn-sm-square rounded-pill mx-1" href=""><i class="fab fa-facebook-f"></i></a>
-                                        <a class="btn btn-secondary btn-sm-square rounded-pill me-1" href=""><i class="fab fa-twitter"></i></a>
-                                        <a class="btn btn-secondary btn-sm-square rounded-pill me-1" href=""><i class="fab fa-linkedin-in"></i></a>
-                                        <a class="btn btn-secondary btn-sm-square rounded-pill me-1" href=""><i class="fab fa-instagram"></i></a>
-                                    </div>
-                                </div>
-                                <div class="bg-light rounded-bottom text-center py-4">
-                                    <h4 class="mb-3">Brandon Geraldo</h4>
-                                    <p class="mb-0">UI/UX & Front End</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-6 col-lg-6 col-xl-3 wow fadeInUp" data-wow-delay="0.6s">
-                        <div class="team-item p-4">
-                            <div class="team-inner rounded">
-                                <div class="team-img">
-                                    <img src="img/Haris.png" class="img-fluid rounded-top w-100" alt="Image">
-                                    <div class="team-share">
-                                        <a class="btn btn-secondary btn-md-square rounded-pill text-white mx-1" href=""><i class="fas fa-share-alt"></i></a>
-                                    </div>
-                                    <div class="team-icon rounded-pill py-2 px-2">
-                                        <a class="btn btn-secondary btn-sm-square rounded-pill mx-1" href=""><i class="fab fa-facebook-f"></i></a>
-                                        <a class="btn btn-secondary btn-sm-square rounded-pill me-1" href=""><i class="fab fa-twitter"></i></a>
-                                        <a class="btn btn-secondary btn-sm-square rounded-pill me-1" href=""><i class="fab fa-linkedin-in"></i></a>
-                                        <a class="btn btn-secondary btn-sm-square rounded-pill me-1" href=""><i class="fab fa-instagram"></i></a>
-                                    </div>
-                                </div>
-                                <div class="bg-light rounded-bottom text-center py-4">
-                                    <h4 class="mb-3">Malvinshah Haris</h4>
-                                    <p class="mb-0">Back End & Security</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-6 col-lg-6 col-xl-3 wow fadeInUp" data-wow-delay="0.8s">
-                        <div class="team-item p-4">
-                            <div class="team-inner rounded">
-                                <div class="team-img">
-                                    <img src="img/Darvesh.png" class="img-fluid rounded-top w-100" alt="Image">
-                                    <div class="team-share">
-                                        <a class="btn btn-secondary btn-md-square rounded-pill text-white mx-1" href=""><i class="fas fa-share-alt"></i></a>
-                                    </div>
-                                    <div class="team-icon rounded-pill py-2 px-2">
-                                        <a class="btn btn-secondary btn-sm-square rounded-pill mx-1" href=""><i class="fab fa-facebook-f"></i></a>
-                                        <a class="btn btn-secondary btn-sm-square rounded-pill me-1" href=""><i class="fab fa-twitter"></i></a>
-                                        <a class="btn btn-secondary btn-sm-square rounded-pill me-1" href=""><i class="fab fa-linkedin-in"></i></a>
-                                        <a class="btn btn-secondary btn-sm-square rounded-pill me-1" href=""><i class="fab fa-instagram"></i></a>
-                                    </div>
-                                </div>
-                                <div class="bg-light rounded-bottom text-center py-4">
-                                    <h4 class="mb-3">Darvesh Aziz</h4>
-                                    <p class="mb-0">Back End & Security</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- Team End -->
-
-        <!-- Fact Counter -->
-        <div class="container-fluid counter py-5">
-            <div class="container py-5">
-                <div class="row g-5">
-                    <div class="col-md-6 col-lg-6 col-xl-3 wow fadeInUp" data-wow-delay="0.2s">
-                        <div class="counter-item">
-                            <div class="counter-item-icon mx-auto">
-                                 <i class="fas fa-trophy fa-3x text-white"></i>
-                            </div>
-                            <h4 class="text-white my-4">Competition</h4>
-                            <div class="counter-counting">
-                                <span class="text-white fs-2 fw-bold" data-toggle="counter-up">456</span>
-                                <span class="h1 fw-bold text-white">+</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-6 col-lg-6 col-xl-3 wow fadeInUp" data-wow-delay="0.4s">
-                        <div class="counter-item">
-                            <div class="counter-item-icon mx-auto">
-                                <i class="fas fa-chalkboard-teacher fa-3x text-white"></i>
-                            </div>
-                            <h4 class="text-white my-4">Mentor</h4>
-                            <div class="counter-counting">
-                                <span class="text-white fs-2 fw-bold" data-toggle="counter-up">513</span>
-                                <span class="h1 fw-bold text-white">+</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-6 col-lg-6 col-xl-3 wow fadeInUp" data-wow-delay="0.6s">
-                        <div class="counter-item">
-                            <div class="counter-item-icon mx-auto">
-                                <i class="fas fa-users fa-3x text-white"></i>
-                            </div>
-                            <h4 class="text-white my-4">Teams</h4>
-                            <div class="counter-counting">
-                                <span class="text-white fs-2 fw-bold" data-toggle="counter-up">53</span>
-                                <span class="h1 fw-bold text-white">+</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-6 col-lg-6 col-xl-3 wow fadeInUp" data-wow-delay="0.8s">
-                        <div class="counter-item">
-                            <div class="counter-item-icon mx-auto">
-                                <i class="fas fa-heart fa-3x text-white"></i>
-                            </div>
-                            <h4 class="text-white my-4">Years Experiance</h4>
-                            <div class="counter-counting">
-                                <span class="text-white fs-2 fw-bold" data-toggle="counter-up">17</span>
-                                <span class="h1 fw-bold text-white">+</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- Fact Counter -->
-
-        <!-- Blog Start -->
+           <!-- Blog Start -->
         <div class="container-fluid blog pb-5">
             <div class="container pb-5">
                 <div class="text-center mx-auto pb-5 wow fadeInUp" data-wow-delay="0.2s" style="max-width: 800px;">
@@ -467,7 +252,7 @@
                 </div>
             </div>
         </div>
- <!-- Testimonial End -->
+        <!-- Testimonial End -->
 
         <!-- Footer Start -->
         <div class="container-fluid footer py-5 wow fadeIn" data-wow-delay="0.2s">
