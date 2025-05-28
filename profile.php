@@ -6,7 +6,7 @@ require_once 'config.php';
 if (!isset($_SESSION['user_id'])) { header('Location: login.php'); exit; }
 $uid = (int)$_SESSION['user_id'];
 
-/* ────────────────────── one-time schema guards ───────────────────── */
+/* ────────────────────── one-time schema guards ─────────────────────- */
 $mysqli->query("ALTER TABLE users ADD COLUMN IF NOT EXISTS
                 avatar VARCHAR(150) DEFAULT NULL");
 
