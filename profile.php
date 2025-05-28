@@ -165,7 +165,7 @@ if ($_SERVER['REQUEST_METHOD']==='POST') {
 
     if ($p['display_name']) $_SESSION['username']=$p['display_name'];
 
-    /* ---------- skills ---------- */
+    /* ---------- skills ----------- */
 
 
     if(!$errors){ header('Location: profile.php?saved=1'); exit; }
