@@ -21,6 +21,12 @@ $otherId = ($conv['user1_id'] == $_SESSION['user_id'])
 //   . 'OTHER user_id = '
 //   . htmlspecialchars($otherId ?? 'NOT SET')
 //   . "</pre>";
+$stmt = $mysqli->prepare("SELECT username, avatar FROM users WHERE id = ?");
+$stmt->bind_param("i", $otherId);
+$stmt->execute();
+$userData = $stmt->get_result()->fetch_assoc();
+$otherUsername = $userData['username'] ?? 'Unknown';
+$otherAvatar   = $userData['avatar'] ?? null;
 $messages = fetchMessages($mysqli, $cid);
 ?>
 <!doctype html>
@@ -186,6 +192,34 @@ body {
   background: var(--secondary);
 }
 /* Responsive */
+
+/* ===== WebKit browsers (Chrome, Edge, Safari) ===== */
+.chat-box::-webkit-scrollbar {
+  width: 8px;               /* width of vertical scrollbar */
+  height: 8px;              /* height of horizontal scrollbar (if you ever need it) */
+}
+
+.chat-box::-webkit-scrollbar-track {
+  background: #232323;      /* same as your chat-box bg for “invisible” look */
+  border-radius: 4px;
+}
+
+.chat-box::-webkit-scrollbar-thumb {
+  background: var(--primary);  /* your bubble-me color */
+  border-radius: 4px;
+  border: 2px solid #232323;   /* creates a little padding around the thumb */
+}
+
+.chat-box::-webkit-scrollbar-thumb:hover {
+  background: var(--secondary);  /* hover state */
+}
+
+/* ===== Firefox ===== */
+.chat-box {
+  scrollbar-width: thin;                   /* “auto” or “thin” */
+  scrollbar-color: var(--primary) #232323; /* thumb and track colors */
+}
+
 @media (max-width: 600px) {
   .chat-outer {
     max-width: 100vw;
@@ -203,6 +237,9 @@ body {
     padding-right: .7rem;
   }
 }
+
+
+
 </style>
 </head>
 <body>
@@ -211,9 +248,9 @@ body {
     <a href="profile_public.php?id=<?= $otherId ?>" class="btn btn-outline-secondary btn-sm" style="border-radius:50%;padding:6px 12px;font-size:1.1rem;background:#232323;border:none;color:#fff;">
       &larr;
     </a>
-    <div class="avatar"><?= strtoupper(substr($otherId,0,1)) ?></div>
+    <div class="avatar"><img src="<?= $otherAvatar ?>" alt="Avatar" style="width: 100%; height: 100%; object-fit: cover; border-radius: 50%;"></div>
     <div class="user-info">
-      <div class="name">User #<?= htmlspecialchars($otherId) ?></div>
+      <div class="name"><?= htmlspecialchars($otherUsername) ?></div>
       <div class="desc">Private Chat</div>
     </div>
   </div>
