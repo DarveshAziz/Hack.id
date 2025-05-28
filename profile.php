@@ -166,12 +166,7 @@ if ($_SERVER['REQUEST_METHOD']==='POST') {
     if ($p['display_name']) $_SESSION['username']=$p['display_name'];
 
     /* ---------- skills ---------- */
-    $mysqli->query("DELETE FROM user_skill WHERE user_id=$uid");
-    $ins=$mysqli->prepare("INSERT INTO user_skill(user_id,skill_id,level) VALUES (?,?,?)");
-    foreach($_POST['skill']??[] as $sid=>$lvl){
-        $lvl=max(0,min(100,(int)$lvl));
-        $ins->bind_param('iii',$uid,$sid,$lvl); $ins->execute();
-    }
+
 
     if(!$errors){ header('Location: profile.php?saved=1'); exit; }
 }
@@ -430,145 +425,139 @@ h2, h3, h5{
 </style>
 </head><body>
 
-<?php include 'includes/header.php'; ?>
+  <?php include 'includes/header.php'; ?>
 
-<div class="container py-5 mt-5">
-  <h2 class="mb-4">Profile settings</h2>
+  <div class="container py-5 mt-5">
+    <h2 class="mb-4">Profile settings</h2>
 
-  <?php foreach($errors as $e): ?>
-     <div class="alert alert-danger"><?= htmlspecialchars($e) ?></div>
-  <?php endforeach;?>
-  <?php if(isset($_GET['saved'])):?>
-     <div class="alert alert-success">Profile updated!</div>
-  <?php endif;?>
+    <?php foreach($errors as $e): ?>
+      <div class="alert alert-danger"><?= htmlspecialchars($e) ?></div>
+    <?php endforeach; ?>
+    <?php if(isset($_GET['saved'])): ?>
+      <div class="alert alert-success">Profile updated!</div>
+    <?php endif; ?>
 
-<form method="post" enctype="multipart/form-data">
+    <form method="post" enctype="multipart/form-data">
 
-  <!-- avatar + name -->
-  <div class="profile-card">
-    <div class="profile-header text-center">
-      <img id="avatarPreview" src="<?= htmlspecialchars($userRow['avatar']) ?>"
-           class="avatar-big mb-3">
-      <input type="file" id="avatarInput" name="avatar" accept="image/*" hidden>
-      <h3 class="mb-2"><?= htmlspecialchars($prof['display_name'] ?: $_SESSION['username']) ?></h3>
-      <p class="text-muted mb-0">Click the photo to upload a new one (max 2&nbsp;MB)</p>
-    </div>
+      <!-- avatar + name -->
+      <div class="profile-card">
+        <div class="profile-header text-center">
+          <img id="avatarPreview" src="<?= htmlspecialchars($userRow['avatar']) ?>"
+               class="avatar-big mb-3">
+          <input type="file" id="avatarInput" name="avatar" accept="image/*" hidden>
+          <h3 class="mb-2"><?= htmlspecialchars($prof['display_name'] ?: $_SESSION['username']) ?></h3>
+          <p class="text-muted mb-0">Click the photo to upload a new one (max 2&nbsp;MB)</p>
+        </div>
+      </div>
+
+      <!-- Enhanced public profile section -->
+      <div class="profile-card">
+        <div class="profile-form-section">
+          <h3 class="section-title">Public Profile</h3>
+
+          <div class="form-row">
+            <div class="floating-label">
+              <input type="text" name="display_name" id="display_name" placeholder=" "
+                     value="<?= htmlspecialchars($prof['display_name']) ?>">
+              <label for="display_name">Display Name</label>
+            </div>
+            <div class="floating-label icon-input location">
+              <input type="text" name="location" id="location" placeholder=" "
+                     value="<?= htmlspecialchars($prof['location']) ?>">
+              <label for="location">Location</label>
+            </div>
+          </div>
+
+          <div class="form-row-single">
+            <div class="floating-label">
+              <input type="text" name="headline" id="headline" placeholder=" "
+                     value="<?= htmlspecialchars($prof['headline']) ?>">
+              <label for="headline">Professional Headline</label>
+            </div>
+          </div>
+
+          <div class="form-row-single">
+            <div class="floating-label">
+              <textarea name="about" id="about" rows="4" placeholder=" "><?= htmlspecialchars($prof['about']) ?></textarea>
+              <label for="about">About Me</label>
+            </div>
+          </div>
+
+          <div class="form-row-triple">
+            <div class="floating-label icon-input website">
+              <input type="url" name="website" id="website" placeholder=" "
+                     value="<?= htmlspecialchars($prof['website']) ?>">
+              <label for="website">Website</label>
+            </div>
+            <div class="floating-label icon-input github">
+              <input type="text" name="github" id="github" placeholder=" "
+                     value="<?= htmlspecialchars($prof['github']) ?>">
+              <label for="github">GitHub</label>
+            </div>
+            <div class="floating-label icon-input linkedin">
+              <input type="text" name="linkedin" id="linkedin" placeholder=" "
+                     value="<?= htmlspecialchars($prof['linkedin']) ?>">
+              <label for="linkedin">LinkedIn</label>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="mt-4">
+        <button class="btn btn-primary">Save profile</button>
+      </div>
+
+    </form>
   </div>
 
-  <!-- Enhanced public profile section -->
-  <div class="profile-card">
-    <div class="profile-form-section">
-      <h3 class="section-title">Public Profile</h3>
-      
-      <div class="form-row">
-        <div class="floating-label">
-          <input type="text" name="display_name" id="display_name" placeholder=" "
-                 value="<?= htmlspecialchars($prof['display_name']) ?>">
-          <label for="display_name">Display Name</label>
-        </div>
-        <div class="floating-label icon-input location">
-          <input type="text" name="location" id="location" placeholder=" "
-                 value="<?= htmlspecialchars($prof['location']) ?>">
-          <label for="location">Location</label>
-        </div>
-      </div>
+  <!-- skills display outside of form -->
+  <div class="container py-5 mt-4">
+    <h2 class="mb-3">Skill levels</h2>
+    <a href="quiz.php" class="btn btn-secondary mb-4">Take a Quiz</a>
 
-      <div class="form-row-single">
-        <div class="floating-label">
-          <input type="text" name="headline" id="headline" placeholder=" "
-                 value="<?= htmlspecialchars($prof['headline']) ?>">
-          <label for="headline">Professional Headline</label>
-        </div>
-      </div>
-
-      <div class="form-row-single">
-        <div class="floating-label">
-          <textarea name="about" id="about" rows="4" placeholder=" "><?= htmlspecialchars($prof['about']) ?></textarea>
-          <label for="about">About Me</label>
-        </div>
-      </div>
-
-      <div class="form-row-triple">
-        <div class="floating-label icon-input website">
-          <input type="url" name="website" id="website" placeholder=" "
-                 value="<?= htmlspecialchars($prof['website']) ?>">
-          <label for="website">Website</label>
-        </div>
-        <div class="floating-label icon-input github">
-          <input type="text" name="github" id="github" placeholder=" "
-                 value="<?= htmlspecialchars($prof['github']) ?>">
-          <label for="github">GitHub</label>
-        </div>
-        <div class="floating-label icon-input linkedin">
-          <input type="text" name="linkedin" id="linkedin" placeholder=" "
-                 value="<?= htmlspecialchars($prof['linkedin']) ?>">
-          <label for="linkedin">LinkedIn</label>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <hr class="my-4">
-
-  <!-- skills -->
-<h2 class="mb-3">Skill levels</h2>
-<?php
-$cat = '';
-$sub = '';
-// Assuming $skillRows and $userLvls are populated as they were in your original file.
-// This loop will display skills based on the existing $skillRows structure.
-foreach ($skillRows as $s) {
-    if ($s['category'] !== $cat) {
-        $cat = $s['category'];
-        $sub = ''; // Reset subcategory when category changes
-        echo "<h3 class='mt-4'>" . htmlspecialchars($cat) . "</h3>";
-    }
-    if ($s['subcategory'] !== $sub) {
-        $sub = $s['subcategory'];
-        // You might want to hide "Core Role" if it's a generic subcategory after your changes
-        if ($sub !== 'Core Role') { 
-            echo "<h5 class='mt-3'>" . htmlspecialchars($sub) . "</h5>";
+    <?php
+    $cat = '';
+    $sub = '';
+    foreach ($skillRows as $s) {
+        if ($s['category'] !== $cat) {
+            $cat = $s['category'];
+            $sub = '';
+            echo "<h3 class='mt-4'>" . htmlspecialchars($cat) . "</h3>";
         }
+        if ($s['subcategory'] !== $sub) {
+            $sub = $s['subcategory'];
+            if ($sub !== 'Core Role') {
+                echo "<h5 class='mt-3'>" . htmlspecialchars($sub) . "</h5>";
+            }
+        }
+        $sid = $s['id'];
+        $lvl = $userLvls[$sid] ?? 0;
+        $label = skillLabel($lvl);
+
+        echo '<div class="skill-pill-container mb-2">';
+        echo '  <span class="skill-pill" style="--pct:' . $lvl . ';">';
+        echo '    <span class="circle"></span>' . htmlspecialchars($s['name']);
+        echo '    <span class="badge bg-info ms-2">' . $label . '</span>';
+        echo '  </span>';
+        echo '</div>';
     }
-    $sid = $s['id'];
-    $lvl = $userLvls[$sid] ?? 0;
+    ?>
+  </div>
 
-    // Output the skill pill without the range input
-    echo '<div class="skill-pill-container mb-2">'; // Added a container for layout flexibility
-    echo '  <span class="skill-pill" style="--pct:' . $lvl . ';">'; // Use span instead of label if no input
-    echo '    <span class="circle"></span>' . htmlspecialchars($s['name']);
-    $label = skillLabel($lvl);
-	echo '    <span class="badge bg-info ms-2">' . $label . '</span>';
-    echo '  </span>';
-    echo '</div>';
-}
-?>
-<div class="mt-4">
-    <button class="btn btn-primary">Save profile</button>
-</div>
-</form> </div> <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
-<script>
-/* live skill circles - This JavaScript is no longer needed as the range input is removed.
-document.querySelectorAll('input[type=range]').forEach(r => {
-    r.addEventListener('input', e => {
-        // This line would cause an error if r (the range input) doesn't exist.
-        // e.target.parentElement.style.setProperty('--pct', e.target.value);
-    });
-});
-*/
-
-/* avatar picker */
-const img = document.getElementById('avatarPreview');
-const file = document.getElementById('avatarInput');
-
-// It's good practice to check if elements exist before adding event listeners
-if (img && file) {
-    img.onclick = () => file.click();
-    file.onchange = e => {
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    /* avatar picker */
+    const img = document.getElementById('avatarPreview');
+    const file = document.getElementById('avatarInput');
+    if (img && file) {
+      img.onclick = () => file.click();
+      file.onchange = e => {
         if (e.target.files && e.target.files[0]) {
-            img.src = URL.createObjectURL(e.target.files[0]);
+          img.src = URL.createObjectURL(e.target.files[0]);
         }
-    };
-}
-</script>
-</body></html>
+      };
+    }
+  </script>
+
+</body>
+</html>
