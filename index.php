@@ -292,8 +292,8 @@ if (isset($_SESSION['user_id'])) {
                     <div class="col-xl-6 wow fadeInRight" data-wow-delay="0.2s">
                         <div class="about-item">
                             <h4 class="text-primary text-uppercase">About Us</h4>
-                            <h1 class="display-3 mb-3">We Deliver The Quality Water.</h1>
-                            <p class="mb-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum quidem quas totam nostrum! Maxime rerum voluptatem sed, facilis unde a aperiam nulla voluptatibus excepturi ipsam iusto consequuntur
+                            <h1 class="display-3 mb-3">Empowering the Next Tech Leaders.</h1>
+                            <p class="mb-4">Hack.id was born to create a vibrant inovation ecosystem. We solve the challanges aspiring developers, designers, and entrepreneurs dace in finding teams discovering hackathons and growing their skills. 
                             </p>
                             <div class="bg-light rounded p-4 mb-4">
                                 <div class="row">
@@ -303,8 +303,8 @@ if (isset($_SESSION['user_id'])) {
                                                 <div class="rounded-circle bg-primary d-flex align-items-center justify-content-center" style="width: 80px; height: 80px;"><i class="fas fa-tint text-white fa-2x"></i></div>
                                             </div>
                                             <div class="">
-                                                <a href="#" class="h4 d-inline-block mb-3">Satisfied Customer</a>
-                                                <p class="mb-0">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quas provident maiores quisquam.</p>
+                                                <a href="#" class="h4 d-inline-block mb-3">Presticious Team</a>
+                                                <p class="mb-0">Hack.id connected me with an amazing team! We tackled a tough challange and ended up winning</p>
                                             </div>
                                         </div>
                                     </div>
@@ -318,8 +318,8 @@ if (isset($_SESSION['user_id'])) {
                                                 <div class="rounded-circle bg-primary d-flex align-items-center justify-content-center" style="width: 80px; height: 80px;"><i class="fas fa-faucet text-white fa-2x"></i></div>
                                             </div>
                                             <div class="">
-                                                <a href="#" class="h4 d-inline-block mb-3">Standard Product</a>
-                                                <p class="mb-0">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quas provident maiores quisquam.</p>
+                                                <a href="#" class="h4 d-inline-block mb-3">Our Impact</a>
+                                                <p class="mb-0">We empower Indonesia's brightiest minds by connecting them to opportunites and collaborators.</p>
                                             </div>
                                         </div>
                                     </div>
