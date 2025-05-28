@@ -25,6 +25,8 @@ if (isset($_SESSION['user_id'])) {
 }
 ?>
 
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -489,166 +491,6 @@ if (isset($_SESSION['user_id'])) {
         </div>
         <!-- Fact Counter -->
 
-        <!-- Service Start -->
-        <div class="container-fluid service bg-light overflow-hidden py-5">
-            <div class="container py-5">
-                <div class="text-center mx-auto pb-5 wow fadeInUp" data-wow-delay="0.2s" style="max-width: 800px;">
-                    <h4 class="text-uppercase text-primary">Our Service</h4>
-                    <h1 class="display-3 text-capitalize mb-3">Protect Your Family with Best Water</h1>
-                </div>
-                <div class="row gx-0 gy-4 align-items-center">
-                    <div class="col-lg-6 col-xl-4 wow fadeInLeft" data-wow-delay="0.2s">
-                        <div class="service-item rounded p-4 mb-4">
-                            <div class="row">
-                                <div class="col-12">
-                                    <div class="d-flex">
-                                        <div class="service-content text-end">
-                                            <a href="#" class="h4 d-inline-block mb-3">Residential Waters</a>
-                                            <p class="mb-0">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quas provident maiores quisquam.</p>
-                                        </div>
-                                        <div class="ps-4">
-                                            <div class="service-btn"><i class="fas fa-handshake text-white fa-2x"></i></div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="service-item rounded p-4 mb-4">
-                            <div class="row">
-                                <div class="col-12">
-                                    <div class="d-flex">
-                                        <div class="service-content text-end">
-                                            <a href="#" class="h4 d-inline-block mb-3">Commercial Waters</a>
-                                            <p class="mb-0">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quas provident maiores quisquam.</p>
-                                        </div>
-                                        <div class="ps-4">
-                                            <div class="service-btn"><i class="fas fa-dumpster-fire text-white fa-2x"></i></div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="service-item rounded p-4 mb-0">
-                            <div class="row">
-                                <div class="col-12">
-                                    <div class="d-flex">
-                                        <div class="service-content text-end">
-                                            <a href="#" class="h4 d-inline-block mb-3">Filtration Plants</a>
-                                            <p class="mb-0">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quas provident maiores quisquam.</p>
-                                        </div>
-                                        <div class="ps-4">
-                                            <div class="service-btn"><i class="fas fa-filter text-white fa-2x"></i></div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-6 col-xl-4 wow fadeInUp" data-wow-delay="0.3s">
-                        <div class="bg-transparent">
-                            <img src="" class="img-fluid w-100" alt="">
-                        </div>
-                    </div>
-                    <div class="col-lg-6 col-xl-4 wow fadeInRight" data-wow-delay="0.2s">
-                        <div class="service-item rounded p-4 mb-4">
-                            <div class="row">
-                                <div class="col-12">
-                                    <div class="d-flex">
-                                        <div class="pe-4">
-                                            <div class="service-btn"><i class="fas fa-assistive-listening-systems text-white fa-2x"></i></div>
-                                        </div>
-                                        <div class="service-content">
-                                            <a href="#" class="h4 d-inline-block mb-3">Water Softening</a>
-                                            <p class="mb-0">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quas provident maiores quisquam.</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="service-item rounded p-4 mb-4">
-                            <div class="row">
-                                <div class="col-12">
-                                    <div class="d-flex">
-                                        <div class="pe-4">
-                                            <div class="service-btn"><i class="fas fa-recycle text-white fa-2x"></i></div>
-                                        </div>
-                                        <div class="service-content">
-                                            <a href="#" class="h4 d-inline-block mb-3">Market Research</a>
-                                            <p class="mb-0">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quas provident maiores quisquam.</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="service-item rounded p-4 mb-0">
-                            <div class="row">
-                                <div class="col-12">
-                                    <div class="d-flex">
-                                        <div class="pe-4">
-                                            <div class="service-btn"><i class="fas fa-project-diagram text-white fa-2x"></i></div>
-                                        </div>
-                                        <div class="service-content">
-                                            <a href="#" class="h4 d-inline-block mb-3">Project Planning</a>
-                                            <p class="mb-0">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quas provident maiores quisquam.</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- Service End -->
-
-
-        <!-- Products Start -->
-        <div class="container-fluid product py-5">
-            <div class="container py-5">
-                <div class="text-center mx-auto pb-5 wow fadeInUp" data-wow-delay="0.2s" style="max-width: 800px;">
-                    <h4 class="text-uppercase text-primary">Our Products</h4>
-                    <h1 class="display-3 text-capitalize mb-3">We Deliver Best Quality Bottle Packs.</h1>
-                </div>
-                <div class="row g-4 justify-content-center">
-                    <div class="col-lg-6 col-xl-4 wow fadeInUp" data-wow-delay="0.2s">
-                        <div class="product-item">
-                            <img src="img/product-3.png" class="img-fluid w-100 rounded-top"  alt="Image">
-                            <div class="product-content bg-light text-center rounded-bottom p-4">
-                                <p>2L 1 Bottle</p>
-                                <a href="#" class="h4 d-inline-block mb-3">Mineral Water Bottle</a>
-                                <p class="fs-4 text-primary mb-3">$35:00</p>
-                                <a href="#" class="btn btn-secondary rounded-pill py-2 px-4">Read More</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-6 col-xl-4 wow fadeInUp" data-wow-delay="0.4s">
-                        <div class="product-item">
-                            <img src="img/product-2.png" class="img-fluid w-100 rounded-top"  alt="Image">
-                            <div class="product-content bg-light text-center rounded-bottom p-4">
-                                <p>4L 2 Bottles</p>
-                                <a href="#" class="h4 d-inline-block mb-3">RO Water Bottle</a>
-                                <p class="fs-4 text-primary mb-3">$70:00</p>
-                                <a href="#" class="btn btn-secondary rounded-pill py-2 px-4">Read More</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-6 col-xl-4 wow fadeInUp" data-wow-delay="0.6s">
-                        <div class="product-item">
-                            <img src="img/product-1.png" class="img-fluid w-100 rounded-top"  alt="Image">
-                            <div class="product-content bg-light text-center rounded-bottom p-4">
-                                <p>6L 3 Bottles</p>
-                                <a href="#" class="h4 d-inline-block mb-3">UV Water Bottle</a>
-                                <p class="fs-4 text-primary mb-3">$100:00</p>
-                                <a href="#" class="btn btn-secondary rounded-pill py-2 px-4">Read More</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- Products End -->
-
-
         <!-- Blog Start -->
         <div class="container-fluid blog pb-5">
             <div class="container pb-5">
@@ -660,39 +502,39 @@ if (isset($_SESSION['user_id'])) {
                     <div class="col-lg-6 col-xl-4 wow fadeInUp" data-wow-delay="0.2s">
                         <div class="blog-item">
                             <div class="blog-img">
-                                <img src="img/blog-1.jpg" class="img-fluid rounded-top w-100" alt="">
-                                <div class="blog-date px-4 py-2"><i class="fa fa-calendar-alt me-1"></i> Jan 12 2025</div>
+                                <img src="img/3.png" class="img-fluid rounded-top w-100" alt="">
+                                <div class="blog-date px-4 py-2"><i class="fa fa-calendar-alt me-1"></i> May 21  2025</div>
                             </div>
                             <div class="blog-content rounded-bottom p-4">
-                                <a href="#" class="h4 d-inline-block mb-3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde</a>
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel, officiis?</p>
-                                <a href="#" class="fw-bold text-secondary">Read More <i class="fa fa-angle-right"></i></a>
+                                <a href="#" class="h4 d-inline-block mb-3">Dive into innovation: The AI in Action Google Cloud</a>
+                                <p>Learn how to register, access key resources, and build innovative projects with Google Cloud, MongoDB, and GitLab.</p>
+                                <a href="blog1.html" class="fw-bold text-secondary">Read More <i class="fa fa-angle-right"></i></a>
                             </div>
                         </div>
                     </div>
                     <div class="col-lg-6 col-xl-4 wow fadeInUp" data-wow-delay="0.4s">
                         <div class="blog-item">
                             <div class="blog-img">
-                                <img src="img/blog-2.jpg" class="img-fluid rounded-top w-100" alt="">
+                                <img src="img/2.png" class="img-fluid rounded-top w-100" alt="">
                                 <div class="blog-date px-4 py-2"><i class="fa fa-calendar-alt me-1"></i> Jan 12 2025</div>
                             </div>
                             <div class="blog-content rounded-bottom p-4">
-                                <a href="#" class="h4 d-inline-block mb-3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde</a>
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel, officiis?</p>
-                                <a href="#" class="fw-bold text-secondary">Read More <i class="fa fa-angle-right"></i></a>
+                                <a href="#" class="h4 d-inline-block mb-3">How to get executive buy-in for your internal hackathons</a>
+                                <p>Learn how to secure leadership approval for your internal hackathon and get access to a business case template.</p>
+                                <a href="blog2.html" class="fw-bold text-secondary">Read More <i class="fa fa-angle-right"></i></a>
                             </div>
                         </div>
                     </div>
                     <div class="col-lg-6 col-xl-4 wow fadeInUp" data-wow-delay="0.6s">
                         <div class="blog-item">
                             <div class="blog-img">
-                                <img src="img/blog-3.jpg" class="img-fluid rounded-top w-100" alt="">
+                                <img src="img/1.png" class="img-fluid rounded-top w-100" alt="">
                                 <div class="blog-date px-4 py-2"><i class="fa fa-calendar-alt me-1"></i> Jan 12 2025</div>
                             </div>
                             <div class="blog-content rounded-bottom p-4">
-                                <a href="#" class="h4 d-inline-block mb-3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde</a>
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel, officiis?</p>
-                                <a href="#" class="fw-bold text-secondary">Read More <i class="fa fa-angle-right"></i></a>
+                                <a href="#" class="h4 d-inline-block mb-3">Increase’s hackathon win took him from Nigeria</a>
+                                <p>Get to know Increase and learn how winning a hackathon took him to the US for the first time!</p>
+                                <a href="blog3.html" class="fw-bold text-secondary">Read More <i class="fa fa-angle-right"></i></a>
                             </div>
                         </div>
                     </div>
