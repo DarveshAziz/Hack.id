@@ -522,6 +522,20 @@ body::before {
 ::-webkit-scrollbar-thumb:hover {
   background: var(--primary-hover);
 }
+
+.card .stretched-link {
+  /* Remove link style, make it invisible but clickable */
+  color: inherit !important;
+  text-decoration: none !important;
+  z-index: 1;
+}
+.card .stretched-link:focus {
+  outline: 2px solid var(--primary-color);
+  outline-offset: 2px;
+}
+.card {
+  cursor: pointer;
+}
 </style>
 </head>
 <body>
@@ -605,11 +619,11 @@ body::before {
               <span class="circle"></span> <?= htmlspecialchars($t['name']) ?>
             </span>
           <?php endforeach; ?>
+          <a href="profile_public.php?id=<?= $u['id'] ?>" class="stretched-link" tabindex="0" aria-label="View profile"></a>
         </div>
 
         <div class="card-footer bg-transparent border-0">
-          <a href="profile_public.php?id=<?= $u['id'] ?>"
-             class="stretched-link"></a>
+          
         </div>
       </div>
     </div>
