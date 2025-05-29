@@ -26,12 +26,19 @@ if ($cat) {
     $safeCats = array_map([$mysqli,'real_escape_string'], $cat);
     $catList  = "'" . implode("','", $safeCats) . "'";
     $where[]  = "EXISTS (
-                   SELECT 1
-                   FROM   user_skill us
-                   JOIN   skills s ON s.id = us.skill_id
-                   WHERE  us.user_id = u.id
-                     AND  s.category IN ($catList)
-                 )";
+                  SELECT 1
+                  FROM (
+                        SELECT  us.user_id,
+                                s.category,
+                                RANK() OVER (PARTITION BY us.user_id
+                                             ORDER BY us.level DESC) AS rnk
+                        FROM    user_skill us
+                        JOIN    skills     s ON s.id = us.skill_id
+                  ) top
+                  WHERE top.user_id = u.id
+                    AND  top.rnk <= 3          -- ← sift to top-3
+                    AND  top.category IN ($catList)
+               )";
 }
 $whereSQL = $where ? 'WHERE ' . implode(' AND ', $where) : '';
 
@@ -567,7 +574,10 @@ body::before {
         <div class="input-group">
           <input class="form-control" placeholder="Search by name"
                  name="q" value="<?= htmlspecialchars($q) ?>">
-          <span class="input-group-text"><i class="fas fa-search"></i></span>
+          <button class="input-group-text"
+          type="submit">            <!-- makes it a real button -->
+    <i class="fas fa-search"></i>
+  </button>
         </div>
       </div>
     </div>
