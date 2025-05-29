@@ -1,7 +1,6 @@
 <?php
 /* manage_teams.php — View your registrations & teams */
 include 'config.php';
-session_start();
 if (empty($_SESSION['user_id'])) {
   header('Location: login.php'); exit;
 }
@@ -89,6 +88,7 @@ body {
 
 /* Headings */
 h1 {
+  margin-top: 2.5rem;
   color: #ffffff;
   font-weight: 700;
   text-align: center;
@@ -131,6 +131,7 @@ h2::before {
 
 /* Card Enhancements */
 .card {
+  margin-top: 0;
   border: none;
   border-radius: 15px;
   box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
@@ -285,8 +286,8 @@ h2::before {
     padding: 1.5rem;
     border-radius: 15px;
   }
-  
   h1 {
+    margin-top: 0rem;
     font-size: 2rem;
   }
   

@@ -1,6 +1,31 @@
+<?php
+require __DIR__ . '/vendor/autoload.php';
+include 'config.php';
+
+if (session_status() !== PHP_SESSION_ACTIVE) {
+    session_start();
+}
+// 2️⃣ If they’re logged in, grab their info; otherwise skip the DB hit
+if (isset($_SESSION['user_id'])) {
+    // cast to int for safety
+    $uid = (int) $_SESSION['user_id'];
+
+    // prepare + execute a safe, injection-proof query
+    $stmt = $mysqli->prepare("
+        SELECT
+          username,
+          COALESCE(avatar, 'img/default-avatar.png') AS avatar
+        FROM users
+        WHERE id = ?
+    ");
+    $stmt->bind_param('i', $uid);
+    $stmt->execute();
+    $userRow = $stmt->get_result()->fetch_assoc();
+    $stmt->close();
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
-
     <head>
         <meta charset="utf-8">
         <title>Hack.id - Find Your Team. Hack the Future </title>
@@ -38,67 +63,16 @@
     </head>
 
     <body>
-
-        <!-- Spinner Start -->
-        <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
-            <div class="spinner-border text-primary" style="width: 3rem; height: 3rem;" role="status">
-                <span class="sr-only">Loading...</span>
-            </div>
-        </div>
-        <!-- Spinner End -->
-
-        <!-- Navbar & Hero Start -->
-        <div class="container-fluid position-relative p-0">
-            <nav class="navbar navbar-expand-lg navbar-light px-4 px-lg-5 py-3 py-lg-0 sticky-top shadow-sm">
-                <a href="index.php" class="navbar-brand d-flex align-items-center p-0">
-                    <!-- image logo -->
-                    <img src="img/logos.png" alt="Acuas logo" class="me-2" style="height:48px;">
-                    <!-- text logo -->
-                    <span class="fs-3 fw-bold" style="color:#7f39e9;">
-                        Hack.id
-                    </span>
-                </a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
-                    <span class="fa fa-bars"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarCollapse">
-                    <div class="navbar-nav ms-auto py-0">
-                        <a href="index.php" class="nav-item nav-link">Home</a>
-                        <a href="about.php" class="nav-item nav-link active">About</a>
-                        <a href="service.php" class="nav-item nav-link">Service</a>
-                        <a href="blog.php" class="nav-item nav-link">Blog</a>
-                        <div class="nav-item dropdown">
-                            <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Pages</a>
-                            <div class="dropdown-menu m-0">
-                                <a href="feature.php" class="dropdown-item">Our Feature</a>
-                                <a href="product.php" class="dropdown-item">Our Product</a>
-                                <a href="team.php" class="dropdown-item">Our Team</a>
-                                <a href="testimonial.php" class="dropdown-item">Testimonial</a>
-                                <a href="404.php" class="dropdown-item">404 Page</a>
-                            </div>
-                        </div>
-                        <a href="contact.php" class="nav-item nav-link">Contact</a>
-                    </div>
-                    <!-- Login/Logout button (static for about.php, adjust as needed for PHP session logic) -->
-                    <a href="login.php" class="btn btn-primary rounded-pill d-inline-flex flex-shrink-0 py-2 px-4 ms-3">
-                        Login
-                    </a>
-                </div>
-            </nav>
-            <!-- Header Start -->
+        <?php include 'includes/header.php'; ?>
             <div class="container-fluid bg-breadcrumb">
                 <div class="container text-center py-5" style="max-width: 900px;">
                     <h4 class="text-white display-4 mb-4 wow fadeInDown" data-wow-delay="0.1s">About Us</h4>
                     <ol class="breadcrumb d-flex justify-content-center mb-0 wow fadeInDown" data-wow-delay="0.3s">
-                        <li class="breadcrumb-item"><a href="index.html">Home</a></li>
-                        <li class="breadcrumb-item"><a href="#">Pages</a></li>
-                        <li class="breadcrumb-item active text-primary">About</li>
+                        <li class="breadcrumb-item"><a href="index.php">Home</a></li>
+                        <li class="breadcrumb-item active text-primary">About Us</li>
                     </ol>    
                 </div>
             </div>
-            <!-- Header End -->
-        </div>
-        <!-- Navbar & Hero End -->
 
         <!-- Modal Search Start -->
         <div class="modal fade" id="searchModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">

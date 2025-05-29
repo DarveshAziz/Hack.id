@@ -231,7 +231,7 @@ body::before {
 
 .badge:hover {
     transform: scale(1.05);
-    box-shadow: 0 4px 12px #;
+    box-shadow: 0 4px 12px rgba(139, 92, 246, 0.2);
 }
 
 /* Footer */
@@ -333,7 +333,7 @@ html {
     background: linear-gradient(var(--secondary-purple), var(--primary-purple));
 }
 </style>
-<body class="pt-5">
+<body class="">
 
 <!-- ===== Sticky header ===== -->
 <?php include 'includes/header.php'; ?>

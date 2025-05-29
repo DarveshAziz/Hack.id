@@ -373,7 +373,6 @@
 
   .carousel .carousel-inner .carousel-item img {
     height: 500px;
-    object-fit: fill;
   }
 
   .carousel .carousel-inner .carousel-item .carousel-caption-1 {
