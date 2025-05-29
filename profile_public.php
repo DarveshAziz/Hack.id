@@ -144,7 +144,7 @@ body::before {
 /* Container */
 .container {
     max-width: 1200px;
-    margin: 0 auto;
+    margin: 3rem auto;
     padding: 2rem 1rem;
     position: relative;
     z-index: 1;
@@ -536,6 +536,14 @@ body::before {
 
 /* Responsive Design */
 @media (max-width: 768px) {
+    .container {
+    max-width: 1200px;
+    margin: 0rem auto;
+    padding: 2rem 1rem;
+    position: relative;
+    z-index: 1;
+    }
+
     .profile-header {
         padding: 2rem 1.5rem;
     }
@@ -626,6 +634,7 @@ body::before {
 
 @media (max-width: 480px) {
     .container {
+        margin: 0rem auto;
         padding: 1rem 0.5rem;
     }
     

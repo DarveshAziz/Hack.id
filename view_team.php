@@ -191,11 +191,12 @@ $editMode = $isOwner && isset($_GET['edit']);
 
     /* Style for the main team name heading */
     .container.py-5 h1.h2.mb-1 {
+      margin-top: 1.5rem;
       color: #582ec4;
       /* Primary color for main title */
       font-weight: 700;
     }
-
+    
     a {
       color: #7e57c2;
       /* A slightly lighter shade of primary for links */
@@ -558,7 +559,6 @@ header a:hover {
       margin-right: 1rem;
       /* Spacing between checkboxes */
     }
-
 
     /* View Mode - Team Description and Logo */
     .row.mb-4>.col-md-8 p {
