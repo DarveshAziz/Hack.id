@@ -796,6 +796,7 @@ footer a:hover {
     <input id="chat-input" type="text" class="form-control" placeholder="Type your message…" />
     <button id="chat-send" class="btn btn-primary">Send</button>
   </div>
+  <a href="mentors.php" class="btn btn-secondary mb-4">Find a Mentor</a>
   </div>
 
 
@@ -864,6 +865,7 @@ footer a:hover {
       setInterval(fetchLoop, 1000);
     })();
   </script>
+  
 </body>
 
 </html>
